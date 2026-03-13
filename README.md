@@ -67,8 +67,8 @@ Build app + androidTest artifacts:
 npm run e2e:build:android
 ```
 
-The build script auto-detects `JAVA_HOME` and prefers `/usr/lib/jvm/java-17-openjdk-amd64` when available.
-If JDK 17 is not active, the script fails fast with instructions to set `JAVA_HOME`.
+The E2E scripts source `scripts/e2e-env.sh`, which attempts to discover JDK 17 from common install paths and `update-alternatives`.
+If JDK 17 cannot be found, the scripts fail fast with instructions to set `JAVA_HOME`.
 
 Run Detox tests against emulator:
 

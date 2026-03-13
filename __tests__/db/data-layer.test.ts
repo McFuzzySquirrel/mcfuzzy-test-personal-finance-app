@@ -1,5 +1,6 @@
 import type { SQLiteDatabase } from 'expo-sqlite';
 
+import { getAppStateValue, LAST_ACTIVE_MONTH_KEY, setAppStateValue } from '@/db/appState';
 import { getBudgetsByMonth, rolloverBudgets, upsertBudget } from '@/db/budgets';
 import { deleteCategory, getAllCategories, insertCategory } from '@/db/categories';
 import { DatabaseError } from '@/db/errors';
@@ -14,6 +15,7 @@ import {
   updateExpense,
 } from '@/db/expenses';
 import { createRecurringInstance, getDueRecurringExpenses } from '@/db/recurring';
+import { seedDefaultCategories } from '@/db/seeds';
 
 type MockDb = {
   execAsync: jest.Mock;
@@ -285,5 +287,32 @@ describe('db data layer', () => {
     expect(instance.isRecurring).toBe(false);
 
     await expect(createRecurringInstance(db, 'template-1', '2026-03-10')).rejects.toBeInstanceOf(DatabaseError);
+  });
+
+  it('reads and writes app state values', async () => {
+    db.runAsync.mockResolvedValue({ changes: 1 });
+    db.getFirstAsync.mockResolvedValueOnce({ key: LAST_ACTIVE_MONTH_KEY, value: '2026-03' }).mockResolvedValueOnce(null);
+
+    await setAppStateValue(db, LAST_ACTIVE_MONTH_KEY, '2026-03');
+    const currentValue = await getAppStateValue(db, LAST_ACTIVE_MONTH_KEY);
+    const missingValue = await getAppStateValue(db, 'missing-key');
+
+    expect(db.runAsync).toHaveBeenCalledWith(expect.stringContaining('ON CONFLICT(key) DO UPDATE'), expect.any(Array));
+    expect(currentValue).toBe('2026-03');
+    expect(missingValue).toBeNull();
+  });
+
+  it('seeds default categories only when categories table is empty', async () => {
+    db.getFirstAsync.mockResolvedValueOnce({ count: 0 }).mockResolvedValueOnce({ count: 7 });
+    db.runAsync.mockResolvedValue({ changes: 1 });
+
+    await seedDefaultCategories(db);
+    await seedDefaultCategories(db);
+
+    expect(db.runAsync).toHaveBeenCalledTimes(7);
+    expect(db.runAsync).toHaveBeenCalledWith(
+      'INSERT INTO categories (id, name, icon, is_custom) VALUES (?, ?, ?, ?);',
+      ['default-food', 'Food', null, 0]
+    );
   });
 });

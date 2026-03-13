@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+. "$(dirname "$0")/e2e-env.sh"
+
 detox test -c android.emu.debug \
   --headless \
   --cleanup \
