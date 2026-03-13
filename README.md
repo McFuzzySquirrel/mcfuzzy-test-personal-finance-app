@@ -1,59 +1,99 @@
 # Student Finance App
 
-Phase 1 foundation scaffold for the student personal finance app.
+A local-first React Native app for students to track spending, set category budgets, view insights, manage split/debt entries, and export monthly reports.
 
-## Stack
+## Highlights
+
+- Fast expense entry flow with category grid and optional notes
+- Monthly dashboard: spent, remaining, top category, budget progress
+- Insights: category pie chart, monthly trend, weekly summary
+- Student features: split expenses, lent/borrowed tracking, recurring entries
+- Export: CSV and PDF with native share sheet integration
+- Offline by default with SQLite (`expo-sqlite`)
+
+## Tech Stack
 
 - Expo SDK `55.0.6`
-- React Native + TypeScript (strict mode)
-- React Navigation v7 (bottom tabs + native stack)
+- React Native + TypeScript (strict)
+- React Navigation v7 (tabs + stack)
 - SQLite via `expo-sqlite` v2
+- Charts via `react-native-gifted-charts`
+- Jest for unit/integration tests
+- Detox for Android E2E baseline
 
-## Project Structure
+## Project Layout
 
 ```text
-app/
-components/
-db/
-hooks/
-store/
-utils/
-types/
-__tests__/
-e2e/
+app/           # screens and navigation
+components/    # reusable UI components
+db/            # schema, migrations, query helpers, seeds
+hooks/         # feature hooks over db layer
+store/         # providers (DatabaseProvider)
+utils/         # formatting/export helpers
+types/         # shared domain types
+__tests__/     # jest tests
+e2e/           # Detox tests/config
+scripts/       # setup, doctor, e2e helper scripts
 ```
 
-## Setup
+## Quick Start
 
 ```bash
 npm install
-```
-
-## Run
-
-```bash
 npm run start
-npm run android
 ```
 
-## Quality Checks
+Run app targets:
 
 ```bash
-npm run lint
+npm run android
+npm run ios
+npm run web
+```
+
+## Quality Gates
+
+```bash
 npm run typecheck
+npm run lint
 npm run test
 ```
 
-## E2E
+## Android E2E (Detox)
 
-Detox Android baseline is configured with an API 35 emulator target.
+> [!IMPORTANT]
+> Local Android E2E requires Java 21 and Android SDK tooling.
 
 Prerequisites:
 
-- Android SDK and platform tools installed
-- One Android AVD created (API 35 recommended)
-- `adb` available in your `PATH`
-- Java installed (`JDK 21` required for local Detox Android build)
+- Java 21 installed
+- Android SDK installed
+- `adb`, `emulator`, and `avdmanager` available in `PATH`
+- Android AVD created (API 35 recommended)
+
+Run environment diagnostics first:
+
+```bash
+npm run e2e:doctor
+```
+
+Build Android app/test artifacts:
+
+```bash
+npm run e2e:build:android
+```
+
+Run Detox tests:
+
+```bash
+npm run e2e:test:android
+```
+
+One-shot E2E flow:
+
+```bash
+npm run e2e:android
+```
 
 Optional AVD override:
 
@@ -61,38 +101,27 @@ Optional AVD override:
 export DETOX_AVD_NAME=detox-api35
 ```
 
-Check local E2E prerequisites:
-
-```bash
-npm run e2e:doctor
-```
-
-Build app + androidTest artifacts:
-
-```bash
-npm run e2e:build:android
-```
-
-The E2E scripts source `scripts/e2e-env.sh`, which attempts to discover JDK 21 from common install paths and `update-alternatives`.
-The Android build script also patches the generated Gradle wrapper to `8.13`, which is compatible with the current Expo/React Native Android toolchain on Java 21.
-The Android build script also sources `scripts/e2e-android-sdk.sh`, which looks for the SDK in `ANDROID_HOME`, `ANDROID_SDK_ROOT`, and common Linux install paths, then writes `android/local.properties` automatically when found.
-If JDK 21 cannot be found, the scripts fail fast with instructions to set `JAVA_HOME`.
-If the Android SDK cannot be found, the build fails fast with instructions to set `ANDROID_HOME` or `ANDROID_SDK_ROOT`.
-
-Run Detox tests against emulator:
-
-```bash
-npm run e2e:test:android
-```
-
-Test artifacts (logs/screenshots/videos on failures) are written to:
+Artifacts (logs/videos/screenshots on failure):
 
 ```bash
 artifacts/detox
 ```
 
-One-shot build + test:
+### E2E Script Behavior
 
-```bash
-npm run e2e:android
-```
+- `scripts/e2e-env.sh` validates Java 21 and resolves `JAVA_HOME`
+- `scripts/e2e-android-sdk.sh` resolves Android SDK path and writes `android/local.properties`
+- `scripts/e2e-android-build.sh` patches generated Gradle wrapper to `8.13` for Java 21 compatibility in current Expo/RN Android flow
+
+## Current Status
+
+- Core app features from the PRD are implemented through dashboard, insights, student features, and export flows
+- Unit/integration test baseline is active and passing
+- Detox baseline is integrated in CI; local execution depends on machine SDK/emulator setup
+
+## Useful Docs
+
+- PRD: `docs/prd/student-finance-app-prd.md`
+- Research source: `docs/research/student_finance_app_project.md`
+- Accessibility checklist: `docs/accessibility-checklist.md`
+- ADR: `ejs-docs/adr/0001-java21-gradle813-detox-toolchain.md`
