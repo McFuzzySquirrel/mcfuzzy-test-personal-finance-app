@@ -53,7 +53,7 @@ Prerequisites:
 - Android SDK and platform tools installed
 - One Android AVD created (API 35 recommended)
 - `adb` available in your `PATH`
-- Java installed (`JDK 17` recommended for Android/Gradle compatibility)
+- Java installed (`JDK 17` required for local Detox Android build)
 
 Optional AVD override:
 
@@ -68,6 +68,7 @@ npm run e2e:build:android
 ```
 
 The build script auto-detects `JAVA_HOME` and prefers `/usr/lib/jvm/java-17-openjdk-amd64` when available.
+If JDK 17 is not active, the script fails fast with instructions to set `JAVA_HOME`.
 
 Run Detox tests against emulator:
 

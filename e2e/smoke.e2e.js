@@ -14,4 +14,20 @@ describe('App smoke flow', () => {
     await element(by.id('dashboard-view-transactions-button')).tap();
     await expect(element(by.id('transactions-open-export'))).toBeVisible();
   });
+
+  it('adds an expense and sees it in transactions', async () => {
+    const note = 'detox-smoke-note';
+
+    await device.reloadReactNative();
+    await element(by.id('dashboard-add-expense-button')).tap();
+    await element(by.id('add-expense-amount-input')).replaceText('12.34');
+    await element(by.id('category-grid-item-default-food')).tap();
+    await element(by.id('add-expense-note-toggle')).tap();
+    await element(by.id('add-expense-note-input')).replaceText(note);
+    await element(by.id('add-expense-save-button')).tap();
+
+    await expect(element(by.id('dashboard-summary-spent-card'))).toBeVisible();
+    await element(by.id('dashboard-view-transactions-button')).tap();
+    await expect(element(by.text(note))).toBeVisible();
+  });
 });
