@@ -53,7 +53,7 @@ Prerequisites:
 - Android SDK and platform tools installed
 - One Android AVD created (API 35 recommended)
 - `adb` available in your `PATH`
-- Java installed (`JDK 17` required for local Detox Android build)
+- Java installed (`JDK 21` required for local Detox Android build)
 
 Optional AVD override:
 
@@ -67,8 +67,9 @@ Build app + androidTest artifacts:
 npm run e2e:build:android
 ```
 
-The E2E scripts source `scripts/e2e-env.sh`, which attempts to discover JDK 17 from common install paths and `update-alternatives`.
-If JDK 17 cannot be found, the scripts fail fast with instructions to set `JAVA_HOME`.
+The E2E scripts source `scripts/e2e-env.sh`, which attempts to discover JDK 21 from common install paths and `update-alternatives`.
+The Android build script also patches the generated Gradle wrapper to `8.13`, which is compatible with the current Expo/React Native Android toolchain on Java 21.
+If JDK 21 cannot be found, the scripts fail fast with instructions to set `JAVA_HOME`.
 
 Run Detox tests against emulator:
 

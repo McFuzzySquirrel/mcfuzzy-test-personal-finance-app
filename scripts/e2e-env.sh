@@ -10,6 +10,11 @@ resolve_java_home() {
   fi
 
   for candidate in \
+    /usr/lib/jvm/java-21-openjdk-amd64 \
+    /usr/lib/jvm/temurin-21-jdk-amd64 \
+    /usr/lib/jvm/temurin-21-jdk \
+    /usr/lib/jvm/java-21-openjdk \
+    /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home \
     /usr/lib/jvm/java-17-openjdk-amd64 \
     /usr/lib/jvm/temurin-17-jdk-amd64 \
     /usr/lib/jvm/temurin-17-jdk \
@@ -24,7 +29,7 @@ resolve_java_home() {
 
   if command -v update-alternatives >/dev/null 2>&1; then
     while IFS= read -r candidate; do
-      if [[ "$candidate" == *java-17* || "$candidate" == *temurin-17* || "$candidate" == *jdk-17* ]]; then
+      if [[ "$candidate" == *java-21* || "$candidate" == *temurin-21* || "$candidate" == *jdk-21* ]]; then
         echo "$(dirname "$(dirname "$candidate")")"
         return 0
       fi
@@ -50,10 +55,10 @@ if [[ -z "$JAVA_MAJOR" ]]; then
   exit 1
 fi
 
-if [[ "$JAVA_MAJOR" -ne 17 ]]; then
-  echo "Detox Android commands require JDK 17 for this project." >&2
+if [[ "$JAVA_MAJOR" -ne 21 ]]; then
+  echo "Detox Android commands require JDK 21 for this project." >&2
   echo "Current JAVA_HOME points to Java $JAVA_MAJOR: $JAVA_HOME" >&2
-  echo "Install JDK 17 and set JAVA_HOME, e.g.:" >&2
-  echo "  export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64" >&2
+  echo "Install JDK 21 and set JAVA_HOME, e.g.:" >&2
+  echo "  export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64" >&2
   exit 1
 fi
