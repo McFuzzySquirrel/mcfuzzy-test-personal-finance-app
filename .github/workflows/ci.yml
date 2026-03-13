@@ -71,7 +71,13 @@ jobs:
 
   e2e:
     if: github.ref == 'refs/heads/main'
+    needs:
+      - lint
+      - typecheck
+      - test
     runs-on: ubuntu-latest
+    env:
+      DETOX_AVD_NAME: detox-api35
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -85,6 +91,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
       - name: Restore Expo cache
         uses: actions/cache@v4
         with:
@@ -93,5 +105,14 @@ jobs:
             .expo
           key: ${{ runner.os }}-expo-${{ hashFiles('package-lock.json') }}
 
-      - name: Detox placeholder
-        run: npm run e2e
+      - name: Detox Android E2E
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          arch: x86_64
+          target: google_apis
+          profile: pixel_6
+          avd-name: ${{ env.DETOX_AVD_NAME }}
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
+          script: npm run e2e:build:android && npm run e2e:test:android

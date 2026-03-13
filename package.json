@@ -11,7 +11,10 @@
     "lint": "eslint . --ext .ts,.tsx",
     "typecheck": "tsc --noEmit",
     "test": "jest --coverage",
-    "e2e": "echo 'Detox placeholder: configure detox before running end-to-end tests.'"
+    "e2e:build:android": "detox build -c android.emu.debug",
+    "e2e:test:android": "detox test -c android.emu.debug --headless --cleanup",
+    "e2e:android": "npm run e2e:build:android && npm run e2e:test:android",
+    "e2e": "npm run e2e:android"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "7.15.5",
@@ -39,6 +42,7 @@
     "@typescript-eslint/parser": "8.57.0",
     "babel-plugin-module-resolver": "5.0.2",
     "babel-preset-expo": "^55.0.11",
+    "detox": "^20.47.0",
     "eslint": "8.57.1",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-native": "5.0.0",
