@@ -2,6 +2,7 @@
 set -euo pipefail
 
 . "$(dirname "$0")/e2e-env.sh"
+. "$(dirname "$0")/e2e-android-sdk.sh"
 
 if [[ ! -d android ]]; then
 	CI=1 npx expo prebuild --platform android

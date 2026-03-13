@@ -11,6 +11,7 @@
     "lint": "eslint . --ext .ts,.tsx",
     "typecheck": "tsc --noEmit",
     "test": "jest --coverage",
+    "e2e:doctor": "bash scripts/e2e-doctor.sh",
     "e2e:build:android": "bash scripts/e2e-android-build.sh",
     "e2e:test:android": "bash scripts/e2e-android-test.sh",
     "e2e:android": "npm run e2e:build:android && npm run e2e:test:android",

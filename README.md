@@ -61,6 +61,12 @@ Optional AVD override:
 export DETOX_AVD_NAME=detox-api35
 ```
 
+Check local E2E prerequisites:
+
+```bash
+npm run e2e:doctor
+```
+
 Build app + androidTest artifacts:
 
 ```bash
@@ -69,7 +75,9 @@ npm run e2e:build:android
 
 The E2E scripts source `scripts/e2e-env.sh`, which attempts to discover JDK 21 from common install paths and `update-alternatives`.
 The Android build script also patches the generated Gradle wrapper to `8.13`, which is compatible with the current Expo/React Native Android toolchain on Java 21.
+The Android build script also sources `scripts/e2e-android-sdk.sh`, which looks for the SDK in `ANDROID_HOME`, `ANDROID_SDK_ROOT`, and common Linux install paths, then writes `android/local.properties` automatically when found.
 If JDK 21 cannot be found, the scripts fail fast with instructions to set `JAVA_HOME`.
+If the Android SDK cannot be found, the build fails fast with instructions to set `ANDROID_HOME` or `ANDROID_SDK_ROOT`.
 
 Run Detox tests against emulator:
 
