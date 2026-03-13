@@ -13,9 +13,13 @@ import {
 } from 'react-native';
 
 import CategoryGrid from '@/components/CategoryGrid';
+import LentBorrowedForm from '@/components/LentBorrowedForm';
+import SplitExpenseForm, { type SplitType } from '@/components/SplitExpenseForm';
 import type { RootStackParamList } from '@/app/navigation/types';
 import { useCategories } from '@/hooks/useCategories';
 import { useExpenses } from '@/hooks/useExpenses';
+import type { ExpenseType } from '@/types';
+import { parseCurrencyInputToCents } from '@/utils/currency';
 import { formatISODate } from '@/utils/date';
 
 type AddExpenseScreenProps = NativeStackScreenProps<RootStackParamList, 'AddExpense'>;
@@ -57,15 +61,52 @@ export default function AddExpenseScreen({ navigation }: AddExpenseScreenProps):
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [showValidation, setShowValidation] = useState(false);
+  const [entryType, setEntryType] = useState<Extract<ExpenseType, 'expense' | 'lent' | 'borrowed'>>('expense');
+  const [splitWithName, setSplitWithName] = useState('');
+  const [isSplitEnabled, setIsSplitEnabled] = useState(false);
+  const [splitType, setSplitType] = useState<SplitType>('equal');
+  const [customSplitAmountText, setCustomSplitAmountText] = useState('');
 
-  const amountInCents = parseAmountToCents(amountText);
+  const amountInCents = parseAmountToCents(amountText) ?? parseCurrencyInputToCents(amountText);
+  const customSplitInCents = parseCurrencyInputToCents(customSplitAmountText);
+  const splitAmountInCents =
+    entryType === 'lent' || entryType === 'borrowed'
+      ? amountInCents
+      : isSplitEnabled
+        ? splitType === 'equal'
+          ? amountInCents
+            ? Math.round(amountInCents / 2)
+            : null
+          : customSplitInCents
+        : null;
+
+  const needsPersonName = entryType === 'lent' || entryType === 'borrowed' || isSplitEnabled;
   const amountError = showValidation && (!amountInCents || amountInCents <= 0) ? 'Enter an amount above 0.' : null;
   const categoryError = showValidation && !selectedCategoryId ? 'Choose a category.' : null;
+  const personError =
+    showValidation &&
+    (entryType === 'lent' || entryType === 'borrowed') &&
+    splitWithName.trim().length === 0
+      ? 'Enter a person name.'
+      : null;
+  const splitAmountError =
+    showValidation &&
+    (entryType === 'lent' || entryType === 'borrowed') &&
+    (!splitAmountInCents || splitAmountInCents <= 0 || (amountInCents !== null && splitAmountInCents > amountInCents))
+      ? 'Split amount must be above 0 and not greater than total amount.'
+      : null;
 
   const handleSave = async (): Promise<void> => {
     setShowValidation(true);
 
-    if (!amountInCents || amountInCents <= 0 || !selectedCategoryId) {
+    if (
+      !amountInCents ||
+      amountInCents <= 0 ||
+      !selectedCategoryId ||
+      (needsPersonName && splitWithName.trim().length === 0) ||
+      ((entryType === 'lent' || entryType === 'borrowed' || isSplitEnabled) &&
+        (!splitAmountInCents || splitAmountInCents <= 0 || splitAmountInCents > amountInCents))
+    ) {
       return;
     }
 
@@ -76,9 +117,11 @@ export default function AddExpenseScreen({ navigation }: AddExpenseScreenProps):
         amount: amountInCents,
         categoryId: selectedCategoryId,
         date: today,
+        splitAmount: splitAmountInCents ?? undefined,
+        splitWith: needsPersonName ? splitWithName.trim() : undefined,
         note: noteText.trim().length > 0 ? noteText.trim() : undefined,
         settled: false,
-        type: 'expense',
+        type: entryType === 'expense' ? (isSplitEnabled ? 'split' : 'expense') : entryType,
       });
       navigation.navigate('Tabs', { screen: 'Dashboard' });
     } catch (saveError) {
@@ -112,6 +155,36 @@ export default function AddExpenseScreen({ navigation }: AddExpenseScreenProps):
         </View>
 
         <View style={styles.sectionSpacing}>
+          <LentBorrowedForm
+            onPersonNameChange={setSplitWithName}
+            onTypeChange={(value) => {
+              setEntryType(value);
+              if (value !== 'expense') {
+                setIsSplitEnabled(false);
+              }
+            }}
+            personName={splitWithName}
+            selectedType={entryType}
+            showValidation={showValidation}
+          />
+          {personError ? <Text style={styles.errorText}>{personError}</Text> : null}
+
+          {entryType === 'expense' ? (
+            <SplitExpenseForm
+              amountText={amountText}
+              customSplitAmountText={customSplitAmountText}
+              enabled={isSplitEnabled}
+              onCustomSplitAmountTextChange={setCustomSplitAmountText}
+              onEnabledChange={setIsSplitEnabled}
+              onSplitTypeChange={setSplitType}
+              onSplitWithChange={setSplitWithName}
+              showValidation={showValidation}
+              splitType={splitType}
+              splitWith={splitWithName}
+            />
+          ) : null}
+          {splitAmountError ? <Text style={styles.errorText}>{splitAmountError}</Text> : null}
+
           <Text style={styles.helperText}>Date: {today}</Text>
           <Pressable
             onPress={() => setIsNoteVisible((currentValue) => !currentValue)}

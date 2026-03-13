@@ -108,6 +108,14 @@ export default function DashboardScreen({ navigation }: DashboardScreenProps): R
         >
           <Text style={styles.secondaryButtonText}>View Transactions</Text>
         </Pressable>
+
+        <Pressable
+          onPress={() => navigation.navigate('Splits')}
+          style={styles.secondaryButton}
+          testID="dashboard-open-splits-button"
+        >
+          <Text style={styles.secondaryButtonText}>View Splits</Text>
+        </Pressable>
       </ScrollView>
 
       <Pressable

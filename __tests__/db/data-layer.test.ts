@@ -165,6 +165,10 @@ describe('db data layer', () => {
     expect(weekly).toHaveLength(7);
     expect(weekly.find((entry) => entry.date === '2026-03-10')?.total).toBe(1000);
     expect(weekly.find((entry) => entry.date === '2026-03-12')?.total).toBe(2000);
+
+    expect(db.getAllAsync.mock.calls[0][0]).toContain("type IN ('expense', 'split')");
+    expect(db.getAllAsync.mock.calls[1][0]).toContain("type IN ('expense', 'split')");
+    expect(db.getAllAsync.mock.calls[2][0]).toContain("type IN ('expense', 'split')");
   });
 
   it('prevents deletion of system categories but allows custom category deletion', async () => {

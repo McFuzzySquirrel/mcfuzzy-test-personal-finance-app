@@ -223,6 +223,7 @@ export async function getMonthlyTotalByCategory(
     `SELECT category_id, COALESCE(SUM(amount), 0) AS total
      FROM expenses
      WHERE date >= ? AND date < ?
+       AND type IN ('expense', 'split')
      GROUP BY category_id
      ORDER BY total DESC;`,
     [bounds.start, bounds.end]
@@ -246,6 +247,7 @@ export async function getMonthlyTotals(
     `SELECT substr(date, 1, 7) AS month, COALESCE(SUM(amount), 0) AS total
      FROM expenses
      WHERE substr(date, 1, 7) IN (${placeholders})
+       AND type IN ('expense', 'split')
      GROUP BY substr(date, 1, 7);`,
     months
   );
@@ -264,6 +266,7 @@ export async function getWeeklyTotalsByDay(
     `SELECT substr(date, 1, 10) AS date, COALESCE(SUM(amount), 0) AS total
      FROM expenses
      WHERE date >= ? AND date < ?
+       AND type IN ('expense', 'split')
      GROUP BY substr(date, 1, 10);`,
     [bounds.start, bounds.endExclusive]
   );

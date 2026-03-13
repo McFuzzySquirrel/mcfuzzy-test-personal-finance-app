@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import dayjs from 'dayjs';
-import { CompositeScreenProps, useFocusEffect } from '@react-navigation/native';
+import { CompositeScreenProps } from '@react-navigation/native';
 import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import {
@@ -14,11 +14,10 @@ import {
 } from 'react-native';
 
 import type { RootStackParamList, RootTabParamList } from '@/app/navigation/types';
-import { getRecurringTemplates } from '@/db/recurring';
+import AddRecurringModal from '@/components/AddRecurringModal';
 import { useBudgets } from '@/hooks/useBudgets';
 import { useCategories } from '@/hooks/useCategories';
-import { useDatabase } from '@/store/DatabaseProvider';
-import type { Expense } from '@/types';
+import { useRecurring } from '@/hooks/useRecurring';
 import { formatCentsForInput, formatZAR, parseCurrencyInputToCents } from '@/utils/currency';
 import { formatMonthKey, formatMonthLabel } from '@/utils/date';
 
@@ -40,8 +39,15 @@ function showFeedback(message: string): void {
   showAlert(message);
 }
 
+function getNextDueDate(templateDate: string): string {
+  const templateDay = Math.min(28, Math.max(1, dayjs(templateDate).date()));
+  const today = dayjs();
+  const thisMonthDue = today.date(templateDay);
+
+  return (thisMonthDue.isBefore(today, 'day') ? thisMonthDue.add(1, 'month') : thisMonthDue).format('D MMM YYYY');
+}
+
 export default function BudgetScreen({ navigation }: BudgetScreenProps): React.JSX.Element {
-  const db = useDatabase();
   const currentMonth = formatMonthKey();
   const previousMonth = useMemo(() => dayjs(`${currentMonth}-01`).subtract(1, 'month').format('YYYY-MM'), [currentMonth]);
   const { categories, createCategory, error: categoriesError, isLoading: categoriesLoading } = useCategories();
@@ -57,9 +63,10 @@ export default function BudgetScreen({ navigation }: BudgetScreenProps): React.J
   const [customCategoryName, setCustomCategoryName] = useState('');
   const [customCategoryIcon, setCustomCategoryIcon] = useState('');
   const [isAddCategoryVisible, setIsAddCategoryVisible] = useState(false);
+  const [isRecurringModalVisible, setIsRecurringModalVisible] = useState(false);
+  const [isRecurringSaving, setIsRecurringSaving] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
-  const [recurringTemplates, setRecurringTemplates] = useState<Expense[]>([]);
-  const [recurringError, setRecurringError] = useState<string | null>(null);
+  const { addRecurringTemplate, error: recurringError, recurringList, refreshRecurring } = useRecurring();
 
   useEffect(() => {
     const nextDrafts = categories.reduce<Record<string, string>>((accumulator, category) => {
@@ -71,26 +78,36 @@ export default function BudgetScreen({ navigation }: BudgetScreenProps): React.J
     setBudgetDrafts(nextDrafts);
   }, [budgetByCategoryId, categories]);
 
-  const loadRecurringTemplates = useCallback(async (): Promise<void> => {
-    try {
-      const nextTemplates = await getRecurringTemplates(db);
-      setRecurringTemplates(nextTemplates);
-      setRecurringError(null);
-    } catch (loadError) {
-      setRecurringError(loadError instanceof Error ? loadError.message : 'Unable to load recurring expenses.');
-    }
-  }, [db]);
-
   useEffect(() => {
-    void loadRecurringTemplates();
-  }, [loadRecurringTemplates]);
+    void refreshRecurring();
+  }, [refreshRecurring]);
 
-  useFocusEffect(
-    useCallback(() => {
-      void loadRecurringTemplates();
-      return undefined;
-    }, [loadRecurringTemplates])
+  const categoryNameById = useMemo(
+    () => new Map(categories.map((category) => [category.id, category.name] as const)),
+    [categories]
   );
+
+  const handleSaveRecurring = async (draft: {
+    amount: number;
+    categoryId: string;
+    dayOfMonth: number;
+    note?: string;
+  }): Promise<void> => {
+    setIsRecurringSaving(true);
+
+    try {
+      await addRecurringTemplate(draft);
+      setIsRecurringModalVisible(false);
+      showFeedback('Recurring expense saved');
+    } catch (saveError) {
+      showAlert(
+        'Unable to save recurring expense',
+        saveError instanceof Error ? saveError.message : 'Please try again.'
+      );
+    } finally {
+      setIsRecurringSaving(false);
+    }
+  };
 
   const handleSaveBudgets = async (): Promise<void> => {
     setIsSaving(true);
@@ -217,18 +234,29 @@ export default function BudgetScreen({ navigation }: BudgetScreenProps): React.J
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Recurring expenses</Text>
         {recurringError ? <Text style={styles.errorText}>{recurringError}</Text> : null}
-        {recurringTemplates.length === 0 ? (
+        <Pressable
+          onPress={() => setIsRecurringModalVisible(true)}
+          style={styles.ghostButton}
+          testID="budget-add-recurring-button"
+        >
+          <Text style={styles.ghostButtonText}>Add recurring</Text>
+        </Pressable>
+
+        {recurringList.length === 0 ? (
           <Text style={styles.statusText}>No recurring expenses saved yet.</Text>
         ) : (
-          recurringTemplates.map((expense) => (
+          recurringList.map((expense) => (
             <Pressable
               key={expense.id}
               onPress={() => navigation.navigate('EditExpense', { expenseId: expense.id })}
               style={styles.recurringCard}
+              testID={`budget-recurring-row-${expense.id}`}
             >
               <View>
                 <Text style={styles.recurringTitle}>{expense.note?.trim() || 'Recurring expense'}</Text>
-                <Text style={styles.recurringMeta}>{dayjs(expense.date).format('D MMM YYYY')}</Text>
+                <Text style={styles.recurringMeta}>
+                  {categoryNameById.get(expense.categoryId) ?? 'Uncategorized'} | Monthly | Next due {getNextDueDate(expense.date)}
+                </Text>
               </View>
               <Text style={styles.recurringAmount}>{formatZAR(expense.amount)}</Text>
             </Pressable>
@@ -261,6 +289,14 @@ export default function BudgetScreen({ navigation }: BudgetScreenProps): React.J
           </View>
         ) : null}
       </View>
+
+      <AddRecurringModal
+        categories={categories}
+        isSaving={isRecurringSaving}
+        onClose={() => setIsRecurringModalVisible(false)}
+        onSave={handleSaveRecurring}
+        visible={isRecurringModalVisible}
+      />
     </ScrollView>
   );
 }

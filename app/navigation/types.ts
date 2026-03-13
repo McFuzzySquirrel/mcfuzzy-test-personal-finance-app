@@ -11,4 +11,5 @@ export type RootStackParamList = {
   Tabs: NavigatorScreenParams<RootTabParamList>;
   AddExpense: undefined;
   EditExpense: { expenseId: string };
+  Splits: undefined;
 };

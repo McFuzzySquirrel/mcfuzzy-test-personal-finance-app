@@ -5,8 +5,10 @@ import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { FlatList, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import ExportModal from '@/components/ExportModal';
 import ExpenseListItem from '@/components/ExpenseListItem';
 import type { RootStackParamList, RootTabParamList } from '@/app/navigation/types';
+import { useBudgets } from '@/hooks/useBudgets';
 import { useCategories } from '@/hooks/useCategories';
 import { useExpenses } from '@/hooks/useExpenses';
 import type { Expense } from '@/types';
@@ -20,7 +22,9 @@ type TransactionsScreenProps = CompositeScreenProps<
 export default function TransactionsScreen({ navigation }: TransactionsScreenProps): React.JSX.Element {
   const [month, setMonth] = useState(dayjs().format('YYYY-MM'));
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(null);
+  const [isExportVisible, setIsExportVisible] = useState(false);
   const { categories } = useCategories();
+  const { budgets } = useBudgets(month);
   const { error, expenses, isLoading } = useExpenses(month);
 
   const categoryNameById = useMemo(
@@ -64,6 +68,14 @@ export default function TransactionsScreen({ navigation }: TransactionsScreenPro
         </Pressable>
       </View>
 
+      <Pressable
+        onPress={() => setIsExportVisible(true)}
+        style={styles.exportButton}
+        testID="transactions-open-export"
+      >
+        <Text style={styles.exportButtonText}>Export</Text>
+      </Pressable>
+
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.filtersRow}>
         <Pressable
           onPress={() => setSelectedCategoryId(null)}
@@ -101,6 +113,16 @@ export default function TransactionsScreen({ navigation }: TransactionsScreenPro
         renderItem={renderExpense}
         showsVerticalScrollIndicator={false}
       />
+
+      <ExportModal
+        budgets={budgets}
+        categories={categories}
+        expenses={expenses}
+        month={month}
+        onClose={() => setIsExportVisible(false)}
+        onMonthChange={setMonth}
+        visible={isExportVisible}
+      />
     </View>
   );
 }
@@ -110,6 +132,18 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 16,
     paddingTop: 16,
+  },
+  exportButton: {
+    alignSelf: 'flex-start',
+    borderRadius: 999,
+    borderWidth: 1,
+    marginBottom: 12,
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+  },
+  exportButtonText: {
+    fontSize: 14,
+    fontWeight: '700',
   },
   filterChip: {
     borderRadius: 999,

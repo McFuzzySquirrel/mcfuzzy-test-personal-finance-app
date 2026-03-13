@@ -7,6 +7,7 @@ import AddExpenseScreen from '@/app/add-expense';
 import BudgetScreen from '@/app/budget';
 import DashboardScreen from '@/app/index';
 import EditExpenseScreen from '@/app/edit-expense';
+import SplitsScreen from '@/app/splits';
 import TransactionsScreen from '@/app/transactions';
 
 import type { RootStackParamList, RootTabParamList } from '@/app/navigation/types';
@@ -59,6 +60,7 @@ export function RootNavigator(): React.JSX.Element {
       <Stack.Screen name="Tabs" component={TabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="AddExpense" component={AddExpenseScreen} options={{ title: 'Add Expense' }} />
       <Stack.Screen name="EditExpense" component={EditExpenseScreen} options={{ title: 'Edit Expense' }} />
+      <Stack.Screen name="Splits" component={SplitsScreen} options={{ title: 'Splits' }} />
     </Stack.Navigator>
   );
 }
