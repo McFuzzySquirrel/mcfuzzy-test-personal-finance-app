@@ -8,4 +8,10 @@ describe('App smoke flow', () => {
     await element(by.id('dashboard-add-expense-button')).tap();
     await expect(element(by.id('add-expense-amount-input'))).toBeVisible();
   });
+
+  it('navigates to transactions from dashboard', async () => {
+    await device.reloadReactNative();
+    await element(by.id('dashboard-view-transactions-button')).tap();
+    await expect(element(by.id('transactions-open-export'))).toBeVisible();
+  });
 });

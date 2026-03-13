@@ -116,3 +116,11 @@ jobs:
           disable-animations: true
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
           script: npm run e2e:build:android && npm run e2e:test:android
+
+      - name: Upload Detox artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: detox-artifacts
+          path: artifacts/detox/
+          if-no-files-found: ignore

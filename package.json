@@ -11,8 +11,8 @@
     "lint": "eslint . --ext .ts,.tsx",
     "typecheck": "tsc --noEmit",
     "test": "jest --coverage",
-    "e2e:build:android": "detox build -c android.emu.debug",
-    "e2e:test:android": "detox test -c android.emu.debug --headless --cleanup",
+    "e2e:build:android": "bash scripts/e2e-android-build.sh",
+    "e2e:test:android": "bash scripts/e2e-android-test.sh",
     "e2e:android": "npm run e2e:build:android && npm run e2e:test:android",
     "e2e": "npm run e2e:android"
   },

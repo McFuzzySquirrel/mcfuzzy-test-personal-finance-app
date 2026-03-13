@@ -53,6 +53,7 @@ Prerequisites:
 - Android SDK and platform tools installed
 - One Android AVD created (API 35 recommended)
 - `adb` available in your `PATH`
+- Java installed (`JDK 17` recommended for Android/Gradle compatibility)
 
 Optional AVD override:
 
@@ -66,10 +67,18 @@ Build app + androidTest artifacts:
 npm run e2e:build:android
 ```
 
+The build script auto-detects `JAVA_HOME` and prefers `/usr/lib/jvm/java-17-openjdk-amd64` when available.
+
 Run Detox tests against emulator:
 
 ```bash
 npm run e2e:test:android
+```
+
+Test artifacts (logs/screenshots/videos on failures) are written to:
+
+```bash
+artifacts/detox
 ```
 
 One-shot build + test:
