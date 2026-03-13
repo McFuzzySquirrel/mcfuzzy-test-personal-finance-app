@@ -14,6 +14,10 @@ export function formatCentsForInput(cents: number): string {
 }
 
 export function parseCurrencyInputToCents(value: string): number | null {
+  if (value.trim().startsWith('-')) {
+    return null;
+  }
+
   const normalized = value.replace(',', '.').replace(/[^\d.]/g, '');
 
   if (normalized.trim().length === 0) {

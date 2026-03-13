@@ -10,13 +10,13 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/$1'
   },
   coverageThreshold: {
-    // Interim floor for bootstrap stability while Jest runtime/mocks are normalized.
+    // Pragmatic floor to prevent regressions while we expand tests toward PRD targets.
     // Follow-up target: enforce >=80% lines/functions for db/ and hooks/ per PRD.
     global: {
-      lines: 1,
-      functions: 1,
-      statements: 1,
-      branches: 1
+      lines: 35,
+      functions: 35,
+      statements: 35,
+      branches: 25
     }
   },
   passWithNoTests: true
