@@ -62,3 +62,11 @@ if [[ "$JAVA_MAJOR" -ne 21 ]]; then
   echo "  export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64" >&2
   exit 1
 fi
+
+# Ensure nvm-managed Node is on PATH (Gradle inherits this when spawning node).
+if [[ -s "${NVM_DIR:-$HOME/.nvm}/nvm.sh" ]]; then
+  export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
+  # shellcheck source=/dev/null
+  . "$NVM_DIR/nvm.sh"
+  echo "Using Node $(node --version) via nvm"
+fi

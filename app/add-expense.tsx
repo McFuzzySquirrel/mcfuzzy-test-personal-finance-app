@@ -133,7 +133,7 @@ export default function AddExpenseScreen({ navigation }: AddExpenseScreenProps):
 
   return (
     <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={styles.flex}> 
-      <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
+      <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled" testID="add-expense-scroll-view">
         <Text style={styles.label}>Amount</Text>
         <TextInput
           autoFocus

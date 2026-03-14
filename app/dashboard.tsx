@@ -29,7 +29,7 @@ export default function DashboardScreen({ navigation }: DashboardScreenProps): R
 
   return (
     <View style={styles.container}>
-      <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+      <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false} testID="dashboard-scroll-view">
         <Text style={styles.title}>Student Finance</Text>
         <Text style={styles.subtitle}>{formatMonthLabel(currentMonth)}</Text>
 

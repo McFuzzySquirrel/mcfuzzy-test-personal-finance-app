@@ -1,0 +1,386 @@
+--------- beginning of main
+03-14 23:01:07.028 14172 14222 W unknown:BridgelessReact: ReactHost{0}.getOrCreateReactInstanceTask(): Loading JS Bundle
+03-14 23:01:07.029 14172 14222 W unknown:BridgelessReact: ReactHost{0}.getOrCreateReactInstanceTask(): DevSupportManager.onNewReactContextCreated()
+03-14 23:01:07.030 14172 14224 D Detox.RNMarker: RUN_JS_BUNDLE_START (index.android.bundle)
+03-14 23:01:07.034 14172 14172 W unknown:ReactNative: Packager connection already open, nooping.
+03-14 23:01:07.035 14172 14222 W unknown:BridgelessReact: ReactHost{0}.startSurface(surfaceId = 0): Execute
+03-14 23:01:07.035 14172 14172 W unknown:BridgelessReact: ReactHost{0}.ReactContext.onHostResume()
+03-14 23:01:07.035 14172 14172 W unknown:BridgelessReact: ReactHost{0}.getOrCreateReactInstanceTask(): Executing ReactInstanceEventListeners
+03-14 23:01:07.035 14172 14172 I DetoxRNLoading: Got new RN-context through listener
+03-14 23:01:07.036 14172 14198 W .studentfinance: Long monitor contention with owner Instr: androidx.test.runner.AndroidJUnitRunner (14196) at void com.wix.detox.DetoxMain.launchActivityOnCue(android.content.Context, com.wix.detox.ActivityLaunchHelper)(DetoxMain.kt:53) waiters=0 in void com.wix.detox.DetoxMain$setupActionHandlers$SynchronizedActionHandler.handle(java.lang.String, long) for 2.048s
+03-14 23:01:07.043 14172 14172 W .studentfinance: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+03-14 23:01:07.043 14172 14172 W .studentfinance: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+03-14 23:01:07.043 14172 14172 W .studentfinance: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+03-14 23:01:07.045 14172 14172 I Detox   : Wait is over: App is now idle!
+03-14 23:01:07.050 14172 14198 I DetoxWSClient: Sending out action 'ready' (ID #-1000)
+03-14 23:01:07.051 14172 14198 I DetoxDispatcher: Done with action 'isReady'
+03-14 23:01:07.122 14172 14224 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/libexpo-modules-core.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk): ok
+03-14 23:01:07.307 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaProviderManager
+03-14 23:01:07.336 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
+03-14 23:01:07.346 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.SearchBarManager
+03-14 23:01:07.348 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenFooterManager
+03-14 23:01:07.354 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.gamma.tabs.TabScreenViewManager
+03-14 23:01:07.358 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class expo.modules.kotlin.views.GroupViewManagerWrapper
+03-14 23:01:07.363 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContainerViewManager
+03-14 23:01:07.364 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.gamma.tabs.TabsHostViewManager
+03-14 23:01:07.370 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ModalScreenViewManager
+03-14 23:01:07.372 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderConfigViewManager
+03-14 23:01:07.376 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContentWrapperManager
+03-14 23:01:07.378 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewManager
+03-14 23:01:07.386 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewShadowNode
+03-14 23:01:07.403 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.safearea.SafeAreaViewManager
+03-14 23:01:07.408 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.safearea.paper.SafeAreaViewShadowNode
+03-14 23:01:07.409 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenViewManager
+03-14 23:01:07.410 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.gamma.stack.host.StackHostViewManager
+03-14 23:01:07.413 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderSubviewManager
+03-14 23:01:07.414 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.gamma.stack.screen.StackScreenViewManager
+03-14 23:01:07.416 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackViewManager
+03-14 23:01:07.627 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$DefsViewManager
+03-14 23:01:07.632 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.VirtualViewManager$RenderableShadowNode
+03-14 23:01:07.651 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.debuggingoverlay.DebuggingOverlayManager
+03-14 23:01:07.662 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$FeMergeManager
+03-14 23:01:07.675 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.safeareaview.ReactSafeAreaViewManager
+03-14 23:01:07.685 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LinearGradientManager
+03-14 23:01:07.699 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$FeGaussianBlurManager
+03-14 23:01:07.716 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
+03-14 23:01:07.717 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
+03-14 23:01:07.730 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
+03-14 23:01:07.758 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
+03-14 23:01:07.762 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
+03-14 23:01:07.773 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$FeColorMatrixManager
+03-14 23:01:07.779 14172 14176 I .studentfinance: Compiler allocated 4219KB to compile void android.widget.TextView.<init>(android.content.Context, android.util.AttributeSet, int, int)
+03-14 23:01:07.780 14172 14224 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHoriz--------- beginning of main
+03-14 23:01:09.330 14354 14354 I .studentfinance: Late-enabling -Xcheck:jni
+03-14 23:01:09.420 14354 14354 I .studentfinance: Using CollectorTypeCMC GC.
+03-14 23:01:09.422 14354 14354 W .studentfinance: Unexpected CPU variant for x86: x86_64.
+03-14 23:01:09.422 14354 14354 W .studentfinance: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+03-14 23:01:09.433 14354 14354 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+--------- beginning of system
+03-14 23:01:09.465 14354 14354 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[com.mcfuzzysquirrel.studentfinance]: x86_64, null instrumentation[com.mcfuzzysquirrel.studentfinance.test]: null, null
+03-14 23:01:09.472 14354 14354 W .studentfinance: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]} | PCL[])
+03-14 23:01:09.475 14354 14354 W .studentfinance: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986])
+03-14 23:01:09.478 14354 14354 W .studentfinance: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902])
+03-14 23:01:09.479 14354 14354 W ziparchive: Unable to open '/data/app/~~jlDdMa7YJ2KCcmdo4JHU-Q==/com.mcfuzzysquirrel.studentfinance.test-YiBpcuh5N-ewevoNfoonZg==/base.dm': No such file or directory
+03-14 23:01:09.479 14354 14354 W ziparchive: Unable to open '/data/app/~~jlDdMa7YJ2KCcmdo4JHU-Q==/com.mcfuzzysquirrel.studentfinance.test-YiBpcuh5N-ewevoNfoonZg==/base.dm': No such file or directory
+03-14 23:01:09.607 14354 14354 W ziparchive: Unable to open '/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.dm': No such file or directory
+03-14 23:01:09.608 14354 14354 W ziparchive: Unable to open '/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.dm': No such file or directory
+03-14 23:01:10.015 14354 14354 D nativeloader: Configuring clns-7 for other apk /system/framework/android.test.runner.jar:/system/framework/android.test.mock.jar:/system/framework/android.test.base.jar:/data/app/~~jlDdMa7YJ2KCcmdo4JHU-Q==/com.mcfuzzysquirrel.studentfinance.test-YiBpcuh5N-ewevoNfoonZg==/base.apk:/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~jlDdMa7YJ2KCcmdo4JHU-Q==/com.mcfuzzysquirrel.studentfinance.test-YiBpcuh5N-ewevoNfoonZg==/lib/x86_64:/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/lib/x86_64:/data/app/~~jlDdMa7YJ2KCcmdo4JHU-Q==/com.mcfuzzysquirrel.studentfinance.test-YiBpcuh5N-ewevoNfoonZg==/base.apk!/lib/x86_64:/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.mcfuzzysquirrel.studentfinance
+03-14 23:01:10.028 14354 14354 V GraphicsEnvironment: Currently set values for:
+03-14 23:01:10.028 14354 14354 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+03-14 23:01:10.028 14354 14354 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+03-14 23:01:10.028 14354 14354 V GraphicsEnvironment: Global.Settings values are invalid: number of packages: 0, number of values: 0
+03-14 23:01:10.028 14354 14354 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+03-14 23:01:10.032 14354 14354 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+03-14 23:01:10.034 14354 14354 D nativeloader: Configuring clns-8 for other apk /system/framework/android.test.mock.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~jlDdMa7YJ2KCcmdo4JHU-Q==/com.mcfuzzysquirrel.studentfinance.test-YiBpcuh5N-ewevoNfoonZg==/lib/x86_64:/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/lib/x86_64, permitted_path=/data:/mnt/expand
+03-14 23:01:10.035 14354 14354 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+03-14 23:01:10.038 14354 14354 D nativeloader: Configuring clns-9 for other apk /system/framework/android.test.runner.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~jlDdMa7YJ2KCcmdo4JHU-Q==/com.mcfuzzysquirrel.studentfinance.test-YiBpcuh5N-ewevoNfoonZg==/lib/x86_64:/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/lib/x86_64, permitted_path=/data:/mnt/expand
+03-14 23:01:10.040 14354 14354 W .studentfinance: ClassLoaderContext shared library size mismatch. Expected=2, found=3 (PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]} | PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]#PCL[/system/framework/android.test.runner.jar*2496447986]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]}};PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902:/system/framework/android.test.base.jar*724373495:/data/app/~~jlDdMa7YJ2KCcmdo4JHU-Q==/com.mcfuzzysquirrel.studentfinance.test-YiBpcuh5N-ewevoNfoonZg==/base.apk*3224200876:/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk*2060289533])
+03-14 23:01:10.042 14354 14354 W .studentfinance: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]#PCL[/system/framework/android.test.runner.jar*2496447986]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]}};PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902:/system/framework/android.test.base.jar*724373495:/data/app/~~jlDdMa7YJ2KCcmdo4JHU-Q==/com.mcfuzzysquirrel.studentfinance.test-YiBpcuh5N-ewevoNfoonZg==/base.apk*3224200876:/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk*2060289533])
+03-14 23:01:10.044 14354 14354 W .studentfinance: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]#PCL[/system/framework/android.test.runner.jar*2496447986]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]}};PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902:/system/framework/android.test.base.jar*724373495:/data/app/~~jlDdMa7YJ2KCcmdo4JHU-Q==/com.mcfuzzysquirrel.studentfinance.test-YiBpcuh5N-ewevoNfoonZg==/base.apk*3224200876:/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk*2060289533])
+03-14 23:01:10.046 14354 14354 W ziparchive: Unable to open '/data/app/~~jlDdMa7YJ2KCcmdo4JHU-Q==/com.mcfuzzysquirrel.studentfinance.test-YiBpcuh5N-ewevoNfoonZg==/base.dm': No such file or directory
+03-14 23:01:10.046 14354 14354 W ziparchive: Unable to open '/data/app/~~jlDdMa7YJ2KCcmdo4JHU-Q==/com.mcfuzzysquirrel.studentfinance.test-YiBpcuh5N-ewevoNfoonZg==/base.dm': No such file or directory
+03-14 23:01:10.142 14354 14354 W ziparchive: Unable to open '/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.dm': No such file or directory
+03-14 23:01:10.142 14354 14354 W ziparchive: Unable to open '/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.dm': No such file or directory
+03-14 23:01:10.457 14354 14354 I AndroidJUnitRunner: newApplication com.mcfuzzysquirrel.studentfinance.MainApplication
+03-14 23:01:10.473 14354 14354 I AndroidJUnitRunner: onCreate Bundle[mParcelledData.dataSize=312]
+03-14 23:01:10.474 14354 14354 D AndroidJUnitRunner: Use the raw file system for managing file I/O.
+03-14 23:01:10.533 14354 14354 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+03-14 23:01:10.534 14354 14383 D AndroidJUnitRunner: onStart is called.
+03-14 23:01:10.537 14354 14354 W SoLoader: Initializing SoLoader: 0
+03-14 23:01:10.538 14354 14354 W SoLoader: Recording new base apk path: /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk
+03-14 23:01:10.538 14354 14354 W SoLoader: Previously recorded 0 base apk paths.
+03-14 23:01:10.540 14354 14354 I SoLoader: Preparing SO source: DirectorySoSource[root = /vendor/lib64 flags = 2]
+03-14 23:01:10.540 14354 14354 I SoLoader: Preparing SO source: DirectorySoSource[root = /system/lib64 flags = 2]
+03-14 23:01:10.540 14354 14354 I SoLoader: Preparing SO source: DirectApkSoSource[root = [/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64]]
+03-14 23:01:10.553 14354 14354 I SoLoader: Preparing SO source: ApplicationSoSource[DirectorySoSource[root = /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/lib/x86_64 flags = 0]]
+03-14 23:01:10.553 14354 14354 I SoLoader: init finish: 4 SO sources prepared
+03-14 23:01:10.553 14354 14354 W SoLoader: SoLoader initialized: 8
+03-14 23:01:10.577 14354 14354 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/libc++_shared.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk): ok
+03-14 23:01:10.585 14354 14354 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/libjsi.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk): ok
+03-14 23:01:10.593 14354 14354 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/libfbjni.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk): ok
+03-14 23:01:10.602 14354 14354 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/libreactnative.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk): ok
+03-14 23:01:10.602 14354 14354 D jni_lib_merge: Entering merged library JNI_OnLoad.
+03-14 23:01:10.602 14354 14354 D jni_lib_merge: Preparing 12 pre-merged libs (including stub)
+03-14 23:01:10.602 14354 14354 D jni_lib_merge: Preparing to register libfabricjni_so.  onload_func: 0x727ce529a730
+03-14 23:01:10.602 14354 14354 D jni_lib_merge: Preparing to register libreact_devsupportjni_so.  onload_func: 0x727ce5497190
+03-14 23:01:10.602 14354 14354 D jni_lib_merge: Preparing to register libreact_featureflagsjni_so.  onload_func: 0x727ce54a8910
+03-14 23:01:10.602 14354 14354 D jni_lib_merge: Preparing to register libreact_newarchdefaults_so.  onload_func: 0x727ce5549d20
+03-14 23:01:10.602 14354 14354 D jni_lib_merge: Preparing to register libreactnativeblob_so.  onload_func: 0x727ce57542e0
+03-14 23:01:10.602 14354 14354 D jni_lib_merge: Preparing to register libreactnativejni_so.  onload_func: 0x727ce5794770
+03-14 23:01:10.602 14354 14354 D jni_lib_merge: Preparing to register libreactnativejni_common_so.  onload_func: 0x727ce57a45d0
+03-14 23:01:10.602 14354 14354 D jni_lib_merge: Preparing to register librninstance_so.  onload_func: 0x727ce57e14c0
+03-14 23:01:10.602 14354 14354 D jni_lib_merge: Preparing to register libturbomodulejsijni_so.  onload_func: 0x727ce5942c00
+03-14 23:01:10.602 14354 14354 D jni_lib_merge: Preparing to register libuimanagerjni_so.  onload_func: 0x727ce595ade0
+03-14 23:01:10.602 14354 14354 D jni_lib_merge: Preparing to register libyoga_so.  onload_func: 0x727ce5969d70
+03-14 23:01:10.602 14354 14354 D jni_lib_merge: About to register 11 actual methods.
+03-14 23:01:10.621 14354 14354 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/libreact_codegen_rnscreens.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk): ok
+03-14 23:01:10.621 14354 14354 D jni_lib_merge: Entering merged library JNI_OnLoad.
+03-14 23:01:10.621 14354 14354 D jni_lib_merge: Preparing 12 pre-merged libs (including stub)
+03-14 23:01:10.621 14354 14354 D jni_lib_merge: Preparing to register libfabricjni_so.  onload_func: 0x727ce529a730
+03-14 23:01:10.621 14354 14354 D jni_lib_merge: Preparing to register libreact_devsupportjni_so.  onload_func: 0x727ce5497190
+03-14 23:01:10.621 14354 14354 D jni_lib_merge: Preparing to register libreact_featureflagsjni_so.  onload_func: 0x727ce54a8910
+03-14 23:01:10.621 14354 14354 D jni_lib_merge: Preparing to register libreact_newarchdefaults_so.  onload_func: 0x727ce5549d20
+03-14 23:01:10.621 14354 14354 D jni_lib_merge: Preparing to register libreactnativeblob_so.  onload_func: 0x727ce57542e0
+03-14 23:01:10.621 14354 14354 D jni_lib_merge: Preparing to register libreactnativejni_so.  onload_func: 0x727ce5794770
+03-14 23:01:10.621 14354 14354 D jni_lib_merge: Preparing to register libreactnativejni_common_so.  onload_func: 0x727ce57a45d0
+03-14 23:01:10.621 14354 14354 D jni_lib_merge: Preparing to register librninstance_so.  onload_func: 0x727ce57e14c0
+03-14 23:01:10.621 14354 14354 D jni_lib_merge: Preparing to register libturbomodulejsijni_so.  onload_func: 0x727ce5942c00
+03-14 23:01:10.621 14354 14354 D jni_lib_merge: Preparing to register libuimanagerjni_so.  onload_func: 0x727ce595ade0
+03-14 23:01:10.621 14354 14354 D jni_lib_merge: Preparing to register libyoga_so.  onload_func: 0x727ce5969d70
+03-14 23:01:10.621 14354 14354 D jni_lib_merge: About to register 11 actual methods.
+03-14 23:01:10.630 14354 14354 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/libreact_codegen_rnsvg.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk): ok
+03-14 23:01:10.630 14354 14354 D jni_lib_merge: Entering merged library JNI_OnLoad.
+03-14 23:01:10.630 14354 14354 D jni_lib_merge: Preparing 12 pre-merged libs (including stub)
+03-14 23:01:10.630 14354 14354 D jni_lib_merge: Preparing to register libfabricjni_so.  onload_func: 0x727ce529a730
+03-14 23:01:10.630 14354 14354 D jni_lib_merge: Preparing to register libreact_devsupportjni_so.  onload_func: 0x727ce5497190
+03-14 23:01:10.630 14354 14354 D jni_lib_merge: Preparing to register libreact_featureflagsjni_so.  onload_func: 0x727ce54a8910
+03-14 23:01:10.630 14354 14354 D jni_lib_merge: Preparing to register libreact_newarchdefaults_so.  onload_func: 0x727ce5549d20
+03-14 23:01:10.630 14354 14354 D jni_lib_merge: Preparing to register libreactnativeblob_so.  onload_func: 0x727ce57542e0
+03-14 23:01:10.630 14354 14354 D jni_lib_merge: Preparing to register libreactnativejni_so.  onload_func: 0x727ce5794770
+03-14 23:01:10.630 14354 14354 D jni_lib_merge: Preparing to register libreactnativejni_common_so.  onload_func: 0x727ce57a45d0
+03-14 23:01:10.630 14354 14354 D jni_lib_merge: Preparing to register librninstance_so.  onload_func: 0x727ce57e14c0
+03-14 23:01:10.630 14354 14354 D jni_lib_merge: Preparing to register libturbomodulejsijni_so.  onload_func: 0x727ce5942c00
+03-14 23:01:10.630 14354 14354 D jni_lib_merge: Preparing to register libuimanagerjni_so.  onload_func: 0x727ce595ade0
+03-14 23:01:10.630 14354 14354 D jni_lib_merge: Preparing to register libyoga_so.  onload_func: 0x727ce5969d70
+03-14 23:01:10.630 14354 14354 D jni_lib_merge: About to register 11 actual methods.
+03-14 23:01:10.638 14354 14354 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/libreact_codegen_safeareacontext.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk): ok
+03-14 23:01:10.643 14354 14354 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/libappmodules.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk): ok
+03-14 23:01:10.695 14354 14383 I InstrConnection: Could not send broadcast or register receiver (isolatedProcess?)
+03-14 23:01:10.698 14354 14383 D TestRequestBuilder: Using class path scanning to discover tests
+03-14 23:01:10.698 14354 14383 I TestRequestBuilder: Scanning classpath to find tests in paths [/data/app/~~jlDdMa7YJ2KCcmdo4JHU-Q==/com.mcfuzzysquirrel.studentfinance.test-YiBpcuh5N-ewevoNfoonZg==/base.apk]
+03-14 23:01:10.699 14354 14383 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 23:01:11.071 14354 14383 I TestRunner: run started: 1 tests
+03-14 23:01:11.072 14354 14383 I TestRunner: started: runDetoxTests(com.mcfuzzysquirrel.studentfinance.DetoxTest)
+03-14 23:01:11.078 14354 14383 I Detox   : Detox server connection details: url=ws://localhost:38775, sessionId=081d4e8b-1bbc-5e02-010e-cf73b44d4af1
+03-14 23:01:11.084 14354 14383 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+03-14 23:01:11.095 14354 14383 W .studentfinance: Accessing hidden field Ljava/lang/reflect/Field;->accessFlags:I (unsupported, reflection, allowed)
+03-14 23:01:11.097 14354 14383 I Detox   : Connecting to server...
+03-14 23:01:11.097 14354 14383 I DetoxWSClient: At connectToServer
+03-14 23:01:11.135 14354 14389 D TrafficStats: tagSocket(102) with statsTag=0xffffffff, statsUid=-1
+03-14 23:01:11.147 14354 14389 D DetoxWSClient: At onOpen
+03-14 23:01:11.147 14354 14389 I DetoxWSClient: Sending out action 'login' (ID #0)
+03-14 23:01:11.147 14354 14389 I Detox   : Connected to server!
+03-14 23:01:11.150 14354 14389 D DetoxWSClient: Received action 'loginSuccess' (ID #0, params={"testerConnected":true,"appConnected":true})
+03-14 23:01:11.151 14354 14385 I DetoxDispatcher: Handling action 'loginSuccess' (ID #0)...
+03-14 23:01:11.151 14354 14385 I DetoxDispatcher: Done with action 'loginSuccess'
+03-14 23:01:11.151 14354 14383 I Detox   : Launching the tested activity!
+03-14 23:01:11.208 14354 14389 D DetoxWSClient: Received action 'isReady' (ID #-1000, params={})
+03-14 23:01:11.208 14354 14385 I DetoxDispatcher: Handling action 'isReady' (ID #-1000)...
+03-14 23:01:11.570 14354 14354 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+03-14 23:01:11.592 14354 14354 D LifecycleMonitor: Lifecycle status change: com.mcfuzzysquirrel.studentfinance.MainActivity@340991c in: PRE_ON_CREATE
+03-14 23:01:12.080 14354 14354 W unknown:BridgelessReact: ReactHost{0}.startSurface(surfaceId = 0): Schedule
+03-14 23:01:12.080 14354 14354 W unknown:BridgelessReact: ReactHost{0}.attachSurface(surfaceId = 0)
+03-14 23:01:12.085 14354 14413 W unknown:BridgelessReact: ReactHost{0}.getOrCreateReactInstanceTask()
+03-14 23:01:12.085 14354 14413 W unknown:BridgelessReact: ReactHost{0}.getOrCreateReactInstanceTask(): Start
+03-14 23:01:12.085 14354 14413 D Detox.RNMarker: REACT_BRIDGELESS_LOADING_START (null)
+03-14 23:01:12.085 14354 14413 W unknown:BridgelessReact: ReactHost{0}.getJSBundleLoader()
+03-14 23:01:12.086 14354 14413 W unknown:BridgelessReact: ReactHost{0}.isMetroRunning()
+03-14 23:01:12.124 14354 14415 D TrafficStats: tagSocket(109) with statsTag=0xffffffff, statsUid=-1
+03-14 23:01:12.126 14354 14414 D TrafficStats: tagSocket(111) with statsTag=0xffffffff, statsUid=-1
+03-14 23:01:12.132 14354 14414 W unknown:ReactNative: The packager does not seem to be running as we got an IOException requesting its status: Failed to connect to /10.0.2.2:8081
+03-14 23:01:12.133 14354 14414 W unknown:BridgelessReact: ReactHost{0}.isMetroRunning(): Async result = false
+03-14 23:01:12.135 14354 14413 W unknown:BridgelessReact: ReactHost{0}.getOrCreateReactInstanceTask(): Creating BridgelessReactContext
+03-14 23:01:12.138 14354 14413 W unknown:BridgelessReact: ReactHost{0}.getOrCreateReactInstanceTask(): Creating ReactInstance
+03-14 23:01:12.153 14354 14354 W .studentfinance: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+03-14 23:01:12.164 14354 14354 D LifecycleMonitor: Lifecycle status change: com.mcfuzzysquirrel.studentfinance.MainActivity@340991c in: CREATED
+03-14 23:01:12.168 14354 14354 D LifecycleMonitor: Lifecycle status change: com.mcfuzzysquirrel.studentfinance.MainActivity@340991c in: STARTED
+03-14 23:01:12.172 14354 14415 W unknown:ReconnectingWebSocket: Couldn't connect to "ws://10.0.2.2:8081/message?device=sdk_gphone64_x86_64%20-%2015%20-%20API%2035&app=com.mcfuzzysquirrel.studentfinance&clientid=BridgelessDevSupportManager", will silently retry
+03-14 23:01:12.189 14354 14354 W unknown:BridgelessReact: ReactHost{0}.onHostResume(activity)
+03-14 23:01:12.191 14354 14354 W unknown:ReactNative: Packager connection already open, nooping.
+03-14 23:01:12.192 14354 14354 W unknown:BridgelessReact: ReactHost{0}.ReactContext.onHostResume()
+03-14 23:01:12.194 14354 14354 D LifecycleMonitor: Lifecycle status change: com.mcfuzzysquirrel.studentfinance.MainActivity@340991c in: RESUMED
+03-14 23:01:12.217 14354 14413 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/libhermesvm.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk): ok
+03-14 23:01:12.220 14354 14413 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/libhermestooling.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk): ok
+03-14 23:01:12.220 14354 14413 D jni_lib_merge: Entering merged library JNI_OnLoad.
+03-14 23:01:12.220 14354 14413 D jni_lib_merge: Preparing 4 pre-merged libs (including stub)
+03-14 23:01:12.221 14354 14413 D jni_lib_merge: Preparing to register libhermes_executor_so.  onload_func: 0x727cdc1ab050
+03-14 23:01:12.221 14354 14413 D jni_lib_merge: Preparing to register libhermesinstancejni_so.  onload_func: 0x727cdc1e1680
+03-14 23:01:12.221 14354 14413 D jni_lib_merge: Preparing to register libjsijniprofiler_so.  onload_func: 0x727cdc1e33f0
+03-14 23:01:12.221 14354 14413 D jni_lib_merge: About to register 3 actual methods.
+03-14 23:01:12.265 14354 14354 W HWUI    : Unknown dataspace 0
+03-14 23:01:12.266 14354 14418 D TrafficStats: tagSocket(115) with statsTag=0xffffffff, statsUid=-1
+03-14 23:01:12.395 14354 14395 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+03-14 23:01:12.395 14354 14395 I EGL_emulation: Opening libGLESv2_emulation.so
+03-14 23:01:12.487 14354 14395 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+03-14 23:01:12.596 14354 14413 W .studentfinance: Verification of expo.modules.kotlin.modules.ModuleDefinitionData expo.modules.kotlin.defaultmodules.NativeModulesProxyModule.definition() took 102.471ms (4752.55 bytecodes/s) (13008B approximate peak alloc)
+03-14 23:01:12.614 14354 14395 I Gralloc4: mapper 4.x is not supported
+03-14 23:01:12.862 14354 14354 I Choreographer: Skipped 31 frames!  The application may be doing too much work on its main thread.
+03-14 23:01:12.993 14354 14413 W .studentfinance: Verification of expo.modules.kotlin.modules.ModuleDefinitionData expo.modules.filesystem.FileSystemModule.definition() took 189.291ms (55818.62 bytecodes/s) (202904B approximate peak alloc)
+03-14 23:01:13.281 14354 14413 I ExpoModulesCore: ✅ AppContext was initialized
+03-14 23:01:13.451 14354 14413 W unknown:BridgelessReact: ReactHost{0}.getOrCreateReactInstanceTask(): Loading JS Bundle
+03-14 23:01:13.453 14354 14416 D Detox.RNMarker: RUN_JS_BUNDLE_START (index.android.bundle)
+03-14 23:01:13.460 14354 14413 W unknown:BridgelessReact: ReactHost{0}.getOrCreateReactInstanceTask(): DevSupportManager.onNewReactContextCreated()
+03-14 23:01:13.470 14354 14354 W unknown:ReactNative: Packager connection already open, nooping.
+03-14 23:01:13.476 14354 14413 W unknown:BridgelessReact: ReactHost{0}.startSurface(surfaceId = 0): Execute
+03-14 23:01:13.477 14354 14354 W unknown:BridgelessReact: ReactHost{0}.ReactContext.onHostResume()
+03-14 23:01:13.478 14354 14354 W unknown:BridgelessReact: ReactHost{0}.getOrCreateReactInstanceTask(): Executing ReactInstanceEventListeners
+03-14 23:01:13.478 14354 14354 I DetoxRNLoading: Got new RN-context through listener
+03-14 23:01:13.482 14354 14385 W .studentfinance: Long monitor contention with owner Instr: androidx.test.runner.AndroidJUnitRunner (14383) at void com.wix.detox.DetoxMain.launchActivityOnCue(android.content.Context, com.wix.detox.ActivityLaunchHelper)(DetoxMain.kt:53) waiters=0 in void com.wix.detox.DetoxMain$setupActionHandlers$SynchronizedActionHandler.handle(java.lang.String, long) for 2.274s
+03-14 23:01:13.485 14354 14354 W .studentfinance: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+03-14 23:01:13.485 14354 14354 W .studentfinance: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+03-14 23:01:13.485 14354 14354 W .studentfinance: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+03-14 23:01:13.486 14354 14354 I Detox   : Wait is over: App is now idle!
+03-14 23:01:13.490 14354 14385 I DetoxWSClient: Sending out action 'ready' (ID #-1000)
+03-14 23:01:13.490 14354 14385 I DetoxDispatcher: Done with action 'isReady'
+03-14 23:01:13.519 14354 14361 I .studentfinance: Compiler allocated 5174KB to compile void android.view.ViewRootImpl.performTraversals()
+03-14 23:01:13.525 14354 14416 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/libexpo-modules-core.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk): ok
+03-14 23:01:13.532 14354 14389 D DetoxWSClient: Received action 'invoke' (ID #1, params={"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-add-expense-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Double","value":15}]})
+03-14 23:01:13.536 14354 14385 I DetoxDispatcher: Handling action 'invoke' (ID #1)...
+03-14 23:01:13.543 14354 14385 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForTestId, [dashboard-add-expense-button, false]
+03-14 23:01:13.555 14354 14385 D Detox   : class androidx.test.espresso.Espresso, onView, [(view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)]
+03-14 23:01:13.567 14354 14385 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForSufficientlyVisible, [75]
+03-14 23:01:13.568 14354 14385 D Detox   : class com.wix.detox.espresso.DetoxAssertion, waitForAssertMatcher, [androidx.test.espresso.ViewInteraction@592f8bf, (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area), 15.0]
+03-14 23:01:13.588 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:13.611 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaProviderManager
+03-14 23:01:13.625 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
+03-14 23:01:13.627 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:13.630 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.SearchBarManager
+03-14 23:01:13.632 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenFooterManager
+03-14 23:01:13.634 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.gamma.tabs.TabScreenViewManager
+03-14 23:01:13.635 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class expo.modules.kotlin.views.GroupViewManagerWrapper
+03-14 23:01:13.637 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContainerViewManager
+03-14 23:01:13.638 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.gamma.tabs.TabsHostViewManager
+03-14 23:01:13.642 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ModalScreenViewManager
+03-14 23:01:13.643 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderConfigViewManager
+03-14 23:01:13.644 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContentWrapperManager
+03-14 23:01:13.645 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewManager
+03-14 23:01:13.647 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewShadowNode
+03-14 23:01:13.648 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.safearea.SafeAreaViewManager
+03-14 23:01:13.648 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.safearea.paper.SafeAreaViewShadowNode
+03-14 23:01:13.649 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenViewManager
+03-14 23:01:13.651 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.gamma.stack.host.StackHostViewManager
+03-14 23:01:13.652 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderSubviewManager
+03-14 23:01:13.653 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.gamma.stack.screen.StackScreenViewManager
+03-14 23:01:13.653 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackViewManager
+03-14 23:01:13.659 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:13.695 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:13.726 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:13.762 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:13.800 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:13.830 14354 14361 I .studentfinance: Compiler allocated 4219KB to compile void android.widget.TextView.<init>(android.content.Context, android.util.AttributeSet, int, int)
+03-14 23:01:13.835 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:13.839 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$DefsViewManager
+03-14 23:01:13.841 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.VirtualViewManager$RenderableShadowNode
+03-14 23:01:13.850 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.debuggingoverlay.DebuggingOverlayManager
+03-14 23:01:13.859 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$FeMergeManager
+03-14 23:01:13.879 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.safeareaview.ReactSafeAreaViewManager
+03-14 23:01:13.881 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:13.895 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LinearGradientManager
+03-14 23:01:13.903 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$FeGaussianBlurManager
+03-14 23:01:13.911 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
+03-14 23:01:13.911 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
+03-14 23:01:13.912 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:13.918 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
+03-14 23:01:13.928 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
+03-14 23:01:13.929 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
+03-14 23:01:13.938 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:13.939 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$FeColorMatrixManager
+03-14 23:01:13.946 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
+03-14 23:01:13.953 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ClipPathViewManager
+03-14 23:01:13.962 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$SymbolManager
+03-14 23:01:13.966 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:13.971 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PatternManager
+03-14 23:01:13.979 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$FeBlendManager
+03-14 23:01:13.986 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
+03-14 23:01:13.993 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.SvgViewManager
+03-14 23:01:13.996 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.002 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
+03-14 23:01:14.003 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchShadowNode
+03-14 23:01:14.010 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$UseViewManager
+03-14 23:01:14.019 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$CircleViewManager
+03-14 23:01:14.024 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.026 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TSpanViewManager
+03-14 23:01:14.034 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$FilterManager
+03-14 23:01:14.040 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MarkerManager
+03-14 23:01:14.048 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerButtonViewManager
+03-14 23:01:14.051 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.056 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
+03-14 23:01:14.063 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ForeignObjectManager
+03-14 23:01:14.071 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$EllipseViewManager
+03-14 23:01:14.078 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.080 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LineViewManager
+03-14 23:01:14.088 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
+03-14 23:01:14.089 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
+03-14 23:01:14.095 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$FeFloodManager
+03-14 23:01:14.101 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$GroupViewManager
+03-14 23:01:14.106 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.109 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextViewManager
+03-14 23:01:14.117 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ImageViewManager
+03-14 23:01:14.125 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$FeCompositeManager
+03-14 23:01:14.133 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.137 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
+03-14 23:01:14.146 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RadialGradientManager
+03-14 23:01:14.153 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MaskManager
+03-14 23:01:14.161 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
+03-14 23:01:14.162 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.167 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RectViewManager
+03-14 23:01:14.179 14354 14415 D TrafficStats: tagSocket(132) with statsTag=0xffffffff, statsUid=-1
+03-14 23:01:14.180 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextPathViewManager
+03-14 23:01:14.194 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.195 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
+03-14 23:01:14.207 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$FeOffsetManager
+03-14 23:01:14.214 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PathViewManager
+03-14 23:01:14.223 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
+03-14 23:01:14.232 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.234 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
+03-14 23:01:14.243 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
+03-14 23:01:14.245 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
+03-14 23:01:14.252 14354 14416 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerRootViewManager
+03-14 23:01:14.260 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.283 14354 14416 W BridgelessReactContext: [WARNING] Bridgeless doesn't support CatalystInstance. Accessing an API that's not part of the new architecture is not encouraged usage.
+03-14 23:01:14.286 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.297 14354 14416 I ExpoModulesCore: ✅ JSI interop was installed
+03-14 23:01:14.301 14354 14416 I ExpoModulesCore: ✅ Constants were exported
+03-14 23:01:14.314 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.338 14354 14416 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/librnscreens.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!classes16.dex): ok
+03-14 23:01:14.342 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.369 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.394 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.427 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.456 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.486 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.515 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.543 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.571 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.598 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.607 14354 14416 D Detox.RNMarker: RUN_JS_BUNDLE_END (index.android.bundle)
+03-14 23:01:14.608 14354 14416 I ReactNativeJS: Running "main"
+03-14 23:01:14.612 14354 14416 D Detox.RNMarker: REACT_BRIDGELESS_LOADING_END (null)
+03-14 23:01:14.621 14354 14416 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/libgesturehandler.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk): ok
+03-14 23:01:14.621 14354 14416 D jni_lib_merge: Entering merged library JNI_OnLoad.
+03-14 23:01:14.621 14354 14416 D jni_lib_merge: Preparing 12 pre-merged libs (including stub)
+03-14 23:01:14.621 14354 14416 D jni_lib_merge: Preparing to register libfabricjni_so.  onload_func: 0x727ce529a730
+03-14 23:01:14.621 14354 14416 D jni_lib_merge: Preparing to register libreact_devsupportjni_so.  onload_func: 0x727ce5497190
+03-14 23:01:14.621 14354 14416 D jni_lib_merge: Preparing to register libreact_featureflagsjni_so.  onload_func: 0x727ce54a8910
+03-14 23:01:14.621 14354 14416 D jni_lib_merge: Preparing to register libreact_newarchdefaults_so.  onload_func: 0x727ce5549d20
+03-14 23:01:14.621 14354 14416 D jni_lib_merge: Preparing to register libreactnativeblob_so.  onload_func: 0x727ce57542e0
+03-14 23:01:14.621 14354 14416 D jni_lib_merge: Preparing to register libreactnativejni_so.  onload_func: 0x727ce5794770
+03-14 23:01:14.621 14354 14416 D jni_lib_merge: Preparing to register libreactnativejni_common_so.  onload_func: 0x727ce57a45d0
+03-14 23:01:14.621 14354 14416 D jni_lib_merge: Preparing to register librninstance_so.  onload_func: 0x727ce57e14c0
+03-14 23:01:14.621 14354 14416 D jni_lib_merge: Preparing to register libturbomodulejsijni_so.  onload_func: 0x727ce5942c00
+03-14 23:01:14.621 14354 14416 D jni_lib_merge: Preparing to register libuimanagerjni_so.  onload_func: 0x727ce595ade0
+03-14 23:01:14.621 14354 14416 D jni_lib_merge: Preparing to register libyoga_so.  onload_func: 0x727ce5969d70
+03-14 23:01:14.621 14354 14416 D jni_lib_merge: About to register 11 actual methods.
+03-14 23:01:14.623 14354 14354 I ReactNative: [GESTURE HANDLER] Initialize gesture handler for root view com.facebook.react.runtime.ReactSurfaceView{fea8024 V.E...... ......ID 0,0-1080,2400 #1}
+03-14 23:01:14.625 14354 14354 D Detox.RNMarker: CONTENT_APPEARED (main)
+03-14 23:01:14.638 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.768 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.813 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.845 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.864 14354 14418 D TrafficStats: tagSocket(139) with statsTag=0xffffffff, statsUid=-1
+03-14 23:01:14.867 14354 14416 D nativeloader: Load /data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!/lib/x86_64/libexpo-sqlite.so using ns clns-7 from class loader (caller=/data/app/~~wRzbvG75nM6MLt9mhOT8kw==/com.mcfuzzysquirrel.studentfinance-JYvgJb_EqJGe5B4qYL6Sfg==/base.apk!classes20.dex): ok
+03-14 23:01:14.873 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.900 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.928 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.954 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:14.983 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:15.021 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:15.054 14354 14354 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-add-expense-button" and view has effective visibility <VISIBLE>)
+03-14 23:01:15.058 14354 14354 W .studentfinance: Accessing hidden field Landroid/widget/ScrollView;->mScroller:Landroid/widget/OverScroller; (unsupported, reflection, allowed)
+03-14 23:01:15.105 14354 14354 W [RNScreens]: backTitleFontFamily prop is not available on Android
+03-14 23:01:15.105 14354 14354 W [RNScreens]: disableBackButtonMenu prop is not available on Android
+03-14 23:01:15.105 14354 14354 W [RNScreens]: backTitleVisible prop is not available on Android
+03-14 23:01:15.105 14354 14354 W [RNScreens]: topInsetEnabled prop is not available on Android
+03-14 23:01:15.105 14354 14354 W [RNScreens]: largeTitleHideShadow prop is not available on Android
+03-14 23:01:15.105 14354 14354 W [RNScreens]: largeTitleFontWeight prop is not available on Android
+03-14 23:01:15.105 14354 14354 W [RNScreens]: userInterfaceStyle prop is n

@@ -1,7 +1,7 @@
 import type { SQLiteDatabase } from 'expo-sqlite';
 
 import { DatabaseError } from '@/db/errors';
-import { normalizeOptionalText, toDbBoolean } from '@/db/shared';
+import { generateId, normalizeOptionalText, toDbBoolean } from '@/db/shared';
 import type { Category } from '@/types';
 
 type CategoryRow = {
@@ -29,7 +29,7 @@ export async function getAllCategories(db: SQLiteDatabase): Promise<Category[]> 
 }
 
 export async function insertCategory(db: SQLiteDatabase, category: Omit<Category, 'id'>): Promise<Category> {
-  const id = crypto.randomUUID();
+  const id = generateId();
   const icon = normalizeOptionalText(category.icon);
 
   await db.runAsync('INSERT INTO categories (id, name, icon, is_custom) VALUES (?, ?, ?, ?);', [

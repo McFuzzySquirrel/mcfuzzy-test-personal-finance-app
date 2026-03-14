@@ -1,0 +1,1970 @@
+22:52:30.096 detox[113446] [90mB[39m node_modules/.bin/detox test -c android.emu.debug --record-logs all --take-screenshots failing --record-videos failing --artifacts-location artifacts/detox
+  data: {
+    "id": "edc3403e-888e-5a14-7394-19d0a4974e28",
+    "detoxConfig": {
+      "configurationName": "android.emu.debug",
+      "apps": {
+        "default": {
+          "type": "android.apk",
+          "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+          "testBinaryPath": "android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk",
+          "build": "if [ ! -d android ]; then CI=1 npx expo prebuild --platform android; fi && cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug",
+          "reversePorts": [
+            8081
+          ]
+        }
+      },
+      "artifacts": {
+        "rootDir": "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z",
+        "plugins": {
+          "log": {
+            "enabled": true,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "screenshot": {
+            "enabled": true,
+            "shouldTakeAutomaticSnapshots": true,
+            "keepOnlyFailedTestsArtifacts": true
+          },
+          "video": {
+            "enabled": true,
+            "keepOnlyFailedTestsArtifacts": true
+          },
+          "instruments": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "uiHierarchy": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          }
+        }
+      },
+      "behavior": {
+        "init": {
+          "keepLockFile": false,
+          "reinstallApp": true,
+          "exposeGlobals": true
+        },
+        "cleanup": {
+          "shutdownDevice": false
+        },
+        "launchApp": "auto"
+      },
+      "cli": {
+        "artifactsLocation": "artifacts/detox",
+        "recordLogs": "all",
+        "takeScreenshots": "failing",
+        "recordVideos": "failing",
+        "configuration": "android.emu.debug",
+        "start": true
+      },
+      "commands": [
+        {
+          "appName": "default",
+          "build": "if [ ! -d android ]; then CI=1 npx expo prebuild --platform android; fi && cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug"
+        }
+      ],
+      "device": {
+        "type": "android.emulator",
+        "device": {
+          "avdName": "detox-api35"
+        }
+      },
+      "logger": {
+        "level": "info",
+        "overrideConsole": true,
+        "options": {
+          "showLoggerName": true,
+          "showPid": true,
+          "showLevel": false,
+          "showMetadata": false,
+          "basepath": "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src",
+          "prefixers": {},
+          "stringifiers": {}
+        }
+      },
+      "testRunner": {
+        "retries": 0,
+        "forwardEnv": false,
+        "detached": false,
+        "bail": false,
+        "noRetryArgs": [
+          "shard"
+        ],
+        "jest": {
+          "setupTimeout": 180000,
+          "teardownTimeout": 30000,
+          "retryAfterCircusRetries": false,
+          "reportWorkerAssign": true
+        },
+        "args": {
+          "$0": "jest",
+          "_": [],
+          "config": "e2e/jest.config.js",
+          "--": []
+        }
+      },
+      "session": {
+        "autoStart": true,
+        "debugSynchronization": 10000
+      }
+    },
+    "detoxIPCServer": "primary-113446",
+    "testResults": [],
+    "testSessionIndex": 0,
+    "workersCount": 0
+  }
+22:52:30.103 detox[113446] [90mi[39m Server path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + ipc.config.id /tmp/detox.primary-113446
+22:52:30.105 detox[113446] [90mi[39m starting server on  /tmp/detox.primary-113446 
+22:52:30.105 detox[113446] [90mi[39m starting TLS server false
+22:52:30.105 detox[113446] [90mi[39m starting server as Unix || Windows Socket
+22:52:30.108 detox[113446] [90mi[39m Detox server listening on localhost:45913...
+22:52:30.119 detox[113446] [90mi[39m Serialized the session state at: /tmp/edc3403e-888e-5a14-7394-19d0a4974e28.detox.json
+22:52:30.120 detox[113446] [90mB[39m jest --config e2e/jest.config.js
+22:52:30.587 detox[113471] [90mi[39m Service path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + id 
+22:52:30.588 detox[113471] [90mi[39m requested connection to  primary-113446 /tmp/detox.primary-113446
+22:52:30.588 detox[113471] [90mi[39m Connecting client on Unix Socket : /tmp/detox.primary-113446
+22:52:30.590 detox[113446] [90mi[39m ## socket connection to server detected ##
+22:52:30.591 detox[113471] [90mi[39m retrying reset
+22:52:30.592 detox[113471] [90mi[39m dispatching event to  primary-113446 /tmp/detox.primary-113446  :  registerContext , { id: 'secondary-113471' }
+22:52:30.594 detox[113446] [90mi[39m received event of :  registerContext { id: 'secondary-113471' }
+22:52:30.594 detox[113446] [90mi[39m dispatching event to socket  :  registerContextDone {
+  testResults: [],
+  testSessionIndex: 0,
+  unsafe_earlyTeardown: undefined
+}
+22:52:30.595 detox[113471] [90mi[39m ## received events ##
+22:52:30.596 detox[113471] [90mi[39m detected event registerContextDone { testResults: [], testSessionIndex: 0 }
+22:52:30.724 detox[113471] [90mB[39m e2e/smoke.e2e.js
+22:52:30.745 detox[113471] [90mB[39m set up environment
+22:52:30.746 detox[113471] [90mi[39m dispatching event to  primary-113446 /tmp/detox.primary-113446  :  registerWorker , { workerId: 'w1' }
+22:52:30.747 detox[113446] [90mi[39m received event of :  registerWorker { workerId: 'w1' }
+22:52:30.747 detox[113446] [90mi[39m dispatching event to socket  :  registerWorkerDone { workersCount: 1 }
+22:52:30.748 detox[113446] [90mi[39m broadcasting event to all known sockets listening to  /tmp/detox.primary-113446  :   sessionStateUpdate { workersCount: 1 }
+22:52:30.751 detox[113471] [90mi[39m ## received events ##
+22:52:30.751 detox[113471] [90mi[39m detected event registerWorkerDone { workersCount: 1 }
+22:52:30.751 detox[113471] [90mi[39m detected event sessionStateUpdate { workersCount: 1 }
+22:52:30.972 detox[113446] [90mB[39m connection :45913<->:58096
+22:52:30.978 detox[113471] [90mi[39m opened web socket to: ws://localhost:45913
+22:52:30.984 detox[113471] [90mi[39m send message
+  data: {"type":"login","params":{"sessionId":"09664e91-fdcf-22e1-af8e-d3275d81a9b7","role":"tester"},"messageId":0}
+22:52:30.986 detox[113446] [90mi[39m get
+  data: {"type":"login","params":{"sessionId":"09664e91-fdcf-22e1-af8e-d3275d81a9b7","role":"tester"},"messageId":0}
+22:52:30.986 detox[113446] [90mi[39m created session 09664e91-fdcf-22e1-af8e-d3275d81a9b7
+22:52:30.986 detox[113446] [90mi[39m send
+  data: {
+    "type": "loginSuccess",
+    "params": {
+      "testerConnected": true,
+      "appConnected": false
+    },
+    "messageId": 0
+  }
+22:52:30.987 detox[113446] [90mi[39m tester joined session 09664e91-fdcf-22e1-af8e-d3275d81a9b7
+22:52:30.989 detox[113471] [90mi[39m get message
+  data: {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+   
+22:52:31.045 detox[113471] [90mi[39m dispatching event to  primary-113446 /tmp/detox.primary-113446  :  allocateDevice , {
+  deviceConfig: { type: 'android.emulator', device: { avdName: 'detox-api35' } }
+}
+22:52:31.046 detox[113446] [90mi[39m received event of :  allocateDevice {
+  deviceConfig: { type: 'android.emulator', device: { avdName: 'detox-api35' } }
+}
+22:52:31.087 detox[113446] [90mB[39m init
+  args: ()
+22:52:31.090 detox[113446] [90mE[39m init
+22:52:31.091 detox[113446] [90mB[39m allocate
+  data: {
+    "type": "android.emulator",
+    "device": {
+      "avdName": "detox-api35"
+    }
+  }
+22:52:31.263 detox[113446] [90mi[39m Detected emulator binary version { major: 36, minor: 4, patch: 10, toString: [Function: toString] }
+22:52:31.269 detox[113446] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb"  devices
+22:52:31.287 detox[113446] [90mi[39m List of devices attached
+emulator-5554	device
+
+
+22:52:31.289 detox[113446] [90mi[39m port: 5554, host: localhost
+22:52:31.309 detox[113446] [90mi[39m Found a matching & free device emulator-5554
+22:52:31.313 detox[113446] [90mi[39m settled on emulator-5554 (detox-api35)
+  data: {
+    "id": "emulator-5554",
+    "adbName": "emulator-5554",
+    "name": "emulator-5554 (detox-api35)"
+  }
+22:52:31.313 detox[113446] [90mE[39m allocate
+22:52:31.313 detox[113446] [90mB[39m post-allocate: emulator-5554
+  data: {
+    "id": "emulator-5554",
+    "adbName": "emulator-5554",
+    "name": "emulator-5554 (detox-api35)"
+  }
+22:52:31.314 detox[113446] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "getprop dev.bootcomplete"
+22:52:31.367 detox[113446] [90mi[39m 1
+
+22:52:31.367 detox[113446] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "getprop ro.build.version.sdk"
+22:52:31.410 detox[113446] [90mi[39m 35
+
+22:52:31.410 detox[113446] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "settings put global animator_duration_scale 0"
+22:52:31.486 detox[113446] [90mi[39m 
+22:52:31.486 detox[113446] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "settings put global window_animation_scale 0"
+22:52:31.535 detox[113446] [90mi[39m 
+22:52:31.536 detox[113446] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "settings put global transition_animation_scale 0"
+22:52:31.573 detox[113446] [90mi[39m 
+22:52:31.574 detox[113446] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "dumpsys power | grep \"^[ ]*m[UW].*=\""
+22:52:31.834 detox[113446] [90mi[39m   mWakefulness=Awake
+  mWakefulnessChanging=false
+  mUseAutoSuspend=true
+  mWakeLockSummary=0x0
+  mWakeUpWhenPluggedOrUnpluggedConfig=false
+  mWakeUpWhenPluggedOrUnpluggedInTheaterModeConfig=false
+  mUserActivityTimeoutOverrideFromWindowManager=-1
+  mUserInactiveOverrideFromWindowManager=false
+  mUserId=0
+  mWakeLockSummary=0x0
+  mUserInteractionBackoffMillis=60000
+
+22:52:31.834 detox[113446] [90mE[39m post-allocate: emulator-5554
+22:52:31.834 detox[113446] [90mi[39m dispatching event to socket  :  allocateDeviceDone {
+  deviceCookie: {
+    id: 'emulator-5554',
+    adbName: 'emulator-5554',
+    name: 'emulator-5554 (detox-api35)'
+  }
+}
+22:52:31.835 detox[113471] [90mi[39m ## received events ##
+22:52:31.835 detox[113471] [90mi[39m detected event allocateDeviceDone {
+  deviceCookie: {
+    id: 'emulator-5554',
+    adbName: 'emulator-5554',
+    name: 'emulator-5554 (detox-api35)'
+  }
+}
+22:52:31.866 detox[113471] [90mB[39m onBootDevice
+  args: ({"deviceId":"emulator-5554"})
+22:52:31.867 detox[113471] [90mE[39m onBootDevice
+22:52:31.868 detox[113471] [90mB[39m installUtilBinaries
+  args: ()
+22:52:31.868 detox[113471] [90mE[39m installUtilBinaries
+22:52:31.869 detox[113471] [90mB[39m selectApp
+  args: ("default")
+22:52:31.874 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/build-tools/36.1.0/aapt" dump badging "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/debug/app-debug.apk"
+22:52:31.883 detox[113471] [90mi[39m package: name='com.mcfuzzysquirrel.studentfinance' versionCode='1' versionName='1.0.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+sdkVersion:'24'
+targetSdkVersion:'36'
+uses-permission: name='android.permission.SYSTEM_ALERT_WINDOW'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.READ_EXTERNAL_STORAGE' maxSdkVersion='32'
+uses-permission: name='android.permission.VIBRATE'
+uses-permission: name='android.permission.WRITE_EXTERNAL_STORAGE' maxSdkVersion='32'
+uses-permission: name='com.mcfuzzysquirrel.studentfinance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
+application-label:'Student Finance'
+application-label-af:'Student Finance'
+application-label-am:'Student Finance'
+application-label-ar:'Student Finance'
+application-label-as:'Student Finance'
+application-label-az:'Student Finance'
+application-label-be:'Student Finance'
+application-label-bg:'Student Finance'
+application-label-bn:'Student Finance'
+application-label-bs:'Student Finance'
+application-label-ca:'Student Finance'
+application-label-cs:'Student Finance'
+application-label-da:'Student Finance'
+application-label-de:'Student Finance'
+application-label-el:'Student Finance'
+application-label-en-AU:'Student Finance'
+application-label-en-CA:'Student Finance'
+application-label-en-GB:'Student Finance'
+application-label-en-IN:'Student Finance'
+application-label-en-XC:'Student Finance'
+application-label-es:'Student Finance'
+application-label-es-419:'Student Finance'
+application-label-es-ES:'Student Finance'
+application-label-es-US:'Student Finance'
+application-label-et:'Student Finance'
+application-label-eu:'Student Finance'
+application-label-fa:'Student Finance'
+application-label-fi:'Student Finance'
+application-label-fr:'Student Finance'
+application-label-fr-CA:'Student Finance'
+application-label-gl:'Student Finance'
+application-label-gu:'Student Finance'
+application-label-hi:'Student Finance'
+application-label-hr:'Student Finance'
+application-label-hu:'Student Finance'
+application-label-hy:'Student Finance'
+application-label-in:'Student Finance'
+application-label-is:'Student Finance'
+application-label-it:'Student Finance'
+application-label-iw:'Student Finance'
+application-label-ja:'Student Finance'
+application-label-ka:'Student Finance'
+application-label-kk:'Student Finance'
+application-label-km:'Student Finance'
+application-label-kn:'Student Finance'
+application-label-ko:'Student Finance'
+application-label-ky:'Student Finance'
+application-label-lo:'Student Finance'
+application-label-lt:'Student Finance'
+application-label-lv:'Student Finance'
+application-label-mk:'Student Finance'
+application-label-ml:'Student Finance'
+application-label-mn:'Student Finance'
+application-label-mr:'Student Finance'
+application-label-ms:'Student Finance'
+application-label-my:'Student Finance'
+application-label-nb:'Student Finance'
+application-label-ne:'Student Finance'
+application-label-nl:'Student Finance'
+application-label-or:'Student Finance'
+application-label-pa:'Student Finance'
+application-label-pl:'Student Finance'
+application-label-pt:'Student Finance'
+application-label-pt-BR:'Student Finance'
+application-label-pt-PT:'Student Finance'
+application-label-ro:'Student Finance'
+application-label-ru:'Student Finance'
+application-label-si:'Student Finance'
+application-label-sk:'Student Finance'
+application-label-sl:'Student Finance'
+application-label-sq:'Student Finance'
+application-label-sr:'Student Finance'
+application-label-sr-Latn:'Student Finance'
+application-label-sv:'Student Finance'
+application-label-sw:'Student Finance'
+application-label-ta:'Student Finance'
+application-label-te:'Student Finance'
+application-label-th:'Student Finance'
+application-label-tl:'Student Finance'
+application-label-tr:'Student Finance'
+application-label-uk:'Student Finance'
+application-label-ur:'Student Finance'
+application-label-uz:'Student Finance'
+application-label-vi:'Student Finance'
+application-label-zh-CN:'Student Finance'
+application-label-zh-HK:'Student Finance'
+application-label-zh-TW:'Student Finance'
+application-label-zu:'Student Finance'
+application-icon-160:'res/mipmap-mdpi-v4/ic_launcher.webp'
+application-icon-240:'res/mipmap-hdpi-v4/ic_launcher.webp'
+application-icon-320:'res/mipmap-xhdpi-v4/ic_launcher.webp'
+application-icon-480:'res/mipmap-xxhdpi-v4/ic_launcher.webp'
+application-icon-640:'res/mipmap-xxxhdpi-v4/ic_launcher.webp'
+application: label='Student Finance' icon='res/mipmap-mdpi-v4/ic_launcher.webp'
+application-debuggable
+launchable-activity: name='com.mcfuzzysquirrel.studentfinance.MainActivity'  label='' icon=''
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+  uses-feature: name='android.hardware.screen.portrait'
+  uses-implied-feature: name='android.hardware.screen.portrait' reason='one or more activities have specified a portrait orientation'
+main
+other-activities
+other-receivers
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-419' 'es-ES' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'
+densities: '160' '240' '320' '480' '640'
+native-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'
+
+22:52:31.883 detox[113471] [90mE[39m selectApp
+22:52:31.884 detox[113471] [90mB[39m uninstallApp
+  args: ()
+22:52:31.884 detox[113471] [90mB[39m onBeforeUninstallApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:52:31.884 detox[113471] [90mE[39m onBeforeUninstallApp
+22:52:31.884 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "pm list packages com.mcfuzzysquirrel.studentfinance"
+22:52:31.931 detox[113471] [90mi[39m package:com.mcfuzzysquirrel.studentfinance
+package:com.mcfuzzysquirrel.studentfinance.test
+
+22:52:31.931 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 uninstall com.mcfuzzysquirrel.studentfinance
+22:52:32.227 detox[113471] [90mi[39m Success
+
+22:52:32.227 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "pm list packages com.mcfuzzysquirrel.studentfinance.test"
+22:52:32.295 detox[113471] [90mi[39m package:com.mcfuzzysquirrel.studentfinance.test
+
+22:52:32.297 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 uninstall com.mcfuzzysquirrel.studentfinance.test
+22:52:32.499 detox[113471] [90mi[39m Success
+
+22:52:32.499 detox[113471] [90mE[39m uninstallApp
+22:52:32.500 detox[113471] [90mB[39m selectApp
+  args: ("default")
+22:52:32.500 detox[113471] [90mB[39m terminateApp
+  args: ()
+22:52:32.500 detox[113471] [90mB[39m onBeforeTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:52:32.501 detox[113471] [90mE[39m onBeforeTerminateApp
+22:52:32.501 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "am force-stop com.mcfuzzysquirrel.studentfinance"
+22:52:32.717 detox[113471] [90mi[39m 
+22:52:32.718 detox[113471] [90mB[39m onTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:52:32.718 detox[113471] [90mE[39m onTerminateApp
+22:52:32.718 detox[113471] [90mE[39m terminateApp
+22:52:32.718 detox[113471] [90mE[39m selectApp
+22:52:32.718 detox[113471] [90mB[39m installApp
+  args: ()
+22:52:32.719 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/build-tools/36.1.0/aapt" dump xmlstrings "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/debug/app-debug.apk" AndroidManifest.xml
+22:52:32.724 detox[113471] [90mi[39m String pool of 99 unique UTF-16 non-sorted strings, 99 entries and 0 styles using 5464 bytes:
+String #0: theme
+String #1: label
+String #2: icon
+String #3: name
+String #4: permission
+String #5: protectionLevel
+String #6: enabled
+String #7: debuggable
+String #8: exported
+String #9: authorities
+String #10: grantUriPermissions
+String #11: launchMode
+String #12: screenOrientation
+String #13: configChanges
+String #14: value
+String #15: resource
+String #16: mimeType
+String #17: scheme
+String #18: minSdkVersion
+String #19: versionCode
+String #20: versionName
+String #21: windowSoftInputMode
+String #22: targetSdkVersion
+String #23: maxSdkVersion
+String #24: allowBackup
+String #25: supportsRtl
+String #26: extractNativeLibs
+String #27: usesCleartextTraffic
+String #28: directBootAware
+String #29: roundIcon
+String #30: compileSdkVersion
+String #31: compileSdkVersionCodename
+String #32: appComponentFactory
+String #33: enableOnBackInvokedCallback
+String #34: */*
+String #35: 1.0.0
+String #36: 16
+String #37: ALWAYS
+String #38: action
+String #39: activity
+String #40: android
+String #41: android.intent.action.MAIN
+String #42: android.intent.action.OPEN_DOCUMENT_TREE
+String #43: android.intent.action.SEND
+String #44: android.intent.action.VIEW
+String #45: android.intent.category.BROWSABLE
+String #46: android.intent.category.LAUNCHER
+String #47: android.permission.DUMP
+String #48: android.permission.INTERNET
+String #49: android.permission.READ_EXTERNAL_STORAGE
+String #50: android.permission.SYSTEM_ALERT_WINDOW
+String #51: android.permission.VIBRATE
+String #52: android.permission.WRITE_EXTERNAL_STORAGE
+String #53: android.support.FILE_PROVIDER_PATHS
+String #54: androidx.core.app.CoreComponentFactory
+String #55: androidx.emoji2.text.EmojiCompatInitializer
+String #56: androidx.lifecycle.ProcessLifecycleInitializer
+String #57: androidx.profileinstaller.ProfileInstallReceiver
+String #58: androidx.profileinstaller.ProfileInstallerInitializer
+String #59: androidx.profileinstaller.action.BENCHMARK_OPERATION
+String #60: androidx.profileinstaller.action.INSTALL_PROFILE
+String #61: androidx.profileinstaller.action.SAVE_PROFILE
+String #62: androidx.profileinstaller.action.SKIP_FILE
+String #63: androidx.startup
+String #64: androidx.startup.InitializationProvider
+String #65: application
+String #66: category
+String #67: com.facebook.react.devsupport.DevSettingsActivity
+String #68: com.facebook.soloader.enabled
+String #69: com.mcfuzzysquirrel.studentfinance
+String #70: com.mcfuzzysquirrel.studentfinance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+String #71: com.mcfuzzysquirrel.studentfinance.FileSystemFileProvider
+String #72: com.mcfuzzysquirrel.studentfinance.MainActivity
+String #73: com.mcfuzzysquirrel.studentfinance.MainApplication
+String #74: com.mcfuzzysquirrel.studentfinance.SharingFileProvider
+String #75: com.mcfuzzysquirrel.studentfinance.androidx-startup
+String #76: data
+String #77: expo.modules.adapters.react.apploader.RNHeadlessAppLoader
+String #78: expo.modules.filesystem.FileSystemFileProvider
+String #79: expo.modules.sharing.SharingFileProvider
+String #80: expo.modules.updates.ENABLED
+String #81: expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH
+String #82: expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS
+String #83: http://schemas.android.com/apk/res/android
+String #84: https
+String #85: intent
+String #86: intent-filter
+String #87: manifest
+String #88: meta-data
+String #89: org.unimodules.core.AppLoader#react-native-headless
+String #90: package
+String #91: permission
+String #92: platformBuildVersionCode
+String #93: platformBuildVersionName
+String #94: provider
+String #95: queries
+String #96: receiver
+String #97: uses-permission
+String #98: uses-sdk
+
+22:52:32.725 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/build-tools/36.1.0/aapt" dump xmlstrings "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk" AndroidManifest.xml
+22:52:32.732 detox[113471] [90mi[39m String pool of 43 unique UTF-16 non-sorted strings, 43 entries and 0 styles using 2228 bytes:
+String #0: theme
+String #1: label
+String #2: name
+String #3: debuggable
+String #4: exported
+String #5: priority
+String #6: targetPackage
+String #7: handleProfiling
+String #8: functionalTest
+String #9: minSdkVersion
+String #10: targetSdkVersion
+String #11: extractNativeLibs
+String #12: compileSdkVersion
+String #13: compileSdkVersionCodename
+String #14: 16
+String #15: Tests for com.mcfuzzysquirrel.studentfinance
+String #16: activity
+String #17: android
+String #18: android.intent.category.LAUNCHER
+String #19: android.permission.REORDER_TASKS
+String #20: android.test.runner
+String #21: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity
+String #22: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+String #23: androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity
+String #24: androidx.test.orchestrator
+String #25: androidx.test.runner.AndroidJUnitRunner
+String #26: androidx.test.services
+String #27: application
+String #28: category
+String #29: com.google.android.apps.common.testing.services
+String #30: com.mcfuzzysquirrel.studentfinance
+String #31: com.mcfuzzysquirrel.studentfinance.test
+String #32: http://schemas.android.com/apk/res/android
+String #33: instrumentation
+String #34: intent-filter
+String #35: manifest
+String #36: package
+String #37: platformBuildVersionCode
+String #38: platformBuildVersionName
+String #39: queries
+String #40: uses-library
+String #41: uses-permission
+String #42: uses-sdk
+
+22:52:32.733 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm -fr /data/local/tmp/detox"
+22:52:32.795 detox[113471] [90mi[39m 
+22:52:32.795 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "mkdir -p /data/local/tmp/detox"
+22:52:32.831 detox[113471] [90mi[39m 
+22:52:32.831 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 push "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/debug/app-debug.apk" "/data/local/tmp/detox/Application.apk"
+22:52:35.852 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 81.5 MB/s (176284751 bytes in 2.062s)
+
+22:52:35.852 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "getprop ro.build.version.sdk"
+22:52:35.925 detox[113471] [90mi[39m 35
+
+22:52:35.929 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell pm install -r -g -t /data/local/tmp/detox/Application.apk
+22:52:38.870 detox[113471] [90mi[39m Success
+
+22:52:38.873 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell pm install -r -g -t /data/local/tmp/detox/Application.apk exited with code #0
+22:52:38.873 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 push "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk" "/data/local/tmp/detox/Test.apk"
+22:52:39.027 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk: 1 file pushed, 0 skipped. 166.5 MB/s (4592218 bytes in 0.026s)
+
+22:52:39.031 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell pm install -r -g -t /data/local/tmp/detox/Test.apk
+22:52:39.712 detox[113471] [90mi[39m Success
+
+22:52:39.715 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell pm install -r -g -t /data/local/tmp/detox/Test.apk exited with code #0
+22:52:39.716 detox[113471] [90mB[39m reverseTcpPort
+  args: (8081)
+22:52:39.716 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 reverse tcp:8081 tcp:8081
+22:52:39.737 detox[113471] [90mi[39m 
+22:52:39.737 detox[113471] [90mE[39m reverseTcpPort
+22:52:39.737 detox[113471] [90mE[39m installApp
+22:52:39.738 detox[113471] [90mB[39m selectApp
+  args: ("default")
+22:52:39.740 detox[113471] [90mB[39m terminateApp
+  args: ()
+22:52:39.740 detox[113471] [90mB[39m onBeforeTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:52:39.740 detox[113471] [90mE[39m onBeforeTerminateApp
+22:52:39.741 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "am force-stop com.mcfuzzysquirrel.studentfinance"
+22:52:39.837 detox[113471] [90mi[39m 
+22:52:39.839 detox[113471] [90mB[39m onTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:52:39.840 detox[113471] [90mE[39m onTerminateApp
+22:52:39.840 detox[113471] [90mE[39m terminateApp
+22:52:39.840 detox[113471] [90mE[39m selectApp
+22:52:39.840 detox[113471] [90mE[39m set up environment
+22:52:40.795 detox[113471] [90mi[39m smoke.e2e.js is assigned to emulator-5554 (detox-api35)
+22:52:40.799 detox[113471] [90mB[39m run the tests
+22:52:40.799 detox[113471] [90mB[39m onRunDescribeStart
+  args: ({"name":"ROOT_DESCRIBE_BLOCK"})
+22:52:40.802 detox[113471] [90mE[39m onRunDescribeStart
+22:52:40.803 detox[113471] [90mB[39m beforeAll
+22:52:40.805 detox[113471] [90mB[39m launchApp
+  args: ({"newInstance":true,"delete":true,"launchArgs":{"detoxEnableSynchronization":0}})
+22:52:40.806 detox[113471] [90mB[39m terminateApp
+  args: ("com.mcfuzzysquirrel.studentfinance")
+22:52:40.806 detox[113471] [90mB[39m onBeforeTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:52:40.806 detox[113471] [90mE[39m onBeforeTerminateApp
+22:52:40.807 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "am force-stop com.mcfuzzysquirrel.studentfinance"
+22:52:41.077 detox[113471] [90mi[39m 
+22:52:41.078 detox[113471] [90mB[39m onTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:52:41.078 detox[113471] [90mE[39m onTerminateApp
+22:52:41.078 detox[113471] [90mE[39m terminateApp
+22:52:41.078 detox[113471] [90mB[39m uninstallApp
+  args: ()
+22:52:41.078 detox[113471] [90mB[39m onBeforeUninstallApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:52:41.078 detox[113471] [90mE[39m onBeforeUninstallApp
+22:52:41.079 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "pm list packages com.mcfuzzysquirrel.studentfinance"
+22:52:41.311 detox[113471] [90mi[39m package:com.mcfuzzysquirrel.studentfinance
+package:com.mcfuzzysquirrel.studentfinance.test
+
+22:52:41.313 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 uninstall com.mcfuzzysquirrel.studentfinance
+22:52:41.895 detox[113471] [90mi[39m Success
+
+22:52:41.897 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "pm list packages com.mcfuzzysquirrel.studentfinance.test"
+22:52:42.365 detox[113471] [90mi[39m package:com.mcfuzzysquirrel.studentfinance.test
+
+22:52:42.366 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 uninstall com.mcfuzzysquirrel.studentfinance.test
+22:52:43.910 detox[113471] [90mi[39m Success
+
+22:52:43.911 detox[113471] [90mE[39m uninstallApp
+22:52:43.911 detox[113471] [90mB[39m installApp
+  args: ()
+22:52:43.911 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/build-tools/36.1.0/aapt" dump xmlstrings "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/debug/app-debug.apk" AndroidManifest.xml
+22:52:43.929 detox[113471] [90mi[39m String pool of 99 unique UTF-16 non-sorted strings, 99 entries and 0 styles using 5464 bytes:
+String #0: theme
+String #1: label
+String #2: icon
+String #3: name
+String #4: permission
+String #5: protectionLevel
+String #6: enabled
+String #7: debuggable
+String #8: exported
+String #9: authorities
+String #10: grantUriPermissions
+String #11: launchMode
+String #12: screenOrientation
+String #13: configChanges
+String #14: value
+String #15: resource
+String #16: mimeType
+String #17: scheme
+String #18: minSdkVersion
+String #19: versionCode
+String #20: versionName
+String #21: windowSoftInputMode
+String #22: targetSdkVersion
+String #23: maxSdkVersion
+String #24: allowBackup
+String #25: supportsRtl
+String #26: extractNativeLibs
+String #27: usesCleartextTraffic
+String #28: directBootAware
+String #29: roundIcon
+String #30: compileSdkVersion
+String #31: compileSdkVersionCodename
+String #32: appComponentFactory
+String #33: enableOnBackInvokedCallback
+String #34: */*
+String #35: 1.0.0
+String #36: 16
+String #37: ALWAYS
+String #38: action
+String #39: activity
+String #40: android
+String #41: android.intent.action.MAIN
+String #42: android.intent.action.OPEN_DOCUMENT_TREE
+String #43: android.intent.action.SEND
+String #44: android.intent.action.VIEW
+String #45: android.intent.category.BROWSABLE
+String #46: android.intent.category.LAUNCHER
+String #47: android.permission.DUMP
+String #48: android.permission.INTERNET
+String #49: android.permission.READ_EXTERNAL_STORAGE
+String #50: android.permission.SYSTEM_ALERT_WINDOW
+String #51: android.permission.VIBRATE
+String #52: android.permission.WRITE_EXTERNAL_STORAGE
+String #53: android.support.FILE_PROVIDER_PATHS
+String #54: androidx.core.app.CoreComponentFactory
+String #55: androidx.emoji2.text.EmojiCompatInitializer
+String #56: androidx.lifecycle.ProcessLifecycleInitializer
+String #57: androidx.profileinstaller.ProfileInstallReceiver
+String #58: androidx.profileinstaller.ProfileInstallerInitializer
+String #59: androidx.profileinstaller.action.BENCHMARK_OPERATION
+String #60: androidx.profileinstaller.action.INSTALL_PROFILE
+String #61: androidx.profileinstaller.action.SAVE_PROFILE
+String #62: androidx.profileinstaller.action.SKIP_FILE
+String #63: androidx.startup
+String #64: androidx.startup.InitializationProvider
+String #65: application
+String #66: category
+String #67: com.facebook.react.devsupport.DevSettingsActivity
+String #68: com.facebook.soloader.enabled
+String #69: com.mcfuzzysquirrel.studentfinance
+String #70: com.mcfuzzysquirrel.studentfinance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+String #71: com.mcfuzzysquirrel.studentfinance.FileSystemFileProvider
+String #72: com.mcfuzzysquirrel.studentfinance.MainActivity
+String #73: com.mcfuzzysquirrel.studentfinance.MainApplication
+String #74: com.mcfuzzysquirrel.studentfinance.SharingFileProvider
+String #75: com.mcfuzzysquirrel.studentfinance.androidx-startup
+String #76: data
+String #77: expo.modules.adapters.react.apploader.RNHeadlessAppLoader
+String #78: expo.modules.filesystem.FileSystemFileProvider
+String #79: expo.modules.sharing.SharingFileProvider
+String #80: expo.modules.updates.ENABLED
+String #81: expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH
+String #82: expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS
+String #83: http://schemas.android.com/apk/res/android
+String #84: https
+String #85: intent
+String #86: intent-filter
+String #87: manifest
+String #88: meta-data
+String #89: org.unimodules.core.AppLoader#react-native-headless
+String #90: package
+String #91: permission
+String #92: platformBuildVersionCode
+String #93: platformBuildVersionName
+String #94: provider
+String #95: queries
+String #96: receiver
+String #97: uses-permission
+String #98: uses-sdk
+
+22:52:43.929 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/build-tools/36.1.0/aapt" dump xmlstrings "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk" AndroidManifest.xml
+22:52:43.936 detox[113471] [90mi[39m String pool of 43 unique UTF-16 non-sorted strings, 43 entries and 0 styles using 2228 bytes:
+String #0: theme
+String #1: label
+String #2: name
+String #3: debuggable
+String #4: exported
+String #5: priority
+String #6: targetPackage
+String #7: handleProfiling
+String #8: functionalTest
+String #9: minSdkVersion
+String #10: targetSdkVersion
+String #11: extractNativeLibs
+String #12: compileSdkVersion
+String #13: compileSdkVersionCodename
+String #14: 16
+String #15: Tests for com.mcfuzzysquirrel.studentfinance
+String #16: activity
+String #17: android
+String #18: android.intent.category.LAUNCHER
+String #19: android.permission.REORDER_TASKS
+String #20: android.test.runner
+String #21: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity
+String #22: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+String #23: androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity
+String #24: androidx.test.orchestrator
+String #25: androidx.test.runner.AndroidJUnitRunner
+String #26: androidx.test.services
+String #27: application
+String #28: category
+String #29: com.google.android.apps.common.testing.services
+String #30: com.mcfuzzysquirrel.studentfinance
+String #31: com.mcfuzzysquirrel.studentfinance.test
+String #32: http://schemas.android.com/apk/res/android
+String #33: instrumentation
+String #34: intent-filter
+String #35: manifest
+String #36: package
+String #37: platformBuildVersionCode
+String #38: platformBuildVersionName
+String #39: queries
+String #40: uses-library
+String #41: uses-permission
+String #42: uses-sdk
+
+22:52:43.937 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm -fr /data/local/tmp/detox"
+22:52:44.313 detox[113471] [90mi[39m 
+22:52:44.313 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "mkdir -p /data/local/tmp/detox"
+22:52:44.405 detox[113471] [90mi[39m 
+22:52:44.405 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 push "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/debug/app-debug.apk" "/data/local/tmp/detox/Application.apk"
+22:52:46.712 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 113.5 MB/s (176284751 bytes in 1.481s)
+
+22:52:46.717 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell pm install -r -g -t /data/local/tmp/detox/Application.apk
+22:52:48.644 detox[113471] [90mi[39m Success
+
+22:52:48.647 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell pm install -r -g -t /data/local/tmp/detox/Application.apk exited with code #0
+22:52:48.647 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 push "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk" "/data/local/tmp/detox/Test.apk"
+22:52:48.739 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk: 1 file pushed, 0 skipped. 279.6 MB/s (4592218 bytes in 0.016s)
+
+22:52:48.744 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell pm install -r -g -t /data/local/tmp/detox/Test.apk
+22:52:49.067 detox[113471] [90mi[39m Success
+
+22:52:49.071 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell pm install -r -g -t /data/local/tmp/detox/Test.apk exited with code #0
+22:52:49.072 detox[113471] [90mB[39m reverseTcpPort
+  args: (8081)
+22:52:49.072 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 reverse tcp:8081 tcp:8081
+22:52:49.081 detox[113471] [90mi[39m 
+22:52:49.082 detox[113471] [90mE[39m reverseTcpPort
+22:52:49.082 detox[113471] [90mE[39m installApp
+22:52:49.083 detox[113471] [90mB[39m onBeforeLaunchApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance","launchArgs":{"detoxServer":"ws://localhost:45913","detoxSessionId":"09664e91-fdcf-22e1-af8e-d3275d81a9b7","detoxEnableSynchronization":0}})
+22:52:49.083 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "date +\"%m-%d %T.000\""
+22:52:49.147 detox[113471] [90mi[39m 03-14 22:52:46.000
+
+22:52:49.147 detox[113471] [90mE[39m onBeforeLaunchApp
+22:52:49.147 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 reverse tcp:45913 tcp:45913
+22:52:49.162 detox[113471] [90mi[39m 45913
+
+22:52:49.163 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "pm list instrumentation"
+22:52:49.224 detox[113471] [90mi[39m instrumentation:com.mcfuzzysquirrel.studentfinance.test/androidx.test.runner.AndroidJUnitRunner (target=com.mcfuzzysquirrel.studentfinance)
+
+22:52:49.233 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell am instrument -w -r -e detoxServer ws://localhost:45913 -e detoxSessionId 09664e91-fdcf-22e1-af8e-d3275d81a9b7 -e detoxEnableSynchronization 0 -e debug false com.mcfuzzysquirrel.studentfinance.test/androidx.test.runner.AndroidJUnitRunner
+22:52:49.734 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "ps | grep \"com\.mcfuzzysquirrel\.studentfinance$\""
+22:52:51.426 detox[113471] [90mi[39m ""/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "ps | grep \"com\.mcfuzzysquirrel\.studentfinance$\""" failed with error = Error: Command failed: "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "ps | grep \"com\.mcfuzzysquirrel\.studentfinance$\""
+ (code=1), stdout and stderr:
+
+22:52:51.426 detox[113471] [90mi[39m 
+22:52:51.427 detox[113471] [90mi[39m 
+22:52:51.927 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "ps | grep \"com\.mcfuzzysquirrel\.studentfinance$\""
+22:52:53.099 detox[113471] [90mi[39m u0_a220       9090   382   16478332 118192 0                   0 R com.mcfuzzysquirrel.studentfinance
+
+22:52:53.099 detox[113471] [90mB[39m onLaunchApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance","launchArgs":{"detoxServer":"ws://localhost:45913","detoxSessionId":"09664e91-fdcf-22e1-af8e-d3275d81a9b7","detoxEnableSynchronization":0},"pid":9090})
+22:52:53.101 detox[113471] [90mi[39m starting ADBLogcatRecording
+22:52:53.108 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:52:46.000\" --pid=9090 -f /sdcard/22523136_0.log"
+22:52:53.108 detox[113471] [90mE[39m onLaunchApp
+22:52:53.410 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22523136_0.log
+22:52:53.434 detox[113471] [90mi[39m 4	/sdcard/22523136_0.log
+
+22:52:54.457 detox[113471] [90mi[39m INSTRUMENTATION_STATUS: class=com.mcfuzzysquirrel.studentfinance.DetoxTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.mcfuzzysquirrel.studentfinance.DetoxTest:
+INSTRUMENTATION_STATUS: test=runDetoxTests
+INSTRUMENTATION_STATUS_CODE: 1
+
+22:52:54.560 detox[113446] [90mB[39m connection :45913<->:51151
+22:52:54.568 detox[113446] [90mi[39m get
+  data: {"messageId":0,"type":"login","params":{"role":"app","sessionId":"09664e91-fdcf-22e1-af8e-d3275d81a9b7"}}
+22:52:54.569 detox[113446] [90mi[39m send
+  data: {
+    "messageId": 0,
+    "type": "loginSuccess",
+    "params": {
+      "testerConnected": true,
+      "appConnected": true
+    }
+  }
+22:52:54.569 detox[113446] [90mi[39m app joined session 09664e91-fdcf-22e1-af8e-d3275d81a9b7
+22:52:54.569 detox[113446] [90mi[39m send
+  data: {
+    "type": "appConnected"
+  }
+22:52:54.570 detox[113471] [90mi[39m get message
+  data: {"type":"appConnected"}
+   
+22:52:54.571 detox[113446] [90mi[39m get
+  data: {"type":"isReady","params":{},"messageId":-1000}
+22:52:54.571 detox[113446] [90mi[39m send
+  data: {
+    "type": "isReady",
+    "params": {},
+    "messageId": -1000
+  }
+22:52:54.571 detox[113471] [90mi[39m send message
+  data: {"type":"isReady","params":{},"messageId":-1000}
+22:52:55.913 detox[113446] [90mi[39m get
+  data: {"messageId":-1000,"type":"ready","params":{}}
+22:52:55.913 detox[113446] [90mi[39m send
+  data: {
+    "messageId": -1000,
+    "type": "ready",
+    "params": {}
+  }
+22:52:55.913 detox[113471] [90mi[39m get message
+  data: {"messageId":-1000,"type":"ready","params":{}}
+   
+22:52:55.914 detox[113471] [90mB[39m onAppReady
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance","pid":9090})
+22:52:55.914 detox[113471] [90mE[39m onAppReady
+22:52:55.914 detox[113471] [90mE[39m launchApp
+22:52:55.915 detox[113471] [90mE[39m beforeAll
+22:52:55.915 detox[113471] [90mB[39m App smoke flow
+22:52:55.915 detox[113471] [90mB[39m onRunDescribeStart
+  args: ({"name":"App smoke flow"})
+22:52:55.916 detox[113471] [90mE[39m onRunDescribeStart
+22:52:55.918 detox[113471] [90mB[39m launches and shows the dashboard
+22:52:55.918 detox[113471] [90mi[39m App smoke flow: launches and shows the dashboard
+22:52:55.921 detox[113471] [90mB[39m onTestStart
+  args: ({"title":"launches and shows the dashboard","fullName":"App smoke flow launches and shows the dashboard","status":"running","invocations":1})
+22:52:55.921 detox[113471] [90mi[39m stopping ADBLogcatRecording
+22:52:55.922 detox[113471] [90mi[39m starting ADBScreencapRecording
+22:52:55.922 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22523136_1.png"
+22:52:55.926 detox[113471] [90mi[39m starting ADBVideoRecording
+22:52:55.929 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22523136_2.mp4
+22:52:55.930 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "date +\"%m-%d %T.000\""
+22:52:56.026 detox[113471] [90mi[39m 03-14 22:52:53.000
+
+22:52:56.028 detox[113471] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell logcat -T "03-14 22:52:46.000" --pid=9090 -f /sdcard/22523136_0.log
+22:52:56.030 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:52:46.000\" --pid=9090 -f /sdcard/22523136_0.log" terminated with SIGINT
+22:52:56.031 detox[113471] [90mi[39m starting ADBLogcatRecording
+22:52:56.037 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:52:53.000\" --pid=9090 -f /sdcard/22523136_3.log"
+22:52:56.230 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22523136_2.mp4
+22:52:56.301 detox[113471] [90mi[39m 4	/sdcard/22523136_2.mp4
+
+22:52:56.338 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22523136_3.log
+22:52:56.418 detox[113471] [90mi[39m 4	/sdcard/22523136_3.log
+
+22:52:56.938 detox[113471] [90mi[39m 
+22:52:56.938 detox[113471] [90mi[39m stopping ADBScreencapRecording
+22:52:56.938 detox[113471] [90mE[39m onTestStart
+22:52:56.938 detox[113471] [90mB[39m beforeEach
+22:52:56.939 detox[113471] [90mE[39m beforeEach
+22:52:56.939 detox[113471] [90mB[39m test_fn
+22:52:56.945 detox[113471] [90mi[39m send message
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-add-expense-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Double","value":15}]},"messageId":1}
+22:52:56.946 detox[113446] [90mi[39m get
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-add-expense-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Double","value":15}]},"messageId":1}
+22:52:56.946 detox[113446] [90mi[39m send
+  data: {
+    "type": "invoke",
+    "params": {
+      "target": {
+        "type": "Class",
+        "value": "com.wix.detox.espresso.DetoxAssertion"
+      },
+      "method": "waitForAssertMatcher",
+      "args": [
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "androidx.test.espresso.Espresso"
+            },
+            "method": "onView",
+            "args": [
+              {
+                "type": "Invocation",
+                "value": {
+                  "target": {
+                    "type": "Class",
+                    "value": "com.wix.detox.espresso.DetoxMatcher"
+                  },
+                  "method": "matcherForTestId",
+                  "args": [
+                    "dashboard-add-expense-button",
+                    {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "com.wix.detox.espresso.DetoxMatcher"
+            },
+            "method": "matcherForSufficientlyVisible",
+            "args": [
+              {
+                "type": "Integer",
+                "value": 75
+              }
+            ]
+          }
+        },
+        {
+          "type": "Double",
+          "value": 15
+        }
+      ]
+    },
+    "messageId": 1
+  }
+22:52:56.952 detox[113471] [90mB[39m undefined with timeout (15000 ms)
+  data: {
+    "target": {
+      "type": "Class",
+      "value": "com.wix.detox.espresso.DetoxAssertion"
+    },
+    "method": "waitForAssertMatcher",
+    "args": [
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "androidx.test.espresso.Espresso"
+          },
+          "method": "onView",
+          "args": [
+            {
+              "type": "Invocation",
+              "value": {
+                "target": {
+                  "type": "Class",
+                  "value": "com.wix.detox.espresso.DetoxMatcher"
+                },
+                "method": "matcherForTestId",
+                "args": [
+                  "dashboard-add-expense-button",
+                  {
+                    "type": "boolean",
+                    "value": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxMatcher"
+          },
+          "method": "matcherForSufficientlyVisible",
+          "args": [
+            {
+              "type": "Integer",
+              "value": 75
+            }
+          ]
+        }
+      },
+      {
+        "type": "Double",
+        "value": 15
+      }
+    ]
+  }
+22:53:00.136 detox[113446] [90mi[39m app exited session 09664e91-fdcf-22e1-af8e-d3275d81a9b7
+22:53:00.137 detox[113446] [90mi[39m send
+  data: {
+    "type": "appDisconnected"
+  }
+22:53:00.138 detox[113446] [90mE[39m connection :45913<->:51151
+22:53:00.138 detox[113471] [90mi[39m get message
+  data: {"type":"appDisconnected"}
+   
+22:53:00.140 detox[113471] [90mE[39m undefined with timeout (15000 ms)
+  error: The pending request #1 ("invoke") has been rejected due to the following error:
+  
+  The app has unexpectedly disconnected from Detox server.
+22:53:00.141 detox[113471] [90mB[39m onTestFnFailure
+  args: ({"error":{"name":"DetoxRuntimeError"}})
+22:53:00.141 detox[113471] [90mi[39m starting ADBScreencapRecording
+22:53:00.141 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22523136_4.png"
+22:53:00.218 detox[113471] [90mi[39m INSTRUMENTATION_RESULT: shortMsg=Process crashed.
+INSTRUMENTATION_CODE: 0
+
+22:53:00.290 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell am instrument -w -r -e detoxServer ws://localhost:45913 -e detoxSessionId 09664e91-fdcf-22e1-af8e-d3275d81a9b7 -e detoxEnableSynchronization 0 -e debug false com.mcfuzzysquirrel.studentfinance.test/androidx.test.runner.AndroidJUnitRunner exited with code #0
+22:53:00.290 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 reverse --remove tcp:45913
+22:53:00.305 detox[113471] [90mi[39m 
+22:53:01.164 detox[113471] [90mi[39m 
+22:53:01.164 detox[113471] [90mi[39m stopping ADBScreencapRecording
+22:53:01.164 detox[113471] [90mE[39m onTestFnFailure
+22:53:01.164 detox[113471] [90mE[39m test_fn
+  error: The pending request #1 ("invoke") has been rejected due to the following error:
+  
+  The app has unexpectedly disconnected from Detox server.
+22:53:01.170 detox[113471] [90mB[39m onTestDone
+  args: ({"title":"launches and shows the dashboard","fullName":"App smoke flow launches and shows the dashboard","status":"failed","invocations":1,"timedOut":false})
+22:53:01.172 detox[113471] [90mi[39m stopping ADBLogcatRecording
+22:53:01.172 detox[113471] [90mi[39m starting ADBScreencapRecording
+22:53:01.172 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22523136_5.png"
+22:53:01.182 detox[113471] [90mi[39m stopping ADBVideoRecording
+22:53:01.182 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "date +\"%m-%d %T.000\""
+22:53:01.188 detox[113471] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22523136_2.mp4
+22:53:01.189 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22523136_2.mp4 terminated with SIGINT
+22:53:01.196 detox[113471] [90mi[39m saving ADBVideoRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow launches and shows the dashboard/test.mp4
+22:53:01.248 detox[113471] [90mi[39m 03-14 22:52:58.000
+
+22:53:01.250 detox[113471] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell logcat -T "03-14 22:52:53.000" --pid=9090 -f /sdcard/22523136_3.log
+22:53:01.252 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:52:53.000\" --pid=9090 -f /sdcard/22523136_3.log" terminated with SIGINT
+22:53:01.690 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22523136_2.mp4
+22:53:01.723 detox[113471] [90mi[39m 120	/sdcard/22523136_2.mp4
+
+22:53:01.723 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_2.mp4" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow launches and shows the dashboard/test.mp4"
+22:53:01.736 detox[113471] [90mi[39m /sdcard/22523136_2.mp4: 1 file pulled, 0 skipped. 20.7 MB/s (113332 bytes in 0.005s)
+
+22:53:01.736 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_2.mp4\""
+22:53:01.772 detox[113471] [90mi[39m 
+22:53:01.773 detox[113471] [90mi[39m saving ADBLogcatRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow launches and shows the dashboard/device.log
+22:53:01.773 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_3.log" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow launches and shows the dashboard/device.log"
+22:53:01.786 detox[113471] [90mi[39m /sdcard/22523136_3.log: 1 file pulled, 0 skipped. 8.3 MB/s (36864 bytes in 0.004s)
+
+22:53:01.787 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_3.log\""
+22:53:01.828 detox[113471] [90mi[39m 
+22:53:01.828 detox[113471] [90mi[39m saving ADBLogcatRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/emulator-5554 2026-03-14 20-53-01Z.startup.log
+22:53:01.829 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_0.log" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/emulator-5554 2026-03-14 20-53-01Z.startup.log"
+22:53:01.839 detox[113471] [90mi[39m /sdcard/22523136_0.log: 1 file pulled, 0 skipped. 13.2 MB/s (24576 bytes in 0.002s)
+
+22:53:01.839 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_0.log\""
+22:53:01.877 detox[113471] [90mi[39m 
+22:53:02.376 detox[113471] [90mi[39m 
+22:53:02.376 detox[113471] [90mi[39m stopping ADBScreencapRecording
+22:53:02.376 detox[113471] [90mE[39m onTestDone
+22:53:02.377 detox[113471] [90mE[39m launches and shows the dashboard
+22:53:02.377 detox[113471] [90mi[39m App smoke flow: launches and shows the dashboard [FAIL]
+22:53:02.379 detox[113471] [90mB[39m opens Add Expense from the dashboard FAB
+22:53:02.379 detox[113471] [90mi[39m App smoke flow: opens Add Expense from the dashboard FAB
+22:53:02.380 detox[113471] [90mB[39m onTestStart
+  args: ({"title":"opens Add Expense from the dashboard FAB","fullName":"App smoke flow opens Add Expense from the dashboard FAB","status":"running","invocations":1})
+22:53:02.380 detox[113471] [90mi[39m starting ADBLogcatRecording
+22:53:02.385 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:52:58.000\" --pid=9090 -f /sdcard/22523136_6.log"
+22:53:02.385 detox[113471] [90mi[39m starting ADBScreencapRecording
+22:53:02.386 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22523136_7.png"
+22:53:02.389 detox[113471] [90mi[39m starting ADBVideoRecording
+22:53:02.392 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22523136_8.mp4
+22:53:02.393 detox[113471] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow launches and shows the dashboard/testStart.png
+22:53:02.393 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_1.png" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow launches and shows the dashboard/testStart.png"
+22:53:02.469 detox[113471] [90mi[39m /sdcard/22523136_1.png: 1 file pulled, 0 skipped. 0.4 MB/s (17439 bytes in 0.042s)
+
+22:53:02.470 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_1.png\""
+22:53:02.516 detox[113471] [90mi[39m 
+22:53:02.520 detox[113471] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow launches and shows the dashboard/testFnFailure.png
+22:53:02.520 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_4.png" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow launches and shows the dashboard/testFnFailure.png"
+22:53:02.533 detox[113471] [90mi[39m /sdcard/22523136_4.png: 1 file pulled, 0 skipped. 9.5 MB/s (20217 bytes in 0.002s)
+
+22:53:02.533 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_4.png\""
+22:53:02.602 detox[113471] [90mi[39m 
+22:53:02.603 detox[113471] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow launches and shows the dashboard/testDone.png
+22:53:02.603 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_5.png" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow launches and shows the dashboard/testDone.png"
+22:53:02.689 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22523136_6.log
+22:53:02.696 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22523136_8.mp4
+22:53:02.809 detox[113471] [90mi[39m /sdcard/22523136_5.png: 1 file pulled, 0 skipped. 28.4 MB/s (1375446 bytes in 0.046s)
+
+22:53:02.809 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_5.png\""
+22:53:02.836 detox[113471] [90mi[39m 8	/sdcard/22523136_8.mp4
+
+22:53:02.837 detox[113471] [90mi[39m 4	/sdcard/22523136_6.log
+
+22:53:02.874 detox[113471] [90mi[39m 
+22:53:03.713 detox[113471] [90mi[39m 
+22:53:03.713 detox[113471] [90mi[39m stopping ADBScreencapRecording
+22:53:03.713 detox[113471] [90mE[39m onTestStart
+22:53:03.713 detox[113471] [90mB[39m beforeEach
+22:53:03.713 detox[113471] [90mE[39m beforeEach
+22:53:03.714 detox[113471] [90mB[39m test_fn
+22:53:03.714 detox[113471] [90mi[39m send message
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-add-expense-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Double","value":10}]},"messageId":2}
+22:53:03.715 detox[113446] [90mi[39m get
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-add-expense-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Double","value":10}]},"messageId":2}
+22:53:03.715 detox[113471] [90mB[39m undefined with timeout (10000 ms)
+  data: {
+    "target": {
+      "type": "Class",
+      "value": "com.wix.detox.espresso.DetoxAssertion"
+    },
+    "method": "waitForAssertMatcher",
+    "args": [
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "androidx.test.espresso.Espresso"
+          },
+          "method": "onView",
+          "args": [
+            {
+              "type": "Invocation",
+              "value": {
+                "target": {
+                  "type": "Class",
+                  "value": "com.wix.detox.espresso.DetoxMatcher"
+                },
+                "method": "matcherForTestId",
+                "args": [
+                  "dashboard-add-expense-button",
+                  {
+                    "type": "boolean",
+                    "value": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxMatcher"
+          },
+          "method": "matcherForSufficientlyVisible",
+          "args": [
+            {
+              "type": "Integer",
+              "value": 75
+            }
+          ]
+        }
+      },
+      {
+        "type": "Double",
+        "value": 10
+      }
+    ]
+  }
+22:53:03.716 detox[113446] [90mi[39m send
+  data: {
+    "type": "serverError",
+    "params": {
+      "error": {
+        "name": "DetoxRuntimeError",
+        "message": "Detox can't seem to connect to the test app(s)!\n\nHINT: \n\nHave you forgotten to call 'device.launchApp()' in the beginning of your test?\nRefer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs\n\n---\nThe following package could not be delivered:\n\n{\n  type: 'invoke',\n  params: [Object],\n  messageId: 2\n}",
+        "stack": "DetoxRuntimeError: Detox can't seem to connect to the test app(s)!\n\nHINT: \n\nHave you forgotten to call 'device.launchApp()' in the beginning of your test?\nRefer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs\n\n---\nThe following package could not be delivered:\n\n{\n  type: 'invoke',\n  params: [Object],\n  messageId: 2\n}\n    at Object.maybeAppWasNotLaunched (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/errors/longreads/failedToReachTheApp.js:22:10)\n    at TesterConnectionHandler.handle (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/server/handlers/TesterConnectionHandler.js:32:31)\n    at DetoxConnection._onMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/server/DetoxConnection.js:76:23)\n    at WebSocket.emit (node:events:519:28)\n    at Receiver.receiverOnMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/websocket.js:1070:20)\n    at Receiver.emit (node:events:519:28)\n    at Receiver.dataMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:517:14)\n    at Receiver.getData (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:435:17)\n    at Receiver.startLoop (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:143:22)\n    at Receiver._write (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:78:10)\n    at writeOrBuffer (node:internal/streams/writable:572:12)\n    at _write (node:internal/streams/writable:501:10)\n    at Writable.write (node:internal/streams/writable:510:10)\n    at Socket.socketOnData (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/websocket.js:1164:35)\n    at Socket.emit (node:events:519:28)\n    at addChunk (node:internal/streams/readable:561:12)"
+      }
+    },
+    "messageId": 2
+  }
+22:53:03.720 detox[113471] [90mi[39m get message
+  data: {"type":"serverError","params":{"error":{"name":"DetoxRuntimeError","message":"Detox can't seem to connect to the test app(s)!\n\nHINT: \n\nHave you forgotten to call 'device.launchApp()' in the beginning of your test?\nRefer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs\n\n---\nThe following package could not be delivered:\n\n{\n  type: 'invoke',\n  params: [Object],\n  messageId: 2\n}","stack":"DetoxRuntimeError: Detox can't seem to connect to the test app(s)!\n\nHINT: \n\nHave you forgotten to call 'device.launchApp()' in the beginning of your test?\nRefer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs\n\n---\nThe following package could not be delivered:\n\n{\n  type: 'invoke',\n  params: [Object],\n  messageId: 2\n}\n    at Object.maybeAppWasNotLaunched (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/errors/longreads/failedToReachTheApp.js:22:10)\n    at TesterConnectionHandler.handle (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/server/handlers/TesterConnectionHandler.js:32:31)\n    at DetoxConnection._onMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/server/DetoxConnection.js:76:23)\n    at WebSocket.emit (node:events:519:28)\n    at Receiver.receiverOnMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/websocket.js:1070:20)\n    at Receiver.emit (node:events:519:28)\n    at Receiver.dataMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:517:14)\n    at Receiver.getData (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:435:17)\n    at Receiver.startLoop (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:143:22)\n    at Receiver._write (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:78:10)\n    at writeOrBuffer (node:internal/streams/writable:572:12)\n    at _write (node:internal/streams/writable:501:10)\n    at Writable.write (node:internal/streams/writable:510:10)\n    at Socket.socketOnData (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/websocket.js:1164:35)\n    at Socket.emit (node:events:519:28)\n    at addChunk (node:internal/streams/readable:561:12)"}},"messageId":2}
+   
+22:53:03.720 detox[113471] [90mi[39m Detox can't seem to connect to the test app(s)!
+
+HINT: 
+
+Have you forgotten to call 'device.launchApp()' in the beginning of your test?
+Refer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs
+
+---
+The following package could not be delivered:
+
+{
+  type: 'invoke',
+  params: [Object],
+  messageId: 2
+}
+22:53:03.721 detox[113471] [90mE[39m undefined with timeout (10000 ms)
+  error: Detox can't seem to connect to the test app(s)!
+  
+  HINT: 
+  
+  Have you forgotten to call 'device.launchApp()' in the beginning of your test?
+  Refer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs
+  
+  ---
+  The following package could not be delivered:
+  
+  {
+    type: 'invoke',
+    params: [Object],
+    messageId: 2
+  }
+      at Object.withTimeout (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js:12:8)
+      at Promise.then.completed (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/utils.js:298:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/utils.js:231:10)
+      at _callCircusTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:316:40)
+      at processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at _runTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:252:3)
+      at _runTestsForDescribeBlock (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:126:9)
+      at _runTestsForDescribeBlock (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:121:9)
+      at run (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:71:3)
+      at runAndTransformResultsToJestFormat (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+      at jestAdapter (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+      at runTestInternal (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-runner/build/runTest.js:367:16)
+      at runTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-runner/build/runTest.js:444:34)
+22:53:03.721 detox[113471] [90mB[39m onTestFnFailure
+  args: ({"error":{}})
+22:53:03.722 detox[113471] [90mi[39m starting ADBScreencapRecording
+22:53:03.722 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22523136_9.png"
+22:53:05.475 detox[113471] [90mi[39m 
+22:53:05.475 detox[113471] [90mi[39m stopping ADBScreencapRecording
+22:53:05.475 detox[113471] [90mE[39m onTestFnFailure
+22:53:05.475 detox[113471] [90mE[39m test_fn
+  error: Detox can't seem to connect to the test app(s)!
+  
+  HINT: 
+  
+  Have you forgotten to call 'device.launchApp()' in the beginning of your test?
+  Refer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs
+  
+  ---
+  The following package could not be delivered:
+  
+  {
+    type: 'invoke',
+    params: [Object],
+    messageId: 2
+  }
+      at Object.withTimeout (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js:12:8)
+      at Promise.then.completed (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/utils.js:298:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/utils.js:231:10)
+      at _callCircusTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:316:40)
+      at processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at _runTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:252:3)
+      at _runTestsForDescribeBlock (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:126:9)
+      at _runTestsForDescribeBlock (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:121:9)
+      at run (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:71:3)
+      at runAndTransformResultsToJestFormat (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+      at jestAdapter (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+      at runTestInternal (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-runner/build/runTest.js:367:16)
+      at runTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-runner/build/runTest.js:444:34)
+22:53:05.476 detox[113471] [90mB[39m onTestDone
+  args: ({"title":"opens Add Expense from the dashboard FAB","fullName":"App smoke flow opens Add Expense from the dashboard FAB","status":"failed","invocations":1,"timedOut":false})
+22:53:05.476 detox[113471] [90mi[39m stopping ADBLogcatRecording
+22:53:05.476 detox[113471] [90mi[39m starting ADBScreencapRecording
+22:53:05.476 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22523136_10.png"
+22:53:05.479 detox[113471] [90mi[39m stopping ADBVideoRecording
+22:53:05.480 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "date +\"%m-%d %T.000\""
+22:53:05.483 detox[113471] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22523136_8.mp4
+22:53:05.484 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22523136_8.mp4 terminated with SIGINT
+22:53:05.485 detox[113471] [90mi[39m saving ADBVideoRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow opens Add Expense from the dashboard FAB/test.mp4
+22:53:05.565 detox[113471] [90mi[39m 03-14 22:53:03.000
+
+22:53:05.567 detox[113471] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell logcat -T "03-14 22:52:58.000" --pid=9090 -f /sdcard/22523136_6.log
+22:53:05.567 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:52:58.000\" --pid=9090 -f /sdcard/22523136_6.log" terminated with SIGINT
+22:53:05.984 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22523136_8.mp4
+22:53:06.149 detox[113471] [90mi[39m 68	/sdcard/22523136_8.mp4
+
+22:53:06.149 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_8.mp4" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow opens Add Expense from the dashboard FAB/test.mp4"
+22:53:06.257 detox[113471] [90mi[39m /sdcard/22523136_8.mp4: 1 file pulled, 0 skipped. 1.0 MB/s (60711 bytes in 0.057s)
+
+22:53:06.257 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_8.mp4\""
+22:53:06.355 detox[113471] [90mi[39m 
+22:53:06.355 detox[113471] [90mi[39m saving ADBLogcatRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow opens Add Expense from the dashboard FAB/device.log
+22:53:06.355 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_6.log" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow opens Add Expense from the dashboard FAB/device.log"
+22:53:06.368 detox[113471] [90mi[39m /sdcard/22523136_6.log: 1 file pulled, 0 skipped.
+
+22:53:06.368 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_6.log\""
+22:53:06.406 detox[113471] [90mi[39m 
+22:53:07.078 detox[113471] [90mi[39m 
+22:53:07.078 detox[113471] [90mi[39m stopping ADBScreencapRecording
+22:53:07.079 detox[113471] [90mE[39m onTestDone
+22:53:07.079 detox[113471] [90mE[39m opens Add Expense from the dashboard FAB
+22:53:07.079 detox[113471] [90mi[39m App smoke flow: opens Add Expense from the dashboard FAB [FAIL]
+22:53:07.080 detox[113471] [90mB[39m navigates to transactions from dashboard
+22:53:07.080 detox[113471] [90mi[39m App smoke flow: navigates to transactions from dashboard
+22:53:07.080 detox[113471] [90mB[39m onTestStart
+  args: ({"title":"navigates to transactions from dashboard","fullName":"App smoke flow navigates to transactions from dashboard","status":"running","invocations":1})
+22:53:07.081 detox[113471] [90mi[39m starting ADBLogcatRecording
+22:53:07.084 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:53:03.000\" --pid=9090 -f /sdcard/22523136_11.log"
+22:53:07.084 detox[113471] [90mi[39m starting ADBScreencapRecording
+22:53:07.084 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22523136_12.png"
+22:53:07.087 detox[113471] [90mi[39m starting ADBVideoRecording
+22:53:07.090 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22523136_13.mp4
+22:53:07.091 detox[113471] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow opens Add Expense from the dashboard FAB/testStart.png
+22:53:07.091 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_7.png" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow opens Add Expense from the dashboard FAB/testStart.png"
+22:53:07.163 detox[113471] [90mi[39m /sdcard/22523136_7.png: 1 file pulled, 0 skipped. 32.3 MB/s (1375556 bytes in 0.041s)
+
+22:53:07.163 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_7.png\""
+22:53:07.206 detox[113471] [90mi[39m 
+22:53:07.207 detox[113471] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow opens Add Expense from the dashboard FAB/testFnFailure.png
+22:53:07.207 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_9.png" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow opens Add Expense from the dashboard FAB/testFnFailure.png"
+22:53:07.236 detox[113471] [90mi[39m /sdcard/22523136_9.png: 1 file pulled, 0 skipped. 73.6 MB/s (1375556 bytes in 0.018s)
+
+22:53:07.237 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_9.png\""
+22:53:07.287 detox[113471] [90mi[39m 
+22:53:07.287 detox[113471] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow opens Add Expense from the dashboard FAB/testDone.png
+22:53:07.288 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_10.png" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow opens Add Expense from the dashboard FAB/testDone.png"
+22:53:07.329 detox[113471] [90mi[39m /sdcard/22523136_10.png: 1 file pulled, 0 skipped. 73.5 MB/s (1375556 bytes in 0.018s)
+
+22:53:07.330 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_10.png\""
+22:53:07.384 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22523136_11.log
+22:53:07.391 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22523136_13.mp4
+22:53:07.508 detox[113471] [90mi[39m 
+22:53:07.508 detox[113471] [90mi[39m 4	/sdcard/22523136_11.log
+
+22:53:07.521 detox[113471] [90mi[39m 8	/sdcard/22523136_13.mp4
+
+22:53:08.388 detox[113471] [90mi[39m 
+22:53:08.388 detox[113471] [90mi[39m stopping ADBScreencapRecording
+22:53:08.388 detox[113471] [90mE[39m onTestStart
+22:53:08.388 detox[113471] [90mB[39m beforeEach
+22:53:08.389 detox[113471] [90mE[39m beforeEach
+22:53:08.389 detox[113471] [90mB[39m test_fn
+22:53:08.391 detox[113471] [90mi[39m send message
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcherWithSearchAction","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-view-transactions-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAction"},"method":"scrollInDirectionStaleAtEdge","args":[{"type":"Integer","value":4},{"type":"Double","value":200},{"type":"Double","value":-1},{"type":"Double","value":-1}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForClass","args":["android.widget.ScrollView"]}}]},"messageId":3}
+22:53:08.392 detox[113471] [90mB[39m wait for expectation while scroll 200 pixels down
+  data: {
+    "target": {
+      "type": "Class",
+      "value": "com.wix.detox.espresso.DetoxAssertion"
+    },
+    "method": "waitForAssertMatcherWithSearchAction",
+    "args": [
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "androidx.test.espresso.Espresso"
+          },
+          "method": "onView",
+          "args": [
+            {
+              "type": "Invocation",
+              "value": {
+                "target": {
+                  "type": "Class",
+                  "value": "com.wix.detox.espresso.DetoxMatcher"
+                },
+                "method": "matcherForTestId",
+                "args": [
+                  "dashboard-view-transactions-button",
+                  {
+                    "type": "boolean",
+                    "value": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxMatcher"
+          },
+          "method": "matcherForSufficientlyVisible",
+          "args": [
+            {
+              "type": "Integer",
+              "value": 75
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxAction"
+          },
+          "method": "scrollInDirectionStaleAtEdge",
+          "args": [
+            {
+              "type": "Integer",
+              "value": 4
+            },
+            {
+              "type": "Double",
+              "value": 200
+            },
+            {
+              "type": "Double",
+              "value": -1
+            },
+            {
+              "type": "Double",
+              "value": -1
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxMatcher"
+          },
+          "method": "matcherForClass",
+          "args": [
+            "android.widget.ScrollView"
+          ]
+        }
+      }
+    ]
+  }
+22:53:08.395 detox[113446] [90mi[39m get
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcherWithSearchAction","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-view-transactions-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAction"},"method":"scrollInDirectionStaleAtEdge","args":[{"type":"Integer","value":4},{"type":"Double","value":200},{"type":"Double","value":-1},{"type":"Double","value":-1}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForClass","args":["android.widget.ScrollView"]}}]},"messageId":3}
+22:53:08.396 detox[113446] [90mi[39m send
+  data: {
+    "type": "serverError",
+    "params": {
+      "error": {
+        "name": "DetoxRuntimeError",
+        "message": "Detox can't seem to connect to the test app(s)!\n\nHINT: \n\nHave you forgotten to call 'device.launchApp()' in the beginning of your test?\nRefer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs\n\n---\nThe following package could not be delivered:\n\n{\n  type: 'invoke',\n  params: [Object],\n  messageId: 3\n}",
+        "stack": "DetoxRuntimeError: Detox can't seem to connect to the test app(s)!\n\nHINT: \n\nHave you forgotten to call 'device.launchApp()' in the beginning of your test?\nRefer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs\n\n---\nThe following package could not be delivered:\n\n{\n  type: 'invoke',\n  params: [Object],\n  messageId: 3\n}\n    at Object.maybeAppWasNotLaunched (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/errors/longreads/failedToReachTheApp.js:22:10)\n    at TesterConnectionHandler.handle (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/server/handlers/TesterConnectionHandler.js:32:31)\n    at DetoxConnection._onMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/server/DetoxConnection.js:76:23)\n    at WebSocket.emit (node:events:519:28)\n    at Receiver.receiverOnMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/websocket.js:1070:20)\n    at Receiver.emit (node:events:519:28)\n    at Receiver.dataMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:517:14)\n    at /home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:468:23\n    at /home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/permessage-deflate.js:308:9\n    at /home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/permessage-deflate.js:391:7\n    at afterWrite (node:internal/streams/writable:710:5)\n    at onwrite (node:internal/streams/writable:688:7)\n    at Zlib.cb (node:internal/streams/transform:191:7)\n    at Zlib.processCallback (node:zlib:608:8)"
+      }
+    },
+    "messageId": 3
+  }
+22:53:08.397 detox[113471] [90mi[39m get message
+  data: {"type":"serverError","params":{"error":{"name":"DetoxRuntimeError","message":"Detox can't seem to connect to the test app(s)!\n\nHINT: \n\nHave you forgotten to call 'device.launchApp()' in the beginning of your test?\nRefer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs\n\n---\nThe following package could not be delivered:\n\n{\n  type: 'invoke',\n  params: [Object],\n  messageId: 3\n}","stack":"DetoxRuntimeError: Detox can't seem to connect to the test app(s)!\n\nHINT: \n\nHave you forgotten to call 'device.launchApp()' in the beginning of your test?\nRefer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs\n\n---\nThe following package could not be delivered:\n\n{\n  type: 'invoke',\n  params: [Object],\n  messageId: 3\n}\n    at Object.maybeAppWasNotLaunched (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/errors/longreads/failedToReachTheApp.js:22:10)\n    at TesterConnectionHandler.handle (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/server/handlers/TesterConnectionHandler.js:32:31)\n    at DetoxConnection._onMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/server/DetoxConnection.js:76:23)\n    at WebSocket.emit (node:events:519:28)\n    at Receiver.receiverOnMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/websocket.js:1070:20)\n    at Receiver.emit (node:events:519:28)\n    at Receiver.dataMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:517:14)\n    at /home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:468:23\n    at /home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/permessage-deflate.js:308:9\n    at /home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/permessage-deflate.js:391:7\n    at afterWrite (node:internal/streams/writable:710:5)\n    at onwrite (node:internal/streams/writable:688:7)\n    at Zlib.cb (node:internal/streams/transform:191:7)\n    at Zlib.processCallback (node:zlib:608:8)"}},"messageId":3}
+   
+22:53:08.397 detox[113471] [90mi[39m Detox can't seem to connect to the test app(s)!
+
+HINT: 
+
+Have you forgotten to call 'device.launchApp()' in the beginning of your test?
+Refer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs
+
+---
+The following package could not be delivered:
+
+{
+  type: 'invoke',
+  params: [Object],
+  messageId: 3
+}
+22:53:08.398 detox[113471] [90mE[39m wait for expectation while scroll 200 pixels down
+  error: Detox can't seem to connect to the test app(s)!
+  
+  HINT: 
+  
+  Have you forgotten to call 'device.launchApp()' in the beginning of your test?
+  Refer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs
+  
+  ---
+  The following package could not be delivered:
+  
+  {
+    type: 'invoke',
+    params: [Object],
+    messageId: 3
+  }
+      at Object.scroll (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js:29:8)
+      at Promise.then.completed (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/utils.js:298:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/utils.js:231:10)
+      at _callCircusTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:316:40)
+      at processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at _runTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:252:3)
+      at _runTestsForDescribeBlock (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:126:9)
+      at _runTestsForDescribeBlock (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:121:9)
+      at run (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:71:3)
+      at runAndTransformResultsToJestFormat (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+      at jestAdapter (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+      at runTestInternal (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-runner/build/runTest.js:367:16)
+      at runTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-runner/build/runTest.js:444:34)
+22:53:08.398 detox[113471] [90mB[39m onTestFnFailure
+  args: ({"error":{}})
+22:53:08.398 detox[113471] [90mi[39m starting ADBScreencapRecording
+22:53:08.398 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22523136_14.png"
+22:53:09.497 detox[113471] [90mi[39m 
+22:53:09.497 detox[113471] [90mi[39m stopping ADBScreencapRecording
+22:53:09.497 detox[113471] [90mE[39m onTestFnFailure
+22:53:09.497 detox[113471] [90mE[39m test_fn
+  error: Detox can't seem to connect to the test app(s)!
+  
+  HINT: 
+  
+  Have you forgotten to call 'device.launchApp()' in the beginning of your test?
+  Refer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs
+  
+  ---
+  The following package could not be delivered:
+  
+  {
+    type: 'invoke',
+    params: [Object],
+    messageId: 3
+  }
+      at Object.scroll (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js:29:8)
+      at Promise.then.completed (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/utils.js:298:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/utils.js:231:10)
+      at _callCircusTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:316:40)
+      at processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at _runTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:252:3)
+      at _runTestsForDescribeBlock (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:126:9)
+      at _runTestsForDescribeBlock (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:121:9)
+      at run (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:71:3)
+      at runAndTransformResultsToJestFormat (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+      at jestAdapter (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+      at runTestInternal (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-runner/build/runTest.js:367:16)
+      at runTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-runner/build/runTest.js:444:34)
+22:53:09.498 detox[113471] [90mB[39m onTestDone
+  args: ({"title":"navigates to transactions from dashboard","fullName":"App smoke flow navigates to transactions from dashboard","status":"failed","invocations":1,"timedOut":false})
+22:53:09.498 detox[113471] [90mi[39m stopping ADBLogcatRecording
+22:53:09.498 detox[113471] [90mi[39m starting ADBScreencapRecording
+22:53:09.498 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22523136_15.png"
+22:53:09.500 detox[113471] [90mi[39m stopping ADBVideoRecording
+22:53:09.501 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "date +\"%m-%d %T.000\""
+22:53:09.504 detox[113471] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22523136_13.mp4
+22:53:09.505 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22523136_13.mp4 terminated with SIGINT
+22:53:09.506 detox[113471] [90mi[39m saving ADBVideoRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow navigates to transactions from dashboard/test.mp4
+22:53:09.569 detox[113471] [90mi[39m 03-14 22:53:07.000
+
+22:53:09.570 detox[113471] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell logcat -T "03-14 22:53:03.000" --pid=9090 -f /sdcard/22523136_11.log
+22:53:09.572 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:53:03.000\" --pid=9090 -f /sdcard/22523136_11.log" terminated with SIGINT
+22:53:10.006 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22523136_13.mp4
+22:53:10.033 detox[113471] [90mi[39m 68	/sdcard/22523136_13.mp4
+
+22:53:10.033 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_13.mp4" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow navigates to transactions from dashboard/test.mp4"
+22:53:10.043 detox[113471] [90mi[39m /sdcard/22523136_13.mp4: 1 file pulled, 0 skipped. 42.3 MB/s (60711 bytes in 0.001s)
+
+22:53:10.043 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_13.mp4\""
+22:53:10.070 detox[113471] [90mi[39m 
+22:53:10.070 detox[113471] [90mi[39m saving ADBLogcatRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow navigates to transactions from dashboard/device.log
+22:53:10.070 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_11.log" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow navigates to transactions from dashboard/device.log"
+22:53:10.081 detox[113471] [90mi[39m /sdcard/22523136_11.log: 1 file pulled, 0 skipped.
+
+22:53:10.081 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_11.log\""
+22:53:10.132 detox[113471] [90mi[39m 
+22:53:10.597 detox[113471] [90mi[39m 
+22:53:10.597 detox[113471] [90mi[39m stopping ADBScreencapRecording
+22:53:10.598 detox[113471] [90mE[39m onTestDone
+22:53:10.598 detox[113471] [90mE[39m navigates to transactions from dashboard
+22:53:10.598 detox[113471] [90mi[39m App smoke flow: navigates to transactions from dashboard [FAIL]
+22:53:10.599 detox[113471] [90mB[39m adds an expense and sees it in transactions
+22:53:10.599 detox[113471] [90mi[39m App smoke flow: adds an expense and sees it in transactions
+22:53:10.599 detox[113471] [90mB[39m onTestStart
+  args: ({"title":"adds an expense and sees it in transactions","fullName":"App smoke flow adds an expense and sees it in transactions","status":"running","invocations":1})
+22:53:10.600 detox[113471] [90mi[39m starting ADBLogcatRecording
+22:53:10.604 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:53:07.000\" --pid=9090 -f /sdcard/22523136_16.log"
+22:53:10.604 detox[113471] [90mi[39m starting ADBScreencapRecording
+22:53:10.604 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22523136_17.png"
+22:53:10.607 detox[113471] [90mi[39m starting ADBVideoRecording
+22:53:10.610 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22523136_18.mp4
+22:53:10.611 detox[113471] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow navigates to transactions from dashboard/testStart.png
+22:53:10.611 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_12.png" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow navigates to transactions from dashboard/testStart.png"
+22:53:10.640 detox[113471] [90mi[39m /sdcard/22523136_12.png: 1 file pulled, 0 skipped. 103.4 MB/s (1375556 bytes in 0.013s)
+
+22:53:10.640 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_12.png\""
+22:53:10.680 detox[113471] [90mi[39m 
+22:53:10.680 detox[113471] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow navigates to transactions from dashboard/testFnFailure.png
+22:53:10.680 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_14.png" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow navigates to transactions from dashboard/testFnFailure.png"
+22:53:10.745 detox[113471] [90mi[39m /sdcard/22523136_14.png: 1 file pulled, 0 skipped. 25.6 MB/s (1375556 bytes in 0.051s)
+
+22:53:10.745 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_14.png\""
+22:53:10.815 detox[113471] [90mi[39m 
+22:53:10.816 detox[113471] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow navigates to transactions from dashboard/testDone.png
+22:53:10.816 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_15.png" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow navigates to transactions from dashboard/testDone.png"
+22:53:10.904 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22523136_16.log
+22:53:10.911 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22523136_18.mp4
+22:53:10.955 detox[113471] [90mi[39m 4	/sdcard/22523136_16.log
+
+22:53:10.957 detox[113471] [90mi[39m /sdcard/22523136_15.png: 1 file pulled, 0 skipped. 12.3 MB/s (1375556 bytes in 0.107s)
+
+22:53:10.957 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_15.png\""
+22:53:10.974 detox[113471] [90mi[39m 8	/sdcard/22523136_18.mp4
+
+22:53:10.997 detox[113471] [90mi[39m 
+22:53:12.202 detox[113471] [90mi[39m 
+22:53:12.202 detox[113471] [90mi[39m stopping ADBScreencapRecording
+22:53:12.202 detox[113471] [90mE[39m onTestStart
+22:53:12.202 detox[113471] [90mB[39m beforeEach
+22:53:12.203 detox[113471] [90mE[39m beforeEach
+22:53:12.203 detox[113471] [90mB[39m test_fn
+22:53:12.204 detox[113446] [90mi[39m get
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Dashboard",{"type":"boolean","value":false}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":4}
+22:53:12.204 detox[113471] [90mi[39m send message
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Dashboard",{"type":"boolean","value":false}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":4}
+22:53:12.204 detox[113471] [90mB[39m tap
+  data: {
+    "target": {
+      "type": "Class",
+      "value": "com.wix.detox.espresso.EspressoDetox"
+    },
+    "method": "perform",
+    "args": [
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxMatcher"
+          },
+          "method": "matcherForText",
+          "args": [
+            "Dashboard",
+            {
+              "type": "boolean",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxViewActions"
+          },
+          "method": "click",
+          "args": []
+        }
+      }
+    ]
+  }
+22:53:12.205 detox[113446] [90mi[39m send
+  data: {
+    "type": "serverError",
+    "params": {
+      "error": {
+        "name": "DetoxRuntimeError",
+        "message": "Detox can't seem to connect to the test app(s)!\n\nHINT: \n\nHave you forgotten to call 'device.launchApp()' in the beginning of your test?\nRefer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs\n\n---\nThe following package could not be delivered:\n\n{\n  type: 'invoke',\n  params: [Object],\n  messageId: 4\n}",
+        "stack": "DetoxRuntimeError: Detox can't seem to connect to the test app(s)!\n\nHINT: \n\nHave you forgotten to call 'device.launchApp()' in the beginning of your test?\nRefer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs\n\n---\nThe following package could not be delivered:\n\n{\n  type: 'invoke',\n  params: [Object],\n  messageId: 4\n}\n    at Object.maybeAppWasNotLaunched (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/errors/longreads/failedToReachTheApp.js:22:10)\n    at TesterConnectionHandler.handle (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/server/handlers/TesterConnectionHandler.js:32:31)\n    at DetoxConnection._onMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/server/DetoxConnection.js:76:23)\n    at WebSocket.emit (node:events:519:28)\n    at Receiver.receiverOnMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/websocket.js:1070:20)\n    at Receiver.emit (node:events:519:28)\n    at Receiver.dataMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:517:14)\n    at Receiver.getData (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:435:17)\n    at Receiver.startLoop (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:143:22)\n    at Receiver._write (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:78:10)\n    at writeOrBuffer (node:internal/streams/writable:572:12)\n    at _write (node:internal/streams/writable:501:10)\n    at Writable.write (node:internal/streams/writable:510:10)\n    at Socket.socketOnData (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/websocket.js:1164:35)\n    at Socket.emit (node:events:519:28)\n    at addChunk (node:internal/streams/readable:561:12)"
+      }
+    },
+    "messageId": 4
+  }
+22:53:12.206 detox[113471] [90mi[39m get message
+  data: {"type":"serverError","params":{"error":{"name":"DetoxRuntimeError","message":"Detox can't seem to connect to the test app(s)!\n\nHINT: \n\nHave you forgotten to call 'device.launchApp()' in the beginning of your test?\nRefer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs\n\n---\nThe following package could not be delivered:\n\n{\n  type: 'invoke',\n  params: [Object],\n  messageId: 4\n}","stack":"DetoxRuntimeError: Detox can't seem to connect to the test app(s)!\n\nHINT: \n\nHave you forgotten to call 'device.launchApp()' in the beginning of your test?\nRefer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs\n\n---\nThe following package could not be delivered:\n\n{\n  type: 'invoke',\n  params: [Object],\n  messageId: 4\n}\n    at Object.maybeAppWasNotLaunched (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/errors/longreads/failedToReachTheApp.js:22:10)\n    at TesterConnectionHandler.handle (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/server/handlers/TesterConnectionHandler.js:32:31)\n    at DetoxConnection._onMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src/server/DetoxConnection.js:76:23)\n    at WebSocket.emit (node:events:519:28)\n    at Receiver.receiverOnMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/websocket.js:1070:20)\n    at Receiver.emit (node:events:519:28)\n    at Receiver.dataMessage (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:517:14)\n    at Receiver.getData (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:435:17)\n    at Receiver.startLoop (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:143:22)\n    at Receiver._write (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/receiver.js:78:10)\n    at writeOrBuffer (node:internal/streams/writable:572:12)\n    at _write (node:internal/streams/writable:501:10)\n    at Writable.write (node:internal/streams/writable:510:10)\n    at Socket.socketOnData (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/node_modules/ws/lib/websocket.js:1164:35)\n    at Socket.emit (node:events:519:28)\n    at addChunk (node:internal/streams/readable:561:12)"}},"messageId":4}
+   
+22:53:12.206 detox[113471] [90mi[39m Detox can't seem to connect to the test app(s)!
+
+HINT: 
+
+Have you forgotten to call 'device.launchApp()' in the beginning of your test?
+Refer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs
+
+---
+The following package could not be delivered:
+
+{
+  type: 'invoke',
+  params: [Object],
+  messageId: 4
+}
+22:53:12.207 detox[113471] [90mE[39m tap
+  error: Detox can't seem to connect to the test app(s)!
+  
+  HINT: 
+  
+  Have you forgotten to call 'device.launchApp()' in the beginning of your test?
+  Refer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs
+  
+  ---
+  The following package could not be delivered:
+  
+  {
+    type: 'invoke',
+    params: [Object],
+    messageId: 4
+  }
+      at Object.tap (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js:38:41)
+      at Promise.then.completed (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/utils.js:298:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/utils.js:231:10)
+      at _callCircusTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:316:40)
+      at processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at _runTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:252:3)
+      at _runTestsForDescribeBlock (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:126:9)
+      at _runTestsForDescribeBlock (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:121:9)
+      at run (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:71:3)
+      at runAndTransformResultsToJestFormat (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+      at jestAdapter (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+      at runTestInternal (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-runner/build/runTest.js:367:16)
+      at runTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-runner/build/runTest.js:444:34)
+22:53:12.208 detox[113471] [90mB[39m onTestFnFailure
+  args: ({"error":{}})
+22:53:12.208 detox[113471] [90mi[39m starting ADBScreencapRecording
+22:53:12.208 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22523136_19.png"
+22:53:13.958 detox[113471] [90mi[39m 
+22:53:13.958 detox[113471] [90mi[39m stopping ADBScreencapRecording
+22:53:13.958 detox[113471] [90mE[39m onTestFnFailure
+22:53:13.958 detox[113471] [90mE[39m test_fn
+  error: Detox can't seem to connect to the test app(s)!
+  
+  HINT: 
+  
+  Have you forgotten to call 'device.launchApp()' in the beginning of your test?
+  Refer to our troubleshooting guide, for full details: https://wix.github.io/Detox/docs/troubleshooting/running-tests#tests-execution-hangs
+  
+  ---
+  The following package could not be delivered:
+  
+  {
+    type: 'invoke',
+    params: [Object],
+    messageId: 4
+  }
+      at Object.tap (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js:38:41)
+      at Promise.then.completed (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/utils.js:298:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/utils.js:231:10)
+      at _callCircusTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:316:40)
+      at processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at _runTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:252:3)
+      at _runTestsForDescribeBlock (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:126:9)
+      at _runTestsForDescribeBlock (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:121:9)
+      at run (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/run.js:71:3)
+      at runAndTransformResultsToJestFormat (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+      at jestAdapter (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+      at runTestInternal (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-runner/build/runTest.js:367:16)
+      at runTest (/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/jest-runner/build/runTest.js:444:34)
+22:53:13.958 detox[113471] [90mB[39m onTestDone
+  args: ({"title":"adds an expense and sees it in transactions","fullName":"App smoke flow adds an expense and sees it in transactions","status":"failed","invocations":1,"timedOut":false})
+22:53:13.958 detox[113471] [90mi[39m stopping ADBLogcatRecording
+22:53:13.958 detox[113471] [90mi[39m starting ADBScreencapRecording
+22:53:13.958 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22523136_20.png"
+22:53:13.961 detox[113471] [90mi[39m stopping ADBVideoRecording
+22:53:13.961 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "date +\"%m-%d %T.000\""
+22:53:13.963 detox[113471] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22523136_18.mp4
+22:53:13.964 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22523136_18.mp4 terminated with SIGINT
+22:53:13.965 detox[113471] [90mi[39m saving ADBVideoRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow adds an expense and sees it in transactions/test.mp4
+22:53:14.022 detox[113471] [90mi[39m 03-14 22:53:11.000
+
+22:53:14.023 detox[113471] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell logcat -T "03-14 22:53:07.000" --pid=9090 -f /sdcard/22523136_16.log
+22:53:14.024 detox[113471] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:53:07.000\" --pid=9090 -f /sdcard/22523136_16.log" terminated with SIGINT
+22:53:14.465 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22523136_18.mp4
+22:53:14.516 detox[113471] [90mi[39m 68	/sdcard/22523136_18.mp4
+
+22:53:14.516 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_18.mp4" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow adds an expense and sees it in transactions/test.mp4"
+22:53:14.527 detox[113471] [90mi[39m /sdcard/22523136_18.mp4: 1 file pulled, 0 skipped. 18.4 MB/s (60711 bytes in 0.003s)
+
+22:53:14.527 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_18.mp4\""
+22:53:14.572 detox[113471] [90mi[39m 
+22:53:14.574 detox[113471] [90mi[39m saving ADBLogcatRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow adds an expense and sees it in transactions/device.log
+22:53:14.574 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_16.log" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow adds an expense and sees it in transactions/device.log"
+22:53:14.591 detox[113471] [90mi[39m /sdcard/22523136_16.log: 1 file pulled, 0 skipped.
+
+22:53:14.591 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_16.log\""
+22:53:14.633 detox[113471] [90mi[39m 
+22:53:15.201 detox[113471] [90mi[39m 
+22:53:15.201 detox[113471] [90mi[39m stopping ADBScreencapRecording
+22:53:15.201 detox[113471] [90mE[39m onTestDone
+22:53:15.201 detox[113471] [90mE[39m adds an expense and sees it in transactions
+22:53:15.201 detox[113471] [90mi[39m App smoke flow: adds an expense and sees it in transactions [FAIL]
+22:53:15.202 detox[113471] [90mB[39m onRunDescribeFinish
+  args: ({"name":"App smoke flow"})
+22:53:15.202 detox[113471] [90mE[39m onRunDescribeFinish
+22:53:15.203 detox[113471] [90mE[39m App smoke flow
+22:53:15.203 detox[113471] [90mB[39m afterAll
+22:53:15.204 detox[113471] [90mB[39m terminateApp
+  args: ()
+22:53:15.204 detox[113471] [90mB[39m onBeforeTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:53:15.204 detox[113471] [90mE[39m onBeforeTerminateApp
+22:53:15.204 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "am force-stop com.mcfuzzysquirrel.studentfinance"
+22:53:15.208 detox[113471] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow adds an expense and sees it in transactions/testStart.png
+22:53:15.208 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_17.png" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow adds an expense and sees it in transactions/testStart.png"
+22:53:15.231 detox[113471] [90mi[39m /sdcard/22523136_17.png: 1 file pulled, 0 skipped. 117.3 MB/s (1375556 bytes in 0.011s)
+
+22:53:15.231 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_17.png\""
+22:53:15.264 detox[113471] [90mi[39m 
+22:53:15.264 detox[113471] [90mB[39m onTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:53:15.264 detox[113471] [90mE[39m onTerminateApp
+22:53:15.264 detox[113471] [90mE[39m terminateApp
+22:53:15.265 detox[113471] [90mE[39m afterAll
+22:53:15.265 detox[113471] [90mB[39m onRunDescribeFinish
+  args: ({"name":"ROOT_DESCRIBE_BLOCK"})
+22:53:15.265 detox[113471] [90mE[39m onRunDescribeFinish
+22:53:15.265 detox[113471] [90mE[39m run the tests
+22:53:15.300 detox[113471] [90mB[39m tear down environment
+22:53:15.301 detox[113471] [90mB[39m onBeforeCleanup
+  args: ()
+22:53:15.302 detox[113471] [90mi[39m 
+22:53:15.302 detox[113471] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow adds an expense and sees it in transactions/testFnFailure.png
+22:53:15.302 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_19.png" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow adds an expense and sees it in transactions/testFnFailure.png"
+22:53:15.320 detox[113471] [90mi[39m /sdcard/22523136_19.png: 1 file pulled, 0 skipped. 135.0 MB/s (1375556 bytes in 0.010s)
+
+22:53:15.320 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_19.png\""
+22:53:15.357 detox[113471] [90mi[39m 
+22:53:15.357 detox[113471] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow adds an expense and sees it in transactions/testDone.png
+22:53:15.357 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22523136_20.png" "artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/✗ App smoke flow adds an expense and sees it in transactions/testDone.png"
+22:53:15.374 detox[113471] [90mi[39m /sdcard/22523136_20.png: 1 file pulled, 0 skipped. 164.8 MB/s (1375556 bytes in 0.008s)
+
+22:53:15.374 detox[113471] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22523136_20.png\""
+22:53:15.408 detox[113471] [90mi[39m 
+22:53:15.408 detox[113471] [90mi[39m saving FileArtifact to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/detox_pid_113471.json.log { append: true }
+22:53:15.409 detox[113471] [90mi[39m saving FileArtifact to: artifacts/detox/android.emu.debug.2026-03-14 20-52-30Z/detox_pid_113471.log { append: true }
+22:53:15.409 detox[113471] [90mE[39m onBeforeCleanup
+22:53:15.411 detox[113446] [90mi[39m tester exited session 09664e91-fdcf-22e1-af8e-d3275d81a9b7
+22:53:15.411 detox[113446] [90mE[39m connection :45913<->:58096
+22:53:15.412 detox[113471] [90mi[39m dispatching event to  primary-113446 /tmp/detox.primary-113446  :  deallocateDevice , {
+  deviceCookie: {
+    id: 'emulator-5554',
+    adbName: 'emulator-5554',
+    name: 'emulator-5554 (detox-api35)'
+  }
+}
+22:53:15.413 detox[113446] [90mi[39m received event of :  deallocateDevice {
+  deviceCookie: {
+    id: 'emulator-5554',
+    adbName: 'emulator-5554',
+    name: 'emulator-5554 (detox-api35)'
+  }
+}
+22:53:15.413 detox[113446] [90mB[39m free: emulator-5554
+  data: {}
+22:53:15.414 detox[113446] [90mE[39m free: emulator-5554
+22:53:15.414 detox[113446] [90mi[39m dispatching event to socket  :  deallocateDeviceDone {}
+22:53:15.415 detox[113471] [90mi[39m ## received events ##
+22:53:15.415 detox[113471] [90mi[39m detected event deallocateDeviceDone {}
+22:53:15.416 detox[113471] [90mE[39m tear down environment
+22:53:15.416 detox[113471] [90mE[39m e2e/smoke.e2e.js
+22:53:15.424 detox[113471] [90mi[39m dispatching event to  primary-113446 /tmp/detox.primary-113446  :  reportTestResults , {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js',
+      testExecError: undefined,
+      isPermanentFailure: false
+    }
+  ]
+}
+22:53:15.425 detox[113446] [90mi[39m received event of :  reportTestResults {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js',
+      isPermanentFailure: false
+    }
+  ]
+}
+22:53:15.425 detox[113446] [90mi[39m dispatching event to socket  :  reportTestResultsDone {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js',
+      isPermanentFailure: false
+    }
+  ]
+}
+22:53:15.426 detox[113446] [90mi[39m broadcasting event to all known sockets listening to  /tmp/detox.primary-113446  :   sessionStateUpdate {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js',
+      isPermanentFailure: false
+    }
+  ]
+}
+22:53:15.426 detox[113471] [90mi[39m ## received events ##
+22:53:15.426 detox[113471] [90mi[39m detected event reportTestResultsDone {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js',
+      isPermanentFailure: false
+    }
+  ]
+}
+22:53:15.428 detox[113471] [90mi[39m connection closed primary-113446 /tmp/detox.primary-113446 0 tries remaining of 0
+22:53:15.428 detox[113471] [90mi[39m secondary-113471 exceeded connection rety amount of  or stopRetrying flag set.
+22:53:15.429 detox[113446] [90mi[39m server socket error Error: read ECONNRESET
+    at Pipe.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+22:53:15.429 detox[113446] [90mi[39m socket disconnected secondary-113471
+22:53:15.532 detox[113446] [90mE[39m Command failed with exit code = 1:
+jest --config e2e/jest.config.js
+22:53:15.533 detox[113446] [90mB[39m cleanup
+  args: ()
+22:53:15.534 detox[113446] [90mE[39m cleanup
+22:53:15.535 detox[113446] [90mi[39m Detox server has been closed gracefully
+22:53:15.536 detox[113446] [90mE[39m node_modules/.bin/detox test -c android.emu.debug --record-logs all --take-screenshots failing --record-videos failing --artifacts-location artifacts/detox

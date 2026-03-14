@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import AddExpenseScreen from '@/app/add-expense';
 import BudgetScreen from '@/app/budget';
-import DashboardScreen from '@/app/index';
+import DashboardScreen from '@/app/dashboard';
 import EditExpenseScreen from '@/app/edit-expense';
 import SplitsScreen from '@/app/splits';
 import TransactionsScreen from '@/app/transactions';
@@ -46,8 +46,8 @@ function LazyInsightsScreen(): React.JSX.Element {
 function TabNavigator(): React.JSX.Element {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Dashboard" component={DashboardScreen} />
-      <Tab.Screen name="Transactions" component={TransactionsScreen} />
+      <Tab.Screen name="Dashboard" component={DashboardScreen} options={{ tabBarButtonTestID: 'tab-dashboard' }} />
+      <Tab.Screen name="Transactions" component={TransactionsScreen} options={{ tabBarButtonTestID: 'tab-transactions' }} />
       <Tab.Screen name="Insights" component={LazyInsightsScreen} options={{ lazy: true }} />
       <Tab.Screen name="Budget" component={BudgetScreen} />
     </Tab.Navigator>

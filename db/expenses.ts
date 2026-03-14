@@ -4,6 +4,7 @@ import { DatabaseError } from '@/db/errors';
 import {
   assertIntegerAmount,
   assertMonthFormat,
+  generateId,
   getMonthBounds,
   getWeekBounds,
   normalizeOptionalText,
@@ -69,7 +70,7 @@ function validateExpenseInput(expense: Omit<Expense, 'id'>): void {
 export async function insertExpense(db: SQLiteDatabase, expense: Omit<Expense, 'id'>): Promise<Expense> {
   validateExpenseInput(expense);
 
-  const id = crypto.randomUUID();
+  const id = generateId();
 
   await db.runAsync(
     `INSERT INTO expenses (

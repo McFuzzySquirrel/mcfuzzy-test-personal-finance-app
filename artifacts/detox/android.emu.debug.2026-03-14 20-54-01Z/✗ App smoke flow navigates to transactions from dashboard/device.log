@@ -1,0 +1,47 @@
+--------- beginning of main
+03-14 22:54:38.713  9792  9828 D EGL_emulation: app_time_stats: avg=501.39ms min=494.02ms max=508.76ms count=2
+03-14 22:54:39.319  9792  9837 D TrafficStats: tagSocket(145) with statsTag=0xffffffff, statsUid=-1
+03-14 22:54:39.444  9792  9842 D TrafficStats: tagSocket(145) with statsTag=0xffffffff, statsUid=-1
+03-14 22:54:39.718  9792  9828 D EGL_emulation: app_time_stats: avg=502.12ms min=500.03ms max=504.20ms count=2
+03-14 22:54:40.048  9792  9822 D DetoxWSClient: Received action 'invoke' (ID #9, params={"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcherWithSearchAction","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-view-transactions-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAction"},"method":"scrollInDirectionStaleAtEdge","args":[{"type":"Integer","value":4},{"type":"Double","value":200},{"type":"Double","value":-1},{"type":"Double","value":-1}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForClass","args":["android.widget.ScrollView"]}}]})
+03-14 22:54:40.050  9792  9818 I DetoxDispatcher: Handling action 'invoke' (ID #9)...
+03-14 22:54:40.051  9792  9818 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForTestId, [dashboard-view-transactions-button, false]
+03-14 22:54:40.053  9792  9818 D Detox   : class androidx.test.espresso.Espresso, onView, [(view.getTag() is "dashboard-view-transactions-button" and view has effective visibility <VISIBLE>)]
+03-14 22:54:40.056  9792  9818 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForSufficientlyVisible, [75]
+03-14 22:54:40.057  9792  9818 D Detox   : class com.wix.detox.espresso.DetoxAction, scrollInDirectionStaleAtEdge, [4, 200.0, -1.0, -1.0]
+03-14 22:54:40.058  9792  9818 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForClass, [android.widget.ScrollView]
+03-14 22:54:40.059  9792  9818 D Detox   : class com.wix.detox.espresso.DetoxAssertion, waitForAssertMatcherWithSearchAction, [androidx.test.espresso.ViewInteraction@fc9d7cf, (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area), com.wix.detox.espresso.scroll.DetoxScrollActionStaleAtEdge@1cc255c, (is assignable from class: class android.widget.ScrollView and view has effective visibility <VISIBLE>)]
+03-14 22:54:40.109  9792  9792 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-view-transactions-button" and view has effective visibility <VISIBLE>)
+03-14 22:54:40.112  9792  9792 I ViewInteraction: Performing 'scrollInDirectionStaleAtEdge' action on view (is assignable from class: class android.widget.ScrollView and view has effective visibility <VISIBLE>)
+03-14 22:54:40.114  9792  9792 D DetoxScrollHelper: prescroll amountDP=200.0 amountPx=525 scrollableRangePx=2160 times=0 remainder=525
+03-14 22:54:40.115  9792  9792 D DetoxScrollHelper: System gesture insets: Insets{left=78, top=160, right=78, bottom=84} minX=83 minY=165 maxX=997.0 maxY=2311.0 currentX=540 currentY=2397
+03-14 22:54:40.115  9792  9792 D DetoxScrollHelper: scroll Point(540, 2311) --> Point(540, 1765)
+03-14 22:54:40.737  9792  9828 D EGL_emulation: app_time_stats: avg=97.19ms min=25.44ms max=504.81ms count=9
+03-14 22:54:41.255  9792  9792 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-view-transactions-button" and view has effective visibility <VISIBLE>)
+03-14 22:54:41.257  9792  9792 I ViewInteraction: Performing 'scrollInDirectionStaleAtEdge' action on view (is assignable from class: class android.widget.ScrollView and view has effective visibility <VISIBLE>)
+03-14 22:54:41.259  9792  9792 D DetoxScrollHelper: prescroll amountDP=200.0 amountPx=525 scrollableRangePx=2160 times=0 remainder=525
+03-14 22:54:41.299  9792  9792 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (view.getTag() is "dashboard-view-transactions-button" and view has effective visibility <VISIBLE>)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: Test exception
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: java.lang.reflect.InvocationTargetException
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at java.lang.reflect.Method.invoke(Native Method)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at org.apache.commons.lang3.reflect.MethodUtils.invokeStaticMethod(MethodUtils.java:443)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at org.apache.commons.lang3.reflect.MethodUtils.invokeStaticMethod(MethodUtils.java:405)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at com.wix.invoke.types.ClassTarget.execute(ClassTarget.java:23)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at com.wix.invoke.types.Target.invoke(Target.java:59)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at com.wix.invoke.MethodInvocation.invoke(MethodInvocation.java:35)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at com.wix.invoke.MethodInvocation.invoke(MethodInvocation.java:26)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at com.wix.invoke.MethodInvocation.invoke(MethodInvocation.java:20)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at com.wix.detox.adapters.server.InvokeActionHandler.handle(DetoxActionHandlers.kt:54)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at com.wix.detox.adapters.server.ActionsExecutor.executeAction$lambda$2$lambda$1(DetoxActionsDispatcher.kt:76)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at com.wix.detox.adapters.server.ActionsExecutor.$r8$lambda$GVbB7LHtBHxNHGbgYnHJ6YrwCqs(Unknown Source:0)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at com.wix.detox.adapters.server.ActionsExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at android.os.Handler.handleCallback(Handler.java:959)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at android.os.Looper.loopOnce(Looper.java:232)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at android.os.Looper.loop(Looper.java:317)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at com.wix.detox.adapters.server.ActionsExecutor._init_$lambda$0(DetoxActionsDispatcher.kt:62)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at com.wix.detox.adapters.server.ActionsExecutor.$r8$lambda$xlgL0CQim6vNM0wWEqM8JIDgZUE(Unknown Source:0)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at com.wix.detox.adapters.server.ActionsExecutor$$ExternalSyntheticLambda1.run(D8$$SyntheticClass:0)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: 	at java.lang.Thread.run(Thread.java:1012)
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: Caused by: junit.framework.AssertionFailedError: '(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.
+03-14 22:54:41.302  9792  9818 I DetoxActionHandlers: Expected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRec

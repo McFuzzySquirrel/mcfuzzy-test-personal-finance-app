@@ -10,4 +10,7 @@ fi
 
 perl -0pi -e 's#gradle-(9\.0\.0|8\.10\.2)-bin\.zip#gradle-8.13-bin.zip#g' android/gradle/wrapper/gradle-wrapper.properties
 
+# Stop stale Gradle daemons so a fresh daemon inherits the current PATH (nvm node).
+(cd android && ./gradlew --stop 2>/dev/null || true)
+
 detox build -c android.emu.debug

@@ -25,10 +25,20 @@ module.exports = {
         avdName: process.env.DETOX_AVD_NAME || 'detox-api35',
       },
     },
+    attached: {
+      type: 'android.attached',
+      device: {
+        adbName: 'emulator-5554',
+      },
+    },
   },
   configurations: {
     'android.emu.debug': {
       device: 'emulator',
+      app: 'android.debug',
+    },
+    'android.att.debug': {
+      device: 'attached',
       app: 'android.debug',
     },
   },

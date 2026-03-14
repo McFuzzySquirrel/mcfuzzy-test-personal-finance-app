@@ -1,0 +1,2336 @@
+22:54:01.479 detox[115052] [90mB[39m node_modules/.bin/detox test -c android.emu.debug --record-logs all --take-screenshots failing --record-videos failing --artifacts-location artifacts/detox
+  data: {
+    "id": "ae9d46fd-0a33-101c-02c3-b55d2c91c9ec",
+    "detoxConfig": {
+      "configurationName": "android.emu.debug",
+      "apps": {
+        "default": {
+          "type": "android.apk",
+          "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+          "testBinaryPath": "android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk",
+          "build": "if [ ! -d android ]; then CI=1 npx expo prebuild --platform android; fi && cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug",
+          "reversePorts": [
+            8081
+          ]
+        }
+      },
+      "artifacts": {
+        "rootDir": "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z",
+        "plugins": {
+          "log": {
+            "enabled": true,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "screenshot": {
+            "enabled": true,
+            "shouldTakeAutomaticSnapshots": true,
+            "keepOnlyFailedTestsArtifacts": true
+          },
+          "video": {
+            "enabled": true,
+            "keepOnlyFailedTestsArtifacts": true
+          },
+          "instruments": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "uiHierarchy": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          }
+        }
+      },
+      "behavior": {
+        "init": {
+          "keepLockFile": false,
+          "reinstallApp": true,
+          "exposeGlobals": true
+        },
+        "cleanup": {
+          "shutdownDevice": false
+        },
+        "launchApp": "auto"
+      },
+      "cli": {
+        "artifactsLocation": "artifacts/detox",
+        "recordLogs": "all",
+        "takeScreenshots": "failing",
+        "recordVideos": "failing",
+        "configuration": "android.emu.debug",
+        "start": true
+      },
+      "commands": [
+        {
+          "appName": "default",
+          "build": "if [ ! -d android ]; then CI=1 npx expo prebuild --platform android; fi && cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug"
+        }
+      ],
+      "device": {
+        "type": "android.emulator",
+        "device": {
+          "avdName": "detox-api35"
+        }
+      },
+      "logger": {
+        "level": "info",
+        "overrideConsole": true,
+        "options": {
+          "showLoggerName": true,
+          "showPid": true,
+          "showLevel": false,
+          "showMetadata": false,
+          "basepath": "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/node_modules/detox/src",
+          "prefixers": {},
+          "stringifiers": {}
+        }
+      },
+      "testRunner": {
+        "retries": 0,
+        "forwardEnv": false,
+        "detached": false,
+        "bail": false,
+        "noRetryArgs": [
+          "shard"
+        ],
+        "jest": {
+          "setupTimeout": 180000,
+          "teardownTimeout": 30000,
+          "retryAfterCircusRetries": false,
+          "reportWorkerAssign": true
+        },
+        "args": {
+          "$0": "jest",
+          "_": [],
+          "config": "e2e/jest.config.js",
+          "--": []
+        }
+      },
+      "session": {
+        "autoStart": true,
+        "debugSynchronization": 10000
+      }
+    },
+    "detoxIPCServer": "primary-115052",
+    "testResults": [],
+    "testSessionIndex": 0,
+    "workersCount": 0
+  }
+22:54:01.486 detox[115052] [90mi[39m Server path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + ipc.config.id /tmp/detox.primary-115052
+22:54:01.489 detox[115052] [90mi[39m starting server on  /tmp/detox.primary-115052 
+22:54:01.489 detox[115052] [90mi[39m starting TLS server false
+22:54:01.489 detox[115052] [90mi[39m starting server as Unix || Windows Socket
+22:54:01.493 detox[115052] [90mi[39m Detox server listening on localhost:41697...
+22:54:01.503 detox[115052] [90mi[39m Serialized the session state at: /tmp/ae9d46fd-0a33-101c-02c3-b55d2c91c9ec.detox.json
+22:54:01.506 detox[115052] [90mB[39m jest --config e2e/jest.config.js
+22:54:01.986 detox[115078] [90mi[39m Service path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + id 
+22:54:01.987 detox[115078] [90mi[39m requested connection to  primary-115052 /tmp/detox.primary-115052
+22:54:01.987 detox[115078] [90mi[39m Connecting client on Unix Socket : /tmp/detox.primary-115052
+22:54:01.989 detox[115052] [90mi[39m ## socket connection to server detected ##
+22:54:01.989 detox[115078] [90mi[39m retrying reset
+22:54:01.990 detox[115078] [90mi[39m dispatching event to  primary-115052 /tmp/detox.primary-115052  :  registerContext , { id: 'secondary-115078' }
+22:54:01.991 detox[115052] [90mi[39m received event of :  registerContext { id: 'secondary-115078' }
+22:54:01.991 detox[115052] [90mi[39m dispatching event to socket  :  registerContextDone {
+  testResults: [],
+  testSessionIndex: 0,
+  unsafe_earlyTeardown: undefined
+}
+22:54:01.992 detox[115078] [90mi[39m ## received events ##
+22:54:01.992 detox[115078] [90mi[39m detected event registerContextDone { testResults: [], testSessionIndex: 0 }
+22:54:02.112 detox[115078] [90mB[39m e2e/smoke.e2e.js
+22:54:02.136 detox[115078] [90mB[39m set up environment
+22:54:02.138 detox[115078] [90mi[39m dispatching event to  primary-115052 /tmp/detox.primary-115052  :  registerWorker , { workerId: 'w1' }
+22:54:02.139 detox[115052] [90mi[39m received event of :  registerWorker { workerId: 'w1' }
+22:54:02.139 detox[115052] [90mi[39m dispatching event to socket  :  registerWorkerDone { workersCount: 1 }
+22:54:02.139 detox[115052] [90mi[39m broadcasting event to all known sockets listening to  /tmp/detox.primary-115052  :   sessionStateUpdate { workersCount: 1 }
+22:54:02.139 detox[115078] [90mi[39m ## received events ##
+22:54:02.140 detox[115078] [90mi[39m detected event registerWorkerDone { workersCount: 1 }
+22:54:02.337 detox[115078] [90mi[39m ## received events ##
+22:54:02.337 detox[115078] [90mi[39m detected event sessionStateUpdate { workersCount: 1 }
+22:54:02.343 detox[115052] [90mB[39m connection :41697<->:58996
+22:54:02.344 detox[115078] [90mi[39m opened web socket to: ws://localhost:41697
+22:54:02.346 detox[115078] [90mi[39m send message
+  data: {"type":"login","params":{"sessionId":"32d47440-e6d3-aee5-7307-a25756827880","role":"tester"},"messageId":0}
+22:54:02.348 detox[115052] [90mi[39m get
+  data: {"type":"login","params":{"sessionId":"32d47440-e6d3-aee5-7307-a25756827880","role":"tester"},"messageId":0}
+22:54:02.348 detox[115052] [90mi[39m created session 32d47440-e6d3-aee5-7307-a25756827880
+22:54:02.349 detox[115052] [90mi[39m send
+  data: {
+    "type": "loginSuccess",
+    "params": {
+      "testerConnected": true,
+      "appConnected": false
+    },
+    "messageId": 0
+  }
+22:54:02.349 detox[115052] [90mi[39m tester joined session 32d47440-e6d3-aee5-7307-a25756827880
+22:54:02.350 detox[115078] [90mi[39m get message
+  data: {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+   
+22:54:02.394 detox[115078] [90mi[39m dispatching event to  primary-115052 /tmp/detox.primary-115052  :  allocateDevice , {
+  deviceConfig: { type: 'android.emulator', device: { avdName: 'detox-api35' } }
+}
+22:54:02.395 detox[115052] [90mi[39m received event of :  allocateDevice {
+  deviceConfig: { type: 'android.emulator', device: { avdName: 'detox-api35' } }
+}
+22:54:02.429 detox[115052] [90mB[39m init
+  args: ()
+22:54:02.432 detox[115052] [90mE[39m init
+22:54:02.432 detox[115052] [90mB[39m allocate
+  data: {
+    "type": "android.emulator",
+    "device": {
+      "avdName": "detox-api35"
+    }
+  }
+22:54:02.549 detox[115052] [90mi[39m Detected emulator binary version { major: 36, minor: 4, patch: 10, toString: [Function: toString] }
+22:54:02.551 detox[115052] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb"  devices
+22:54:02.557 detox[115052] [90mi[39m List of devices attached
+emulator-5554	device
+
+
+22:54:02.558 detox[115052] [90mi[39m port: 5554, host: localhost
+22:54:02.577 detox[115052] [90mi[39m Found a matching & free device emulator-5554
+22:54:02.578 detox[115052] [90mi[39m settled on emulator-5554 (detox-api35)
+  data: {
+    "id": "emulator-5554",
+    "adbName": "emulator-5554",
+    "name": "emulator-5554 (detox-api35)"
+  }
+22:54:02.578 detox[115052] [90mE[39m allocate
+22:54:02.578 detox[115052] [90mB[39m post-allocate: emulator-5554
+  data: {
+    "id": "emulator-5554",
+    "adbName": "emulator-5554",
+    "name": "emulator-5554 (detox-api35)"
+  }
+22:54:02.578 detox[115052] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "getprop dev.bootcomplete"
+22:54:02.636 detox[115052] [90mi[39m 1
+
+22:54:02.637 detox[115052] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "getprop ro.build.version.sdk"
+22:54:02.693 detox[115052] [90mi[39m 35
+
+22:54:02.693 detox[115052] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "settings put global animator_duration_scale 0"
+22:54:02.761 detox[115052] [90mi[39m 
+22:54:02.761 detox[115052] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "settings put global window_animation_scale 0"
+22:54:02.803 detox[115052] [90mi[39m 
+22:54:02.803 detox[115052] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "settings put global transition_animation_scale 0"
+22:54:02.844 detox[115052] [90mi[39m 
+22:54:02.844 detox[115052] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "dumpsys power | grep \"^[ ]*m[UW].*=\""
+22:54:03.030 detox[115052] [90mi[39m   mWakefulness=Awake
+  mWakefulnessChanging=false
+  mUseAutoSuspend=true
+  mWakeLockSummary=0x0
+  mWakeUpWhenPluggedOrUnpluggedConfig=false
+  mWakeUpWhenPluggedOrUnpluggedInTheaterModeConfig=false
+  mUserActivityTimeoutOverrideFromWindowManager=-1
+  mUserInactiveOverrideFromWindowManager=false
+  mUserId=0
+  mWakeLockSummary=0x0
+  mUserInteractionBackoffMillis=60000
+
+22:54:03.030 detox[115052] [90mE[39m post-allocate: emulator-5554
+22:54:03.031 detox[115052] [90mi[39m dispatching event to socket  :  allocateDeviceDone {
+  deviceCookie: {
+    id: 'emulator-5554',
+    adbName: 'emulator-5554',
+    name: 'emulator-5554 (detox-api35)'
+  }
+}
+22:54:03.031 detox[115078] [90mi[39m ## received events ##
+22:54:03.031 detox[115078] [90mi[39m detected event allocateDeviceDone {
+  deviceCookie: {
+    id: 'emulator-5554',
+    adbName: 'emulator-5554',
+    name: 'emulator-5554 (detox-api35)'
+  }
+}
+22:54:03.062 detox[115078] [90mB[39m onBootDevice
+  args: ({"deviceId":"emulator-5554"})
+22:54:03.063 detox[115078] [90mE[39m onBootDevice
+22:54:03.063 detox[115078] [90mB[39m installUtilBinaries
+  args: ()
+22:54:03.064 detox[115078] [90mE[39m installUtilBinaries
+22:54:03.064 detox[115078] [90mB[39m selectApp
+  args: ("default")
+22:54:03.069 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/build-tools/36.1.0/aapt" dump badging "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/debug/app-debug.apk"
+22:54:03.078 detox[115078] [90mi[39m package: name='com.mcfuzzysquirrel.studentfinance' versionCode='1' versionName='1.0.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+sdkVersion:'24'
+targetSdkVersion:'36'
+uses-permission: name='android.permission.SYSTEM_ALERT_WINDOW'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.READ_EXTERNAL_STORAGE' maxSdkVersion='32'
+uses-permission: name='android.permission.VIBRATE'
+uses-permission: name='android.permission.WRITE_EXTERNAL_STORAGE' maxSdkVersion='32'
+uses-permission: name='com.mcfuzzysquirrel.studentfinance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
+application-label:'Student Finance'
+application-label-af:'Student Finance'
+application-label-am:'Student Finance'
+application-label-ar:'Student Finance'
+application-label-as:'Student Finance'
+application-label-az:'Student Finance'
+application-label-be:'Student Finance'
+application-label-bg:'Student Finance'
+application-label-bn:'Student Finance'
+application-label-bs:'Student Finance'
+application-label-ca:'Student Finance'
+application-label-cs:'Student Finance'
+application-label-da:'Student Finance'
+application-label-de:'Student Finance'
+application-label-el:'Student Finance'
+application-label-en-AU:'Student Finance'
+application-label-en-CA:'Student Finance'
+application-label-en-GB:'Student Finance'
+application-label-en-IN:'Student Finance'
+application-label-en-XC:'Student Finance'
+application-label-es:'Student Finance'
+application-label-es-419:'Student Finance'
+application-label-es-ES:'Student Finance'
+application-label-es-US:'Student Finance'
+application-label-et:'Student Finance'
+application-label-eu:'Student Finance'
+application-label-fa:'Student Finance'
+application-label-fi:'Student Finance'
+application-label-fr:'Student Finance'
+application-label-fr-CA:'Student Finance'
+application-label-gl:'Student Finance'
+application-label-gu:'Student Finance'
+application-label-hi:'Student Finance'
+application-label-hr:'Student Finance'
+application-label-hu:'Student Finance'
+application-label-hy:'Student Finance'
+application-label-in:'Student Finance'
+application-label-is:'Student Finance'
+application-label-it:'Student Finance'
+application-label-iw:'Student Finance'
+application-label-ja:'Student Finance'
+application-label-ka:'Student Finance'
+application-label-kk:'Student Finance'
+application-label-km:'Student Finance'
+application-label-kn:'Student Finance'
+application-label-ko:'Student Finance'
+application-label-ky:'Student Finance'
+application-label-lo:'Student Finance'
+application-label-lt:'Student Finance'
+application-label-lv:'Student Finance'
+application-label-mk:'Student Finance'
+application-label-ml:'Student Finance'
+application-label-mn:'Student Finance'
+application-label-mr:'Student Finance'
+application-label-ms:'Student Finance'
+application-label-my:'Student Finance'
+application-label-nb:'Student Finance'
+application-label-ne:'Student Finance'
+application-label-nl:'Student Finance'
+application-label-or:'Student Finance'
+application-label-pa:'Student Finance'
+application-label-pl:'Student Finance'
+application-label-pt:'Student Finance'
+application-label-pt-BR:'Student Finance'
+application-label-pt-PT:'Student Finance'
+application-label-ro:'Student Finance'
+application-label-ru:'Student Finance'
+application-label-si:'Student Finance'
+application-label-sk:'Student Finance'
+application-label-sl:'Student Finance'
+application-label-sq:'Student Finance'
+application-label-sr:'Student Finance'
+application-label-sr-Latn:'Student Finance'
+application-label-sv:'Student Finance'
+application-label-sw:'Student Finance'
+application-label-ta:'Student Finance'
+application-label-te:'Student Finance'
+application-label-th:'Student Finance'
+application-label-tl:'Student Finance'
+application-label-tr:'Student Finance'
+application-label-uk:'Student Finance'
+application-label-ur:'Student Finance'
+application-label-uz:'Student Finance'
+application-label-vi:'Student Finance'
+application-label-zh-CN:'Student Finance'
+application-label-zh-HK:'Student Finance'
+application-label-zh-TW:'Student Finance'
+application-label-zu:'Student Finance'
+application-icon-160:'res/mipmap-mdpi-v4/ic_launcher.webp'
+application-icon-240:'res/mipmap-hdpi-v4/ic_launcher.webp'
+application-icon-320:'res/mipmap-xhdpi-v4/ic_launcher.webp'
+application-icon-480:'res/mipmap-xxhdpi-v4/ic_launcher.webp'
+application-icon-640:'res/mipmap-xxxhdpi-v4/ic_launcher.webp'
+application: label='Student Finance' icon='res/mipmap-mdpi-v4/ic_launcher.webp'
+application-debuggable
+launchable-activity: name='com.mcfuzzysquirrel.studentfinance.MainActivity'  label='' icon=''
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+  uses-feature: name='android.hardware.screen.portrait'
+  uses-implied-feature: name='android.hardware.screen.portrait' reason='one or more activities have specified a portrait orientation'
+main
+other-activities
+other-receivers
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-419' 'es-ES' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'
+densities: '160' '240' '320' '480' '640'
+native-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'
+
+22:54:03.078 detox[115078] [90mE[39m selectApp
+22:54:03.079 detox[115078] [90mB[39m uninstallApp
+  args: ()
+22:54:03.079 detox[115078] [90mB[39m onBeforeUninstallApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:54:03.079 detox[115078] [90mE[39m onBeforeUninstallApp
+22:54:03.080 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "pm list packages com.mcfuzzysquirrel.studentfinance"
+22:54:03.116 detox[115078] [90mi[39m package:com.mcfuzzysquirrel.studentfinance
+package:com.mcfuzzysquirrel.studentfinance.test
+
+22:54:03.117 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 uninstall com.mcfuzzysquirrel.studentfinance
+22:54:03.339 detox[115078] [90mi[39m Success
+
+22:54:03.339 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "pm list packages com.mcfuzzysquirrel.studentfinance.test"
+22:54:03.397 detox[115078] [90mi[39m package:com.mcfuzzysquirrel.studentfinance.test
+
+22:54:03.397 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 uninstall com.mcfuzzysquirrel.studentfinance.test
+22:54:03.630 detox[115078] [90mi[39m Success
+
+22:54:03.630 detox[115078] [90mE[39m uninstallApp
+22:54:03.631 detox[115078] [90mB[39m selectApp
+  args: ("default")
+22:54:03.631 detox[115078] [90mB[39m terminateApp
+  args: ()
+22:54:03.632 detox[115078] [90mB[39m onBeforeTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:54:03.632 detox[115078] [90mE[39m onBeforeTerminateApp
+22:54:03.633 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "am force-stop com.mcfuzzysquirrel.studentfinance"
+22:54:03.967 detox[115078] [90mi[39m 
+22:54:03.967 detox[115078] [90mB[39m onTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:54:03.967 detox[115078] [90mE[39m onTerminateApp
+22:54:03.967 detox[115078] [90mE[39m terminateApp
+22:54:03.967 detox[115078] [90mE[39m selectApp
+22:54:03.968 detox[115078] [90mB[39m installApp
+  args: ()
+22:54:03.968 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/build-tools/36.1.0/aapt" dump xmlstrings "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/debug/app-debug.apk" AndroidManifest.xml
+22:54:03.984 detox[115078] [90mi[39m String pool of 99 unique UTF-16 non-sorted strings, 99 entries and 0 styles using 5464 bytes:
+String #0: theme
+String #1: label
+String #2: icon
+String #3: name
+String #4: permission
+String #5: protectionLevel
+String #6: enabled
+String #7: debuggable
+String #8: exported
+String #9: authorities
+String #10: grantUriPermissions
+String #11: launchMode
+String #12: screenOrientation
+String #13: configChanges
+String #14: value
+String #15: resource
+String #16: mimeType
+String #17: scheme
+String #18: minSdkVersion
+String #19: versionCode
+String #20: versionName
+String #21: windowSoftInputMode
+String #22: targetSdkVersion
+String #23: maxSdkVersion
+String #24: allowBackup
+String #25: supportsRtl
+String #26: extractNativeLibs
+String #27: usesCleartextTraffic
+String #28: directBootAware
+String #29: roundIcon
+String #30: compileSdkVersion
+String #31: compileSdkVersionCodename
+String #32: appComponentFactory
+String #33: enableOnBackInvokedCallback
+String #34: */*
+String #35: 1.0.0
+String #36: 16
+String #37: ALWAYS
+String #38: action
+String #39: activity
+String #40: android
+String #41: android.intent.action.MAIN
+String #42: android.intent.action.OPEN_DOCUMENT_TREE
+String #43: android.intent.action.SEND
+String #44: android.intent.action.VIEW
+String #45: android.intent.category.BROWSABLE
+String #46: android.intent.category.LAUNCHER
+String #47: android.permission.DUMP
+String #48: android.permission.INTERNET
+String #49: android.permission.READ_EXTERNAL_STORAGE
+String #50: android.permission.SYSTEM_ALERT_WINDOW
+String #51: android.permission.VIBRATE
+String #52: android.permission.WRITE_EXTERNAL_STORAGE
+String #53: android.support.FILE_PROVIDER_PATHS
+String #54: androidx.core.app.CoreComponentFactory
+String #55: androidx.emoji2.text.EmojiCompatInitializer
+String #56: androidx.lifecycle.ProcessLifecycleInitializer
+String #57: androidx.profileinstaller.ProfileInstallReceiver
+String #58: androidx.profileinstaller.ProfileInstallerInitializer
+String #59: androidx.profileinstaller.action.BENCHMARK_OPERATION
+String #60: androidx.profileinstaller.action.INSTALL_PROFILE
+String #61: androidx.profileinstaller.action.SAVE_PROFILE
+String #62: androidx.profileinstaller.action.SKIP_FILE
+String #63: androidx.startup
+String #64: androidx.startup.InitializationProvider
+String #65: application
+String #66: category
+String #67: com.facebook.react.devsupport.DevSettingsActivity
+String #68: com.facebook.soloader.enabled
+String #69: com.mcfuzzysquirrel.studentfinance
+String #70: com.mcfuzzysquirrel.studentfinance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+String #71: com.mcfuzzysquirrel.studentfinance.FileSystemFileProvider
+String #72: com.mcfuzzysquirrel.studentfinance.MainActivity
+String #73: com.mcfuzzysquirrel.studentfinance.MainApplication
+String #74: com.mcfuzzysquirrel.studentfinance.SharingFileProvider
+String #75: com.mcfuzzysquirrel.studentfinance.androidx-startup
+String #76: data
+String #77: expo.modules.adapters.react.apploader.RNHeadlessAppLoader
+String #78: expo.modules.filesystem.FileSystemFileProvider
+String #79: expo.modules.sharing.SharingFileProvider
+String #80: expo.modules.updates.ENABLED
+String #81: expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH
+String #82: expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS
+String #83: http://schemas.android.com/apk/res/android
+String #84: https
+String #85: intent
+String #86: intent-filter
+String #87: manifest
+String #88: meta-data
+String #89: org.unimodules.core.AppLoader#react-native-headless
+String #90: package
+String #91: permission
+String #92: platformBuildVersionCode
+String #93: platformBuildVersionName
+String #94: provider
+String #95: queries
+String #96: receiver
+String #97: uses-permission
+String #98: uses-sdk
+
+22:54:03.984 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/build-tools/36.1.0/aapt" dump xmlstrings "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk" AndroidManifest.xml
+22:54:03.993 detox[115078] [90mi[39m String pool of 43 unique UTF-16 non-sorted strings, 43 entries and 0 styles using 2228 bytes:
+String #0: theme
+String #1: label
+String #2: name
+String #3: debuggable
+String #4: exported
+String #5: priority
+String #6: targetPackage
+String #7: handleProfiling
+String #8: functionalTest
+String #9: minSdkVersion
+String #10: targetSdkVersion
+String #11: extractNativeLibs
+String #12: compileSdkVersion
+String #13: compileSdkVersionCodename
+String #14: 16
+String #15: Tests for com.mcfuzzysquirrel.studentfinance
+String #16: activity
+String #17: android
+String #18: android.intent.category.LAUNCHER
+String #19: android.permission.REORDER_TASKS
+String #20: android.test.runner
+String #21: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity
+String #22: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+String #23: androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity
+String #24: androidx.test.orchestrator
+String #25: androidx.test.runner.AndroidJUnitRunner
+String #26: androidx.test.services
+String #27: application
+String #28: category
+String #29: com.google.android.apps.common.testing.services
+String #30: com.mcfuzzysquirrel.studentfinance
+String #31: com.mcfuzzysquirrel.studentfinance.test
+String #32: http://schemas.android.com/apk/res/android
+String #33: instrumentation
+String #34: intent-filter
+String #35: manifest
+String #36: package
+String #37: platformBuildVersionCode
+String #38: platformBuildVersionName
+String #39: queries
+String #40: uses-library
+String #41: uses-permission
+String #42: uses-sdk
+
+22:54:03.994 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm -fr /data/local/tmp/detox"
+22:54:04.067 detox[115078] [90mi[39m 
+22:54:04.067 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "mkdir -p /data/local/tmp/detox"
+22:54:04.105 detox[115078] [90mi[39m 
+22:54:04.105 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 push "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/debug/app-debug.apk" "/data/local/tmp/detox/Application.apk"
+22:54:06.287 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 110.8 MB/s (176284751 bytes in 1.518s)
+
+22:54:06.287 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "getprop ro.build.version.sdk"
+22:54:06.322 detox[115078] [90mi[39m 35
+
+22:54:06.326 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell pm install -r -g -t /data/local/tmp/detox/Application.apk
+22:54:08.190 detox[115078] [90mi[39m Success
+
+22:54:08.191 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell pm install -r -g -t /data/local/tmp/detox/Application.apk exited with code #0
+22:54:08.191 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 push "/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk" "/data/local/tmp/detox/Test.apk"
+22:54:08.294 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk: 1 file pushed, 0 skipped. 135.7 MB/s (4592218 bytes in 0.032s)
+
+22:54:08.301 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell pm install -r -g -t /data/local/tmp/detox/Test.apk
+22:54:09.323 detox[115078] [90mi[39m Success
+
+22:54:09.328 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell pm install -r -g -t /data/local/tmp/detox/Test.apk exited with code #0
+22:54:09.328 detox[115078] [90mB[39m reverseTcpPort
+  args: (8081)
+22:54:09.328 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 reverse tcp:8081 tcp:8081
+22:54:09.340 detox[115078] [90mi[39m 
+22:54:09.340 detox[115078] [90mE[39m reverseTcpPort
+22:54:09.340 detox[115078] [90mE[39m installApp
+22:54:09.340 detox[115078] [90mB[39m selectApp
+  args: ("default")
+22:54:09.341 detox[115078] [90mB[39m terminateApp
+  args: ()
+22:54:09.341 detox[115078] [90mB[39m onBeforeTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:54:09.341 detox[115078] [90mE[39m onBeforeTerminateApp
+22:54:09.341 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "am force-stop com.mcfuzzysquirrel.studentfinance"
+22:54:09.704 detox[115078] [90mi[39m 
+22:54:09.704 detox[115078] [90mB[39m onTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:54:09.704 detox[115078] [90mE[39m onTerminateApp
+22:54:09.705 detox[115078] [90mE[39m terminateApp
+22:54:09.705 detox[115078] [90mE[39m selectApp
+22:54:09.705 detox[115078] [90mE[39m set up environment
+22:54:10.200 detox[115078] [90mi[39m smoke.e2e.js is assigned to emulator-5554 (detox-api35)
+22:54:10.203 detox[115078] [90mB[39m run the tests
+22:54:10.203 detox[115078] [90mB[39m onRunDescribeStart
+  args: ({"name":"ROOT_DESCRIBE_BLOCK"})
+22:54:10.205 detox[115078] [90mE[39m onRunDescribeStart
+22:54:10.208 detox[115078] [90mB[39m beforeAll
+22:54:10.211 detox[115078] [90mB[39m launchApp
+  args: ({"newInstance":true,"launchArgs":{"detoxEnableSynchronization":0}})
+22:54:10.212 detox[115078] [90mB[39m terminateApp
+  args: ("com.mcfuzzysquirrel.studentfinance")
+22:54:10.212 detox[115078] [90mB[39m onBeforeTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:54:10.212 detox[115078] [90mE[39m onBeforeTerminateApp
+22:54:10.213 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "am force-stop com.mcfuzzysquirrel.studentfinance"
+22:54:10.575 detox[115078] [90mi[39m 
+22:54:10.577 detox[115078] [90mB[39m onTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:54:10.577 detox[115078] [90mE[39m onTerminateApp
+22:54:10.577 detox[115078] [90mE[39m terminateApp
+22:54:10.578 detox[115078] [90mB[39m onBeforeLaunchApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance","launchArgs":{"detoxServer":"ws://localhost:41697","detoxSessionId":"32d47440-e6d3-aee5-7307-a25756827880","detoxEnableSynchronization":0}})
+22:54:10.584 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "date +\"%m-%d %T.000\""
+22:54:10.872 detox[115078] [90mi[39m 03-14 22:54:08.000
+
+22:54:10.874 detox[115078] [90mE[39m onBeforeLaunchApp
+22:54:10.874 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 reverse tcp:41697 tcp:41697
+22:54:10.925 detox[115078] [90mi[39m 41697
+
+22:54:10.927 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "pm list instrumentation"
+22:54:11.106 detox[115078] [90mi[39m instrumentation:com.mcfuzzysquirrel.studentfinance.test/androidx.test.runner.AndroidJUnitRunner (target=com.mcfuzzysquirrel.studentfinance)
+
+22:54:11.112 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell am instrument -w -r -e detoxServer ws://localhost:41697 -e detoxSessionId 32d47440-e6d3-aee5-7307-a25756827880 -e detoxEnableSynchronization 0 -e debug false com.mcfuzzysquirrel.studentfinance.test/androidx.test.runner.AndroidJUnitRunner
+22:54:11.614 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "ps | grep \"com\.mcfuzzysquirrel\.studentfinance$\""
+22:54:13.450 detox[115078] [90mi[39m ""/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "ps | grep \"com\.mcfuzzysquirrel\.studentfinance$\""" failed with error = Error: Command failed: "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "ps | grep \"com\.mcfuzzysquirrel\.studentfinance$\""
+ (code=1), stdout and stderr:
+
+22:54:13.452 detox[115078] [90mi[39m 
+22:54:13.453 detox[115078] [90mi[39m 
+22:54:13.956 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "ps | grep \"com\.mcfuzzysquirrel\.studentfinance$\""
+22:54:14.044 detox[115078] [90mi[39m u0_a222       9792   382   16460036  96952 0                   0 R com.mcfuzzysquirrel.studentfinance
+
+22:54:14.046 detox[115078] [90mB[39m onLaunchApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance","launchArgs":{"detoxServer":"ws://localhost:41697","detoxSessionId":"32d47440-e6d3-aee5-7307-a25756827880","detoxEnableSynchronization":0},"pid":9792})
+22:54:14.047 detox[115078] [90mi[39m starting ADBLogcatRecording
+22:54:14.055 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:54:08.000\" --pid=9792 -f /sdcard/22542387_0.log"
+22:54:14.055 detox[115078] [90mE[39m onLaunchApp
+22:54:14.355 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22542387_0.log
+22:54:14.392 detox[115078] [90mi[39m 4	/sdcard/22542387_0.log
+
+22:54:16.800 detox[115078] [90mi[39m INSTRUMENTATION_STATUS: class=com.mcfuzzysquirrel.studentfinance.DetoxTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.mcfuzzysquirrel.studentfinance.DetoxTest:
+INSTRUMENTATION_STATUS: test=runDetoxTests
+
+22:54:16.801 detox[115078] [90mi[39m INSTRUMENTATION_STATUS_CODE: 1
+
+22:54:17.068 detox[115052] [90mB[39m connection :41697<->:52373
+22:54:17.084 detox[115052] [90mi[39m get
+  data: {"messageId":0,"type":"login","params":{"role":"app","sessionId":"32d47440-e6d3-aee5-7307-a25756827880"}}
+22:54:17.084 detox[115052] [90mi[39m send
+  data: {
+    "messageId": 0,
+    "type": "loginSuccess",
+    "params": {
+      "testerConnected": true,
+      "appConnected": true
+    }
+  }
+22:54:17.084 detox[115052] [90mi[39m app joined session 32d47440-e6d3-aee5-7307-a25756827880
+22:54:17.085 detox[115052] [90mi[39m send
+  data: {
+    "type": "appConnected"
+  }
+22:54:17.085 detox[115078] [90mi[39m get message
+  data: {"type":"appConnected"}
+   
+22:54:17.086 detox[115078] [90mi[39m send message
+  data: {"type":"isReady","params":{},"messageId":-1000}
+22:54:17.087 detox[115052] [90mi[39m get
+  data: {"type":"isReady","params":{},"messageId":-1000}
+22:54:17.087 detox[115052] [90mi[39m send
+  data: {
+    "type": "isReady",
+    "params": {},
+    "messageId": -1000
+  }
+22:54:19.526 detox[115052] [90mi[39m get
+  data: {"messageId":-1000,"type":"ready","params":{}}
+22:54:19.526 detox[115052] [90mi[39m send
+  data: {
+    "messageId": -1000,
+    "type": "ready",
+    "params": {}
+  }
+22:54:19.526 detox[115078] [90mi[39m get message
+  data: {"messageId":-1000,"type":"ready","params":{}}
+   
+22:54:19.527 detox[115078] [90mB[39m onAppReady
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance","pid":9792})
+22:54:19.527 detox[115078] [90mE[39m onAppReady
+22:54:19.527 detox[115078] [90mE[39m launchApp
+22:54:19.528 detox[115078] [90mE[39m beforeAll
+22:54:19.528 detox[115078] [90mB[39m App smoke flow
+22:54:19.528 detox[115078] [90mB[39m onRunDescribeStart
+  args: ({"name":"App smoke flow"})
+22:54:19.529 detox[115078] [90mE[39m onRunDescribeStart
+22:54:19.530 detox[115078] [90mB[39m launches and shows the dashboard
+22:54:19.530 detox[115078] [90mi[39m App smoke flow: launches and shows the dashboard
+22:54:19.533 detox[115078] [90mB[39m onTestStart
+  args: ({"title":"launches and shows the dashboard","fullName":"App smoke flow launches and shows the dashboard","status":"running","invocations":1})
+22:54:19.534 detox[115078] [90mi[39m stopping ADBLogcatRecording
+22:54:19.534 detox[115078] [90mi[39m starting ADBScreencapRecording
+22:54:19.535 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22542387_1.png"
+22:54:19.541 detox[115078] [90mi[39m starting ADBVideoRecording
+22:54:19.545 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22542387_2.mp4
+22:54:19.545 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "date +\"%m-%d %T.000\""
+22:54:19.747 detox[115078] [90mi[39m 03-14 22:54:17.000
+
+22:54:19.750 detox[115078] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell logcat -T "03-14 22:54:08.000" --pid=9792 -f /sdcard/22542387_0.log
+22:54:19.752 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:54:08.000\" --pid=9792 -f /sdcard/22542387_0.log" terminated with SIGINT
+22:54:19.752 detox[115078] [90mi[39m starting ADBLogcatRecording
+22:54:19.756 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:54:17.000\" --pid=9792 -f /sdcard/22542387_3.log"
+22:54:19.849 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22542387_2.mp4
+22:54:19.985 detox[115078] [90mi[39m 4	/sdcard/22542387_2.mp4
+
+22:54:20.057 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22542387_3.log
+22:54:20.206 detox[115078] [90mi[39m 4	/sdcard/22542387_3.log
+
+22:54:20.807 detox[115078] [90mi[39m 
+22:54:20.809 detox[115078] [90mi[39m stopping ADBScreencapRecording
+22:54:20.809 detox[115078] [90mE[39m onTestStart
+22:54:20.809 detox[115078] [90mB[39m beforeEach
+22:54:20.810 detox[115078] [90mE[39m beforeEach
+22:54:20.810 detox[115078] [90mB[39m test_fn
+22:54:20.822 detox[115078] [90mi[39m send message
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-add-expense-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Double","value":15}]},"messageId":1}
+22:54:20.824 detox[115052] [90mi[39m get
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-add-expense-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Double","value":15}]},"messageId":1}
+22:54:20.824 detox[115052] [90mi[39m send
+  data: {
+    "type": "invoke",
+    "params": {
+      "target": {
+        "type": "Class",
+        "value": "com.wix.detox.espresso.DetoxAssertion"
+      },
+      "method": "waitForAssertMatcher",
+      "args": [
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "androidx.test.espresso.Espresso"
+            },
+            "method": "onView",
+            "args": [
+              {
+                "type": "Invocation",
+                "value": {
+                  "target": {
+                    "type": "Class",
+                    "value": "com.wix.detox.espresso.DetoxMatcher"
+                  },
+                  "method": "matcherForTestId",
+                  "args": [
+                    "dashboard-add-expense-button",
+                    {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "com.wix.detox.espresso.DetoxMatcher"
+            },
+            "method": "matcherForSufficientlyVisible",
+            "args": [
+              {
+                "type": "Integer",
+                "value": 75
+              }
+            ]
+          }
+        },
+        {
+          "type": "Double",
+          "value": 15
+        }
+      ]
+    },
+    "messageId": 1
+  }
+22:54:20.828 detox[115078] [90mB[39m undefined with timeout (15000 ms)
+  data: {
+    "target": {
+      "type": "Class",
+      "value": "com.wix.detox.espresso.DetoxAssertion"
+    },
+    "method": "waitForAssertMatcher",
+    "args": [
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "androidx.test.espresso.Espresso"
+          },
+          "method": "onView",
+          "args": [
+            {
+              "type": "Invocation",
+              "value": {
+                "target": {
+                  "type": "Class",
+                  "value": "com.wix.detox.espresso.DetoxMatcher"
+                },
+                "method": "matcherForTestId",
+                "args": [
+                  "dashboard-add-expense-button",
+                  {
+                    "type": "boolean",
+                    "value": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxMatcher"
+          },
+          "method": "matcherForSufficientlyVisible",
+          "args": [
+            {
+              "type": "Integer",
+              "value": 75
+            }
+          ]
+        }
+      },
+      {
+        "type": "Double",
+        "value": 15
+      }
+    ]
+  }
+22:54:23.479 detox[115052] [90mi[39m get
+  data: {"messageId":1,"type":"invokeResult","params":{"result":null}}
+22:54:23.479 detox[115052] [90mi[39m send
+  data: {
+    "messageId": 1,
+    "type": "invokeResult",
+    "params": {
+      "result": null
+    }
+  }
+22:54:23.479 detox[115078] [90mi[39m get message
+  data: {"messageId":1,"type":"invokeResult","params":{"result":null}}
+   
+22:54:23.480 detox[115078] [90mE[39m undefined with timeout (15000 ms)
+22:54:23.481 detox[115078] [90mi[39m send message
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-summary-spent-card",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":2}
+22:54:23.481 detox[115078] [90mB[39m expect element to be visible
+  data: {
+    "target": {
+      "type": "Class",
+      "value": "com.wix.detox.espresso.DetoxAssertion"
+    },
+    "method": "assertMatcher",
+    "args": [
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "androidx.test.espresso.Espresso"
+          },
+          "method": "onView",
+          "args": [
+            {
+              "type": "Invocation",
+              "value": {
+                "target": {
+                  "type": "Class",
+                  "value": "com.wix.detox.espresso.DetoxMatcher"
+                },
+                "method": "matcherForTestId",
+                "args": [
+                  "dashboard-summary-spent-card",
+                  {
+                    "type": "boolean",
+                    "value": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxMatcher"
+          },
+          "method": "matcherForSufficientlyVisible",
+          "args": [
+            {
+              "type": "Integer",
+              "value": 75
+            }
+          ]
+        }
+      }
+    ]
+  }
+22:54:23.482 detox[115052] [90mi[39m get
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-summary-spent-card",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":2}
+22:54:23.482 detox[115052] [90mi[39m send
+  data: {
+    "type": "invoke",
+    "params": {
+      "target": {
+        "type": "Class",
+        "value": "com.wix.detox.espresso.DetoxAssertion"
+      },
+      "method": "assertMatcher",
+      "args": [
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "androidx.test.espresso.Espresso"
+            },
+            "method": "onView",
+            "args": [
+              {
+                "type": "Invocation",
+                "value": {
+                  "target": {
+                    "type": "Class",
+                    "value": "com.wix.detox.espresso.DetoxMatcher"
+                  },
+                  "method": "matcherForTestId",
+                  "args": [
+                    "dashboard-summary-spent-card",
+                    {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "com.wix.detox.espresso.DetoxMatcher"
+            },
+            "method": "matcherForSufficientlyVisible",
+            "args": [
+              {
+                "type": "Integer",
+                "value": 75
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "messageId": 2
+  }
+22:54:23.606 detox[115052] [90mi[39m get
+  data: {"messageId":2,"type":"invokeResult","params":{"result":null}}
+22:54:23.606 detox[115052] [90mi[39m send
+  data: {
+    "messageId": 2,
+    "type": "invokeResult",
+    "params": {
+      "result": null
+    }
+  }
+22:54:23.608 detox[115078] [90mi[39m get message
+  data: {"messageId":2,"type":"invokeResult","params":{"result":null}}
+   
+22:54:23.608 detox[115078] [90mE[39m expect element to be visible
+22:54:23.609 detox[115078] [90mE[39m test_fn
+22:54:23.610 detox[115078] [90mB[39m onTestDone
+  args: ({"title":"launches and shows the dashboard","fullName":"App smoke flow launches and shows the dashboard","status":"passed","invocations":1})
+22:54:23.610 detox[115078] [90mi[39m stopping ADBLogcatRecording
+22:54:23.610 detox[115078] [90mi[39m stopping ADBVideoRecording
+22:54:23.611 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "date +\"%m-%d %T.000\""
+22:54:23.619 detox[115078] [90mi[39m discarding ADBScreencapRecording
+22:54:23.619 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_1.png\""
+22:54:23.626 detox[115078] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22542387_2.mp4
+22:54:23.629 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22542387_2.mp4 terminated with SIGINT
+22:54:23.811 detox[115078] [90mi[39m 03-14 22:54:21.000
+
+22:54:23.812 detox[115078] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell logcat -T "03-14 22:54:17.000" --pid=9792 -f /sdcard/22542387_3.log
+22:54:23.815 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:54:17.000\" --pid=9792 -f /sdcard/22542387_3.log" terminated with SIGINT
+22:54:23.818 detox[115078] [90mE[39m onTestDone
+22:54:23.819 detox[115078] [90mE[39m launches and shows the dashboard
+22:54:23.823 detox[115078] [90mi[39m App smoke flow: launches and shows the dashboard [OK]
+22:54:23.827 detox[115078] [90mB[39m opens Add Expense from the dashboard FAB
+22:54:23.827 detox[115078] [90mi[39m App smoke flow: opens Add Expense from the dashboard FAB
+22:54:23.833 detox[115078] [90mB[39m onTestStart
+  args: ({"title":"opens Add Expense from the dashboard FAB","fullName":"App smoke flow opens Add Expense from the dashboard FAB","status":"running","invocations":1})
+22:54:23.833 detox[115078] [90mi[39m starting ADBLogcatRecording
+22:54:23.842 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:54:21.000\" --pid=9792 -f /sdcard/22542387_4.log"
+22:54:23.846 detox[115078] [90mi[39m starting ADBScreencapRecording
+22:54:23.846 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22542387_5.png"
+22:54:23.855 detox[115078] [90mi[39m starting ADBVideoRecording
+22:54:23.866 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22542387_6.mp4
+22:54:23.868 detox[115078] [90mi[39m 
+22:54:23.868 detox[115078] [90mi[39m discarding ADBVideoRecording
+22:54:24.130 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22542387_2.mp4
+22:54:24.158 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22542387_4.log
+22:54:24.166 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22542387_6.mp4
+22:54:24.258 detox[115078] [90mi[39m 140	/sdcard/22542387_2.mp4
+
+22:54:24.259 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_2.mp4\""
+22:54:24.266 detox[115078] [90mi[39m 4	/sdcard/22542387_4.log
+
+22:54:24.369 detox[115078] [90mi[39m 4	/sdcard/22542387_6.mp4
+
+22:54:24.473 detox[115078] [90mi[39m 
+22:54:24.479 detox[115078] [90mi[39m saving ADBLogcatRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✓ App smoke flow launches and shows the dashboard/device.log
+22:54:24.479 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_3.log" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✓ App smoke flow launches and shows the dashboard/device.log"
+22:54:24.576 detox[115078] [90mi[39m /sdcard/22542387_3.log: 1 file pulled, 0 skipped. 6.4 MB/s (32768 bytes in 0.005s)
+
+22:54:24.577 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_3.log\""
+22:54:25.044 detox[115078] [90mi[39m 
+22:54:25.046 detox[115078] [90mi[39m saving ADBLogcatRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/emulator-5554 2026-03-14 20-54-25Z.startup.log
+22:54:25.046 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_0.log" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/emulator-5554 2026-03-14 20-54-25Z.startup.log"
+22:54:25.129 detox[115078] [90mi[39m /sdcard/22542387_0.log: 1 file pulled, 0 skipped. 5.2 MB/s (24576 bytes in 0.005s)
+
+22:54:25.129 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_0.log\""
+22:54:25.361 detox[115078] [90mi[39m 
+22:54:25.696 detox[115078] [90mi[39m 
+22:54:25.698 detox[115078] [90mi[39m stopping ADBScreencapRecording
+22:54:25.698 detox[115078] [90mE[39m onTestStart
+22:54:25.698 detox[115078] [90mB[39m beforeEach
+22:54:25.698 detox[115078] [90mE[39m beforeEach
+22:54:25.699 detox[115078] [90mB[39m test_fn
+22:54:25.700 detox[115052] [90mi[39m get
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-add-expense-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Double","value":10}]},"messageId":3}
+22:54:25.700 detox[115052] [90mi[39m send
+  data: {
+    "type": "invoke",
+    "params": {
+      "target": {
+        "type": "Class",
+        "value": "com.wix.detox.espresso.DetoxAssertion"
+      },
+      "method": "waitForAssertMatcher",
+      "args": [
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "androidx.test.espresso.Espresso"
+            },
+            "method": "onView",
+            "args": [
+              {
+                "type": "Invocation",
+                "value": {
+                  "target": {
+                    "type": "Class",
+                    "value": "com.wix.detox.espresso.DetoxMatcher"
+                  },
+                  "method": "matcherForTestId",
+                  "args": [
+                    "dashboard-add-expense-button",
+                    {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "com.wix.detox.espresso.DetoxMatcher"
+            },
+            "method": "matcherForSufficientlyVisible",
+            "args": [
+              {
+                "type": "Integer",
+                "value": 75
+              }
+            ]
+          }
+        },
+        {
+          "type": "Double",
+          "value": 10
+        }
+      ]
+    },
+    "messageId": 3
+  }
+22:54:25.700 detox[115078] [90mi[39m send message
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-add-expense-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Double","value":10}]},"messageId":3}
+22:54:25.702 detox[115078] [90mB[39m undefined with timeout (10000 ms)
+  data: {
+    "target": {
+      "type": "Class",
+      "value": "com.wix.detox.espresso.DetoxAssertion"
+    },
+    "method": "waitForAssertMatcher",
+    "args": [
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "androidx.test.espresso.Espresso"
+          },
+          "method": "onView",
+          "args": [
+            {
+              "type": "Invocation",
+              "value": {
+                "target": {
+                  "type": "Class",
+                  "value": "com.wix.detox.espresso.DetoxMatcher"
+                },
+                "method": "matcherForTestId",
+                "args": [
+                  "dashboard-add-expense-button",
+                  {
+                    "type": "boolean",
+                    "value": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxMatcher"
+          },
+          "method": "matcherForSufficientlyVisible",
+          "args": [
+            {
+              "type": "Integer",
+              "value": 75
+            }
+          ]
+        }
+      },
+      {
+        "type": "Double",
+        "value": 10
+      }
+    ]
+  }
+22:54:25.762 detox[115052] [90mi[39m get
+  data: {"messageId":3,"type":"invokeResult","params":{"result":null}}
+22:54:25.762 detox[115052] [90mi[39m send
+  data: {
+    "messageId": 3,
+    "type": "invokeResult",
+    "params": {
+      "result": null
+    }
+  }
+22:54:25.763 detox[115078] [90mi[39m get message
+  data: {"messageId":3,"type":"invokeResult","params":{"result":null}}
+   
+22:54:25.763 detox[115078] [90mE[39m undefined with timeout (10000 ms)
+22:54:25.764 detox[115078] [90mi[39m send message
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-add-expense-button",{"type":"boolean","value":false}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":4}
+22:54:25.764 detox[115078] [90mB[39m tap
+  data: {
+    "target": {
+      "type": "Class",
+      "value": "com.wix.detox.espresso.EspressoDetox"
+    },
+    "method": "perform",
+    "args": [
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxMatcher"
+          },
+          "method": "matcherForTestId",
+          "args": [
+            "dashboard-add-expense-button",
+            {
+              "type": "boolean",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxViewActions"
+          },
+          "method": "click",
+          "args": []
+        }
+      }
+    ]
+  }
+22:54:25.765 detox[115052] [90mi[39m get
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-add-expense-button",{"type":"boolean","value":false}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":4}
+22:54:25.765 detox[115052] [90mi[39m send
+  data: {
+    "type": "invoke",
+    "params": {
+      "target": {
+        "type": "Class",
+        "value": "com.wix.detox.espresso.EspressoDetox"
+      },
+      "method": "perform",
+      "args": [
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "com.wix.detox.espresso.DetoxMatcher"
+            },
+            "method": "matcherForTestId",
+            "args": [
+              "dashboard-add-expense-button",
+              {
+                "type": "boolean",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "com.wix.detox.espresso.DetoxViewActions"
+            },
+            "method": "click",
+            "args": []
+          }
+        }
+      ]
+    },
+    "messageId": 4
+  }
+22:54:27.450 detox[115052] [90mi[39m get
+  data: {"messageId":4,"type":"invokeResult","params":{"result":null}}
+22:54:27.451 detox[115052] [90mi[39m send
+  data: {
+    "messageId": 4,
+    "type": "invokeResult",
+    "params": {
+      "result": null
+    }
+  }
+22:54:27.451 detox[115078] [90mi[39m get message
+  data: {"messageId":4,"type":"invokeResult","params":{"result":null}}
+   
+22:54:27.451 detox[115078] [90mE[39m tap
+22:54:27.452 detox[115078] [90mi[39m send message
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["add-expense-amount-input",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Double","value":10}]},"messageId":5}
+22:54:27.453 detox[115052] [90mi[39m get
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["add-expense-amount-input",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Double","value":10}]},"messageId":5}
+22:54:27.453 detox[115078] [90mB[39m undefined with timeout (10000 ms)
+  data: {
+    "target": {
+      "type": "Class",
+      "value": "com.wix.detox.espresso.DetoxAssertion"
+    },
+    "method": "waitForAssertMatcher",
+    "args": [
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "androidx.test.espresso.Espresso"
+          },
+          "method": "onView",
+          "args": [
+            {
+              "type": "Invocation",
+              "value": {
+                "target": {
+                  "type": "Class",
+                  "value": "com.wix.detox.espresso.DetoxMatcher"
+                },
+                "method": "matcherForTestId",
+                "args": [
+                  "add-expense-amount-input",
+                  {
+                    "type": "boolean",
+                    "value": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxMatcher"
+          },
+          "method": "matcherForSufficientlyVisible",
+          "args": [
+            {
+              "type": "Integer",
+              "value": 75
+            }
+          ]
+        }
+      },
+      {
+        "type": "Double",
+        "value": 10
+      }
+    ]
+  }
+22:54:27.454 detox[115052] [90mi[39m send
+  data: {
+    "type": "invoke",
+    "params": {
+      "target": {
+        "type": "Class",
+        "value": "com.wix.detox.espresso.DetoxAssertion"
+      },
+      "method": "waitForAssertMatcher",
+      "args": [
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "androidx.test.espresso.Espresso"
+            },
+            "method": "onView",
+            "args": [
+              {
+                "type": "Invocation",
+                "value": {
+                  "target": {
+                    "type": "Class",
+                    "value": "com.wix.detox.espresso.DetoxMatcher"
+                  },
+                  "method": "matcherForTestId",
+                  "args": [
+                    "add-expense-amount-input",
+                    {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "com.wix.detox.espresso.DetoxMatcher"
+            },
+            "method": "matcherForSufficientlyVisible",
+            "args": [
+              {
+                "type": "Integer",
+                "value": 75
+              }
+            ]
+          }
+        },
+        {
+          "type": "Double",
+          "value": 10
+        }
+      ]
+    },
+    "messageId": 5
+  }
+22:54:27.717 detox[115052] [90mi[39m get
+  data: {"messageId":5,"type":"invokeResult","params":{"result":null}}
+22:54:27.717 detox[115052] [90mi[39m send
+  data: {
+    "messageId": 5,
+    "type": "invokeResult",
+    "params": {
+      "result": null
+    }
+  }
+22:54:27.718 detox[115078] [90mi[39m get message
+  data: {"messageId":5,"type":"invokeResult","params":{"result":null}}
+   
+22:54:27.719 detox[115078] [90mE[39m undefined with timeout (10000 ms)
+22:54:27.719 detox[115078] [90mB[39m pressBack
+  args: ()
+22:54:27.720 detox[115052] [90mi[39m get
+  data: {"type":"invoke","params":{"target":{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.uiautomator.UiAutomator"},"method":"uiDevice","args":[]}},"method":"pressBack","args":[]},"messageId":6}
+22:54:27.720 detox[115052] [90mi[39m send
+  data: {
+    "type": "invoke",
+    "params": {
+      "target": {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.uiautomator.UiAutomator"
+          },
+          "method": "uiDevice",
+          "args": []
+        }
+      },
+      "method": "pressBack",
+      "args": []
+    },
+    "messageId": 6
+  }
+22:54:27.720 detox[115078] [90mi[39m send message
+  data: {"type":"invoke","params":{"target":{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.uiautomator.UiAutomator"},"method":"uiDevice","args":[]}},"method":"pressBack","args":[]},"messageId":6}
+22:54:29.786 detox[115052] [90mi[39m get
+  data: {"messageId":6,"type":"invokeResult","params":{"result":false}}
+22:54:29.787 detox[115052] [90mi[39m send
+  data: {
+    "messageId": 6,
+    "type": "invokeResult",
+    "params": {
+      "result": false
+    }
+  }
+22:54:29.787 detox[115078] [90mi[39m get message
+  data: {"messageId":6,"type":"invokeResult","params":{"result":false}}
+   
+22:54:29.788 detox[115078] [90mE[39m pressBack
+22:54:29.788 detox[115078] [90mi[39m send message
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-add-expense-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Double","value":10}]},"messageId":7}
+22:54:29.789 detox[115052] [90mi[39m get
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-add-expense-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Double","value":10}]},"messageId":7}
+22:54:29.789 detox[115052] [90mi[39m send
+  data: {
+    "type": "invoke",
+    "params": {
+      "target": {
+        "type": "Class",
+        "value": "com.wix.detox.espresso.DetoxAssertion"
+      },
+      "method": "waitForAssertMatcher",
+      "args": [
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "androidx.test.espresso.Espresso"
+            },
+            "method": "onView",
+            "args": [
+              {
+                "type": "Invocation",
+                "value": {
+                  "target": {
+                    "type": "Class",
+                    "value": "com.wix.detox.espresso.DetoxMatcher"
+                  },
+                  "method": "matcherForTestId",
+                  "args": [
+                    "dashboard-add-expense-button",
+                    {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "com.wix.detox.espresso.DetoxMatcher"
+            },
+            "method": "matcherForSufficientlyVisible",
+            "args": [
+              {
+                "type": "Integer",
+                "value": 75
+              }
+            ]
+          }
+        },
+        {
+          "type": "Double",
+          "value": 10
+        }
+      ]
+    },
+    "messageId": 7
+  }
+22:54:29.789 detox[115078] [90mB[39m undefined with timeout (10000 ms)
+  data: {
+    "target": {
+      "type": "Class",
+      "value": "com.wix.detox.espresso.DetoxAssertion"
+    },
+    "method": "waitForAssertMatcher",
+    "args": [
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "androidx.test.espresso.Espresso"
+          },
+          "method": "onView",
+          "args": [
+            {
+              "type": "Invocation",
+              "value": {
+                "target": {
+                  "type": "Class",
+                  "value": "com.wix.detox.espresso.DetoxMatcher"
+                },
+                "method": "matcherForTestId",
+                "args": [
+                  "dashboard-add-expense-button",
+                  {
+                    "type": "boolean",
+                    "value": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxMatcher"
+          },
+          "method": "matcherForSufficientlyVisible",
+          "args": [
+            {
+              "type": "Integer",
+              "value": 75
+            }
+          ]
+        }
+      },
+      {
+        "type": "Double",
+        "value": 10
+      }
+    ]
+  }
+22:54:39.789 detox[115052] [90mi[39m get
+  data: {"type":"currentStatus","params":{},"messageId":8}
+22:54:39.789 detox[115052] [90mi[39m send
+  data: {
+    "type": "currentStatus",
+    "params": {},
+    "messageId": 8
+  }
+22:54:39.789 detox[115078] [90mi[39m send message
+  data: {"type":"currentStatus","params":{},"messageId":8}
+22:54:39.811 detox[115052] [90mi[39m get
+  data: {"messageId":8,"type":"currentStatusResult","params":{"status":{"app_status":"idle"}}}
+22:54:39.811 detox[115052] [90mi[39m send
+  data: {
+    "messageId": 8,
+    "type": "currentStatusResult",
+    "params": {
+      "status": {
+        "app_status": "idle"
+      }
+    }
+  }
+22:54:39.812 detox[115078] [90mi[39m get message
+  data: {"messageId":8,"type":"currentStatusResult","params":{"status":{"app_status":"idle"}}}
+   
+22:54:39.816 detox[115078] [90mi[39m The app seems to be idle
+22:54:39.839 detox[115052] [90mi[39m get
+  data: {"messageId":7,"type":"testFailed","params":{"details":"10.0sec timeout expired without matching of given matcher: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n","viewHierarchy":null}}
+22:54:39.840 detox[115052] [90mi[39m send
+  data: {
+    "messageId": 7,
+    "type": "testFailed",
+    "params": {
+      "details": "10.0sec timeout expired without matching of given matcher: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n",
+      "viewHierarchy": null
+    }
+  }
+22:54:39.840 detox[115078] [90mi[39m get message
+  data: {"messageId":7,"type":"testFailed","params":{"details":"10.0sec timeout expired without matching of given matcher: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n","viewHierarchy":null}}
+   
+22:54:39.841 detox[115078] [90mE[39m undefined with timeout (10000 ms)
+  error: Test Failed: 10.0sec timeout expired without matching of given matcher: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)
+  
+22:54:39.841 detox[115078] [90mB[39m onTestFnFailure
+  args: ({"error":{"name":"DetoxRuntimeError"}})
+22:54:39.841 detox[115078] [90mi[39m starting ADBScreencapRecording
+22:54:39.842 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22542387_7.png"
+22:54:40.767 detox[115078] [90mi[39m 
+22:54:40.767 detox[115078] [90mi[39m stopping ADBScreencapRecording
+22:54:40.767 detox[115078] [90mE[39m onTestFnFailure
+22:54:40.767 detox[115078] [90mE[39m test_fn
+  error: Test Failed: 10.0sec timeout expired without matching of given matcher: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)
+  
+22:54:40.768 detox[115078] [90mB[39m onTestDone
+  args: ({"title":"opens Add Expense from the dashboard FAB","fullName":"App smoke flow opens Add Expense from the dashboard FAB","status":"failed","invocations":1,"timedOut":false})
+22:54:40.770 detox[115078] [90mi[39m stopping ADBLogcatRecording
+22:54:40.770 detox[115078] [90mi[39m starting ADBScreencapRecording
+22:54:40.770 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22542387_8.png"
+22:54:40.774 detox[115078] [90mi[39m stopping ADBVideoRecording
+22:54:40.774 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "date +\"%m-%d %T.000\""
+22:54:40.779 detox[115078] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22542387_6.mp4
+22:54:40.781 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22542387_6.mp4 terminated with SIGINT
+22:54:40.782 detox[115078] [90mi[39m saving ADBVideoRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow opens Add Expense from the dashboard FAB/test.mp4
+22:54:40.870 detox[115078] [90mi[39m 03-14 22:54:38.000
+
+22:54:40.874 detox[115078] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell logcat -T "03-14 22:54:21.000" --pid=9792 -f /sdcard/22542387_4.log
+22:54:40.875 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:54:21.000\" --pid=9792 -f /sdcard/22542387_4.log" terminated with SIGINT
+22:54:41.280 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22542387_6.mp4
+22:54:41.344 detox[115078] [90mi[39m 652	/sdcard/22542387_6.mp4
+
+22:54:41.344 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_6.mp4" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow opens Add Expense from the dashboard FAB/test.mp4"
+22:54:41.376 detox[115078] [90mi[39m /sdcard/22542387_6.mp4: 1 file pulled, 0 skipped. 41.0 MB/s (654437 bytes in 0.015s)
+
+22:54:41.376 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_6.mp4\""
+22:54:41.423 detox[115078] [90mi[39m 
+22:54:41.428 detox[115078] [90mi[39m saving ADBLogcatRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow opens Add Expense from the dashboard FAB/device.log
+22:54:41.428 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_4.log" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow opens Add Expense from the dashboard FAB/device.log"
+22:54:41.450 detox[115078] [90mi[39m /sdcard/22542387_4.log: 1 file pulled, 0 skipped. 18.4 MB/s (81920 bytes in 0.004s)
+
+22:54:41.450 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_4.log\""
+22:54:41.496 detox[115078] [90mi[39m 
+22:54:41.496 detox[115078] [90mi[39m stopping ADBScreencapRecording
+22:54:41.497 detox[115078] [90mE[39m onTestDone
+22:54:41.497 detox[115078] [90mE[39m opens Add Expense from the dashboard FAB
+22:54:41.497 detox[115078] [90mi[39m App smoke flow: opens Add Expense from the dashboard FAB [FAIL]
+22:54:41.502 detox[115078] [90mB[39m navigates to transactions from dashboard
+22:54:41.502 detox[115078] [90mi[39m App smoke flow: navigates to transactions from dashboard
+22:54:41.505 detox[115078] [90mB[39m onTestStart
+  args: ({"title":"navigates to transactions from dashboard","fullName":"App smoke flow navigates to transactions from dashboard","status":"running","invocations":1})
+22:54:41.505 detox[115078] [90mi[39m starting ADBLogcatRecording
+22:54:41.508 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:54:38.000\" --pid=9792 -f /sdcard/22542387_9.log"
+22:54:41.509 detox[115078] [90mi[39m starting ADBScreencapRecording
+22:54:41.509 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22542387_10.png"
+22:54:41.514 detox[115078] [90mi[39m starting ADBVideoRecording
+22:54:41.518 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22542387_11.mp4
+22:54:41.520 detox[115078] [90mi[39m 
+22:54:41.521 detox[115078] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow opens Add Expense from the dashboard FAB/testStart.png
+22:54:41.524 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_5.png" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow opens Add Expense from the dashboard FAB/testStart.png"
+22:54:41.562 detox[115078] [90mi[39m /sdcard/22542387_5.png: 1 file pulled, 0 skipped. 12.1 MB/s (159348 bytes in 0.013s)
+
+22:54:41.563 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_5.png\""
+22:54:41.662 detox[115078] [90mi[39m 
+22:54:41.662 detox[115078] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow opens Add Expense from the dashboard FAB/testFnFailure.png
+22:54:41.662 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_7.png" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow opens Add Expense from the dashboard FAB/testFnFailure.png"
+22:54:41.708 detox[115078] [90mi[39m /sdcard/22542387_7.png: 1 file pulled, 0 skipped. 16.7 MB/s (164259 bytes in 0.009s)
+
+22:54:41.710 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_7.png\""
+22:54:41.773 detox[115078] [90mi[39m 
+22:54:41.776 detox[115078] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow opens Add Expense from the dashboard FAB/testDone.png
+22:54:41.776 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_8.png" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow opens Add Expense from the dashboard FAB/testDone.png"
+22:54:41.809 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22542387_9.log
+22:54:41.818 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22542387_11.mp4
+22:54:41.877 detox[115078] [90mi[39m /sdcard/22542387_8.png: 1 file pulled, 0 skipped. 10.7 MB/s (164457 bytes in 0.015s)
+
+22:54:41.881 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_8.png\""
+22:54:41.889 detox[115078] [90mi[39m 4	/sdcard/22542387_9.log
+
+22:54:41.929 detox[115078] [90mi[39m 4	/sdcard/22542387_11.mp4
+
+22:54:41.980 detox[115078] [90mi[39m 
+22:54:42.389 detox[115078] [90mi[39m 
+22:54:42.390 detox[115078] [90mi[39m stopping ADBScreencapRecording
+22:54:42.390 detox[115078] [90mE[39m onTestStart
+22:54:42.390 detox[115078] [90mB[39m beforeEach
+22:54:42.390 detox[115078] [90mE[39m beforeEach
+22:54:42.390 detox[115078] [90mB[39m test_fn
+22:54:42.392 detox[115078] [90mi[39m send message
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcherWithSearchAction","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-view-transactions-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAction"},"method":"scrollInDirectionStaleAtEdge","args":[{"type":"Integer","value":4},{"type":"Double","value":200},{"type":"Double","value":-1},{"type":"Double","value":-1}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForClass","args":["android.widget.ScrollView"]}}]},"messageId":9}
+22:54:42.395 detox[115078] [90mB[39m wait for expectation while scroll 200 pixels down
+  data: {
+    "target": {
+      "type": "Class",
+      "value": "com.wix.detox.espresso.DetoxAssertion"
+    },
+    "method": "waitForAssertMatcherWithSearchAction",
+    "args": [
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "androidx.test.espresso.Espresso"
+          },
+          "method": "onView",
+          "args": [
+            {
+              "type": "Invocation",
+              "value": {
+                "target": {
+                  "type": "Class",
+                  "value": "com.wix.detox.espresso.DetoxMatcher"
+                },
+                "method": "matcherForTestId",
+                "args": [
+                  "dashboard-view-transactions-button",
+                  {
+                    "type": "boolean",
+                    "value": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxMatcher"
+          },
+          "method": "matcherForSufficientlyVisible",
+          "args": [
+            {
+              "type": "Integer",
+              "value": 75
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxAction"
+          },
+          "method": "scrollInDirectionStaleAtEdge",
+          "args": [
+            {
+              "type": "Integer",
+              "value": 4
+            },
+            {
+              "type": "Double",
+              "value": 200
+            },
+            {
+              "type": "Double",
+              "value": -1
+            },
+            {
+              "type": "Double",
+              "value": -1
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxMatcher"
+          },
+          "method": "matcherForClass",
+          "args": [
+            "android.widget.ScrollView"
+          ]
+        }
+      }
+    ]
+  }
+22:54:42.401 detox[115052] [90mi[39m get
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"waitForAssertMatcherWithSearchAction","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["dashboard-view-transactions-button",{"type":"boolean","value":false}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAction"},"method":"scrollInDirectionStaleAtEdge","args":[{"type":"Integer","value":4},{"type":"Double","value":200},{"type":"Double","value":-1},{"type":"Double","value":-1}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForClass","args":["android.widget.ScrollView"]}}]},"messageId":9}
+22:54:42.402 detox[115052] [90mi[39m send
+  data: {
+    "type": "invoke",
+    "params": {
+      "target": {
+        "type": "Class",
+        "value": "com.wix.detox.espresso.DetoxAssertion"
+      },
+      "method": "waitForAssertMatcherWithSearchAction",
+      "args": [
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "androidx.test.espresso.Espresso"
+            },
+            "method": "onView",
+            "args": [
+              {
+                "type": "Invocation",
+                "value": {
+                  "target": {
+                    "type": "Class",
+                    "value": "com.wix.detox.espresso.DetoxMatcher"
+                  },
+                  "method": "matcherForTestId",
+                  "args": [
+                    "dashboard-view-transactions-button",
+                    {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "com.wix.detox.espresso.DetoxMatcher"
+            },
+            "method": "matcherForSufficientlyVisible",
+            "args": [
+              {
+                "type": "Integer",
+                "value": 75
+              }
+            ]
+          }
+        },
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "com.wix.detox.espresso.DetoxAction"
+            },
+            "method": "scrollInDirectionStaleAtEdge",
+            "args": [
+              {
+                "type": "Integer",
+                "value": 4
+              },
+              {
+                "type": "Double",
+                "value": 200
+              },
+              {
+                "type": "Double",
+                "value": -1
+              },
+              {
+                "type": "Double",
+                "value": -1
+              }
+            ]
+          }
+        },
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "com.wix.detox.espresso.DetoxMatcher"
+            },
+            "method": "matcherForClass",
+            "args": [
+              "android.widget.ScrollView"
+            ]
+          }
+        }
+      ]
+    },
+    "messageId": 9
+  }
+22:54:43.682 detox[115052] [90mi[39m get
+  data: {"messageId":9,"type":"testFailed","params":{"details":"'(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.\nExpected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n     Got: was null\n\n","viewHierarchy":null}}
+22:54:43.682 detox[115052] [90mi[39m send
+  data: {
+    "messageId": 9,
+    "type": "testFailed",
+    "params": {
+      "details": "'(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.\nExpected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n     Got: was null\n\n",
+      "viewHierarchy": null
+    }
+  }
+22:54:43.682 detox[115078] [90mi[39m get message
+  data: {"messageId":9,"type":"testFailed","params":{"details":"'(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.\nExpected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n     Got: was null\n\n","viewHierarchy":null}}
+   
+22:54:43.683 detox[115078] [90mE[39m wait for expectation while scroll 200 pixels down
+  error: Test Failed: '(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.
+  Expected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)
+       Got: was null
+  
+  
+22:54:43.683 detox[115078] [90mB[39m onTestFnFailure
+  args: ({"error":{"name":"DetoxRuntimeError"}})
+22:54:43.683 detox[115078] [90mi[39m starting ADBScreencapRecording
+22:54:43.683 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22542387_12.png"
+22:54:44.846 detox[115078] [90mi[39m 
+22:54:44.846 detox[115078] [90mi[39m stopping ADBScreencapRecording
+22:54:44.846 detox[115078] [90mE[39m onTestFnFailure
+22:54:44.846 detox[115078] [90mE[39m test_fn
+  error: Test Failed: '(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.
+  Expected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)
+       Got: was null
+  
+  
+22:54:44.846 detox[115078] [90mB[39m onTestDone
+  args: ({"title":"navigates to transactions from dashboard","fullName":"App smoke flow navigates to transactions from dashboard","status":"failed","invocations":1,"timedOut":false})
+22:54:44.846 detox[115078] [90mi[39m stopping ADBLogcatRecording
+22:54:44.847 detox[115078] [90mi[39m starting ADBScreencapRecording
+22:54:44.847 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22542387_13.png"
+22:54:44.851 detox[115078] [90mi[39m stopping ADBVideoRecording
+22:54:44.851 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "date +\"%m-%d %T.000\""
+22:54:44.854 detox[115078] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22542387_11.mp4
+22:54:44.856 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22542387_11.mp4 terminated with SIGINT
+22:54:44.856 detox[115078] [90mi[39m saving ADBVideoRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow navigates to transactions from dashboard/test.mp4
+22:54:44.903 detox[115078] [90mi[39m 03-14 22:54:42.000
+
+22:54:44.904 detox[115078] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell logcat -T "03-14 22:54:38.000" --pid=9792 -f /sdcard/22542387_9.log
+22:54:44.905 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:54:38.000\" --pid=9792 -f /sdcard/22542387_9.log" terminated with SIGINT
+22:54:45.320 detox[115078] [90mi[39m 
+22:54:45.320 detox[115078] [90mi[39m stopping ADBScreencapRecording
+22:54:45.321 detox[115078] [90mE[39m onTestDone
+22:54:45.321 detox[115078] [90mE[39m navigates to transactions from dashboard
+22:54:45.321 detox[115078] [90mi[39m App smoke flow: navigates to transactions from dashboard [FAIL]
+22:54:45.322 detox[115078] [90mB[39m adds an expense and sees it in transactions
+22:54:45.322 detox[115078] [90mi[39m App smoke flow: adds an expense and sees it in transactions
+22:54:45.322 detox[115078] [90mB[39m onTestStart
+  args: ({"title":"adds an expense and sees it in transactions","fullName":"App smoke flow adds an expense and sees it in transactions","status":"running","invocations":1})
+22:54:45.323 detox[115078] [90mi[39m starting ADBLogcatRecording
+22:54:45.327 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:54:42.000\" --pid=9792 -f /sdcard/22542387_14.log"
+22:54:45.327 detox[115078] [90mi[39m starting ADBScreencapRecording
+22:54:45.327 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22542387_15.png"
+22:54:45.331 detox[115078] [90mi[39m starting ADBVideoRecording
+22:54:45.339 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22542387_16.mp4
+22:54:45.358 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22542387_11.mp4
+22:54:45.402 detox[115078] [90mi[39m 556	/sdcard/22542387_11.mp4
+
+22:54:45.402 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_11.mp4" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow navigates to transactions from dashboard/test.mp4"
+22:54:45.422 detox[115078] [90mi[39m /sdcard/22542387_11.mp4: 1 file pulled, 0 skipped. 52.4 MB/s (555047 bytes in 0.010s)
+
+22:54:45.422 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_11.mp4\""
+22:54:45.458 detox[115078] [90mi[39m 
+22:54:45.459 detox[115078] [90mi[39m saving ADBLogcatRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow navigates to transactions from dashboard/device.log
+22:54:45.459 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_9.log" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow navigates to transactions from dashboard/device.log"
+22:54:45.473 detox[115078] [90mi[39m /sdcard/22542387_9.log: 1 file pulled, 0 skipped. 5.6 MB/s (8192 bytes in 0.001s)
+
+22:54:45.473 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_9.log\""
+22:54:45.518 detox[115078] [90mi[39m 
+22:54:45.518 detox[115078] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow navigates to transactions from dashboard/testStart.png
+22:54:45.518 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_10.png" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow navigates to transactions from dashboard/testStart.png"
+22:54:45.529 detox[115078] [90mi[39m /sdcard/22542387_10.png: 1 file pulled, 0 skipped. 67.6 MB/s (164457 bytes in 0.002s)
+
+22:54:45.529 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_10.png\""
+22:54:45.628 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22542387_14.log
+22:54:45.638 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22542387_16.mp4
+22:54:45.721 detox[115078] [90mi[39m 
+22:54:45.722 detox[115078] [90mi[39m 4	/sdcard/22542387_14.log
+
+22:54:45.722 detox[115078] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow navigates to transactions from dashboard/testFnFailure.png
+22:54:45.722 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_12.png" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow navigates to transactions from dashboard/testFnFailure.png"
+22:54:45.748 detox[115078] [90mi[39m 8	/sdcard/22542387_16.mp4
+
+22:54:45.758 detox[115078] [90mi[39m /sdcard/22542387_12.png: 1 file pulled, 0 skipped. 10.5 MB/s (166586 bytes in 0.015s)
+
+22:54:45.758 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_12.png\""
+22:54:45.816 detox[115078] [90mi[39m 
+22:54:45.817 detox[115078] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow navigates to transactions from dashboard/testDone.png
+22:54:45.817 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_13.png" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow navigates to transactions from dashboard/testDone.png"
+22:54:45.827 detox[115078] [90mi[39m /sdcard/22542387_13.png: 1 file pulled, 0 skipped. 68.8 MB/s (166805 bytes in 0.002s)
+
+22:54:45.827 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_13.png\""
+22:54:45.867 detox[115078] [90mi[39m 
+22:54:45.904 detox[115078] [90mi[39m 
+22:54:45.904 detox[115078] [90mi[39m stopping ADBScreencapRecording
+22:54:45.904 detox[115078] [90mE[39m onTestStart
+22:54:45.905 detox[115078] [90mB[39m beforeEach
+22:54:45.905 detox[115078] [90mE[39m beforeEach
+22:54:45.905 detox[115078] [90mB[39m test_fn
+22:54:45.906 detox[115052] [90mi[39m get
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Dashboard",{"type":"boolean","value":false}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":10}
+22:54:45.906 detox[115052] [90mi[39m send
+  data: {
+    "type": "invoke",
+    "params": {
+      "target": {
+        "type": "Class",
+        "value": "com.wix.detox.espresso.EspressoDetox"
+      },
+      "method": "perform",
+      "args": [
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "com.wix.detox.espresso.DetoxMatcher"
+            },
+            "method": "matcherForText",
+            "args": [
+              "Dashboard",
+              {
+                "type": "boolean",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "Invocation",
+          "value": {
+            "target": {
+              "type": "Class",
+              "value": "com.wix.detox.espresso.DetoxViewActions"
+            },
+            "method": "click",
+            "args": []
+          }
+        }
+      ]
+    },
+    "messageId": 10
+  }
+22:54:45.906 detox[115078] [90mi[39m send message
+  data: {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Dashboard",{"type":"boolean","value":false}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":10}
+22:54:45.907 detox[115078] [90mB[39m tap
+  data: {
+    "target": {
+      "type": "Class",
+      "value": "com.wix.detox.espresso.EspressoDetox"
+    },
+    "method": "perform",
+    "args": [
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxMatcher"
+          },
+          "method": "matcherForText",
+          "args": [
+            "Dashboard",
+            {
+              "type": "boolean",
+              "value": false
+            }
+          ]
+        }
+      },
+      {
+        "type": "Invocation",
+        "value": {
+          "target": {
+            "type": "Class",
+            "value": "com.wix.detox.espresso.DetoxViewActions"
+          },
+          "method": "click",
+          "args": []
+        }
+      }
+    ]
+  }
+22:54:46.017 detox[115052] [90mi[39m get
+  data: {"messageId":10,"type":"testFailed","params":{"details":"No views in hierarchy found matching: (an instance of android.widget.TextView and view.getText() with or without transformation to match: is \"Dashboard\" and view has effective visibility <VISIBLE>)\n","viewHierarchy":"<?xml version='1.0' encoding='UTF_8' standalone='yes' ?>\r\n<ViewHierarchy density=\"2.625\">\r\n  <DecorView class=\"com.android.internal.policy.DecorView\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n    <LinearLayout class=\"android.widget.LinearLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n      <ViewStub class=\"android.view.ViewStub\" width=\"0\" height=\"0\" visibility=\"gone\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\" \/>\r\n      <FrameLayout class=\"android.widget.FrameLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n        <FitWindowsLinearLayout class=\"androidx.appcompat.widget.FitWindowsLinearLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n          <ViewStubCompat class=\"androidx.appcompat.widget.ViewStubCompat\" width=\"0\" height=\"0\" visibility=\"gone\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\" \/>\r\n          <ContentFrameLayout class=\"androidx.appcompat.widget.ContentFrameLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n            <ReactSurfaceView class=\"com.facebook.react.runtime.ReactSurfaceView\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Amount, , Category, &#128218;, Books, &#127881;, Entertainment, &#127828;, Food, &#129534;, Other, &#127968;, Rent, &#128241;, Subscriptions, &#128652;, Transport, Expense type, Regular expense, Lent money, Borrowed money, Add split details, Date: 2026-03-14, Add note, Save, Add Expense, Navigate up\" x=\"0\" y=\"0\">\r\n              <RNGestureHandlerRootView class=\"com.swmansion.gesturehandler.react.RNGestureHandlerRootView\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                <SafeAreaProvider class=\"com.th3rdwave.safeareacontext.SafeAreaProvider\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                  <ScreenStack class=\"com.swmansion.rnscreens.ScreenStack\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                    <ScreensCoordinatorLayout class=\"com.swmansion.rnscreens.stack.views.ScreensCoordinatorLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                      <Screen class=\"com.swmansion.rnscreens.Screen\" width=\"1080\" height=\"2125\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"275\">\r\n                        <ScreenContentWrapper class=\"com.swmansion.rnscreens.ScreenContentWrapper\" width=\"1080\" height=\"2125\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"275\">\r\n                          <ReactScrollView class=\"com.facebook.react.views.scroll.ReactScrollView\" width=\"1080\" height=\"2125\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Amount, , Category, &#128218;, Books, &#127881;, Entertainment, &#127828;, Food, &#129534;, Other, &#127968;, Rent, &#128241;, Subscriptions, &#128652;, Transport, Expense type, Regular expense, Lent money, Borrowed money, Add split details, Date: 2026-03-14, Add note, Save\" x=\"0\" y=\"275\">\r\n                            <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"1080\" height=\"2334\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Amount, , Category, &#128218;, Books, &#127881;, Entertainment, &#127828;, Food, &#129534;, Other, &#127968;, Rent, &#128241;, Subscriptions, &#128652;, Transport, Expense type, Regular expense, Lent money, Borrowed money, Add split details, Date: 2026-03-14, Add note, Save\" x=\"0\" y=\"66\">\r\n                              <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"986\" height=\"57\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Amount\" x=\"47\" y=\"113\" text=\"Amount\" \/>\r\n                              <ReactEditText class=\"com.facebook.react.views.textinput.ReactEditText\" width=\"986\" height=\"201\" visibility=\"visible\" alpha=\"1.0\" focused=\"true\" x=\"47\" y=\"196\" id=\"add-expense-amount-input\" \/>\r\n                              <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"986\" height=\"57\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Category\" x=\"47\" y=\"459\" text=\"Category\" \/>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128218;, Books\" x=\"47\" y=\"558\" id=\"category-grid-item-default-books\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128218;\" x=\"155\" y=\"592\" text=\"&#128218;\" \/>\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"104\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Books\" x=\"142\" y=\"698\" text=\"Books\" \/>\r\n                              <\/ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127881;, Entertainment\" x=\"373\" y=\"558\" id=\"category-grid-item-default-entertainment\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127881;\" x=\"481\" y=\"592\" text=\"&#127881;\" \/>\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"236\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Entertainment\" x=\"402\" y=\"698\" text=\"Entertainment\" \/>\r\n                              <\/ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127828;, Food\" x=\"700\" y=\"558\" id=\"category-grid-item-default-food\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127828;\" x=\"808\" y=\"592\" text=\"&#127828;\" \/>\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"83\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Food\" x=\"805\" y=\"698\" text=\"Food\" \/>\r\n                              <\/ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#129534;, Other\" x=\"47\" y=\"820\" id=\"category-grid-item-default-other\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#129534;\" x=\"155\" y=\"854\" text=\"&#129534;\" \/>\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"92\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Other\" x=\"148\" y=\"960\" text=\"Other\" \/>\r\n                              <\/ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127968;, Rent\" x=\"373\" y=\"820\" id=\"category-grid-item-default-rent\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127968;\" x=\"481\" y=\"854\" text=\"&#127968;\" \/>\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"77\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Rent\" x=\"481\" y=\"960\" text=\"Rent\" \/>\r\n                              <\/ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128241;, Subscriptions\" x=\"700\" y=\"820\" id=\"category-grid-item-default-subscriptions\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128241;\" x=\"808\" y=\"854\" text=\"&#128241;\" \/>\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"230\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Subscriptions\" x=\"732\" y=\"960\" text=\"Subscriptions\" \/>\r\n                              <\/ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128652;, Transport\" x=\"47\" y=\"1083\" id=\"category-grid-item-default-transport\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128652;\" x=\"155\" y=\"1117\" text=\"&#128652;\" \/>\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"163\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Transport\" x=\"112\" y=\"1223\" text=\"Transport\" \/>\r\n                              <\/ReactViewGroup>\r\n                              <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"986\" height=\"57\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Expense type\" x=\"47\" y=\"1456\" text=\"Expense type\" \/>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"986\" height=\"246\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"47\" y=\"1539\" id=\"add-expense-type-toggle\" \/>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"338\" height=\"99\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Regular expense\" x=\"47\" y=\"1539\" id=\"add-expense-type-expense\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"264\" height=\"47\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Regular expense\" x=\"83\" y=\"1565\" text=\"Regular expense\" \/>\r\n                              <\/ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"253\" height=\"99\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Lent money\" x=\"411\" y=\"1539\" id=\"add-expense-type-lent\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"185\" height=\"47\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Lent money\" x=\"445\" y=\"1562\" text=\"Lent money\" \/>\r\n                              <\/ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"337\" height=\"94\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Borrowed money\" x=\"47\" y=\"1665\" id=\"add-expense-type-borrowed\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"268\" height=\"47\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Borrowed money\" x=\"81\" y=\"1688\" text=\"Borrowed money\" \/>\r\n                              <\/ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"348\" height=\"98\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add split details\" x=\"47\" y=\"1828\" id=\"add-expense-split-toggle\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"269\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add split details\" x=\"86\" y=\"1851\" text=\"Add split details\" \/>\r\n                              <\/ReactViewGroup>\r\n                              <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"986\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Date: 2026-03-14\" x=\"47\" y=\"1925\" text=\"Date: 2026-03-14\" \/>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"229\" height=\"98\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add note\" x=\"47\" y=\"2003\" id=\"add-expense-note-toggle\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"150\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add note\" x=\"86\" y=\"2026\" text=\"Add note\" \/>\r\n                              <\/ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"986\" height=\"147\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Save\" x=\"47\" y=\"2206\" id=\"add-expense-save-button\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"92\" height=\"57\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Save\" x=\"493\" y=\"2250\" text=\"Save\" \/>\r\n                              <\/ReactViewGroup>\r\n                            <\/ReactViewGroup>\r\n                          <\/ReactScrollView>\r\n                        <\/ScreenContentWrapper>\r\n                        <ScreenStackHeaderConfig class=\"com.swmansion.rnscreens.ScreenStackHeaderConfig\" width=\"1080\" height=\"0\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\" \/>\r\n                      <\/Screen>\r\n                      <CustomAppBarLayout class=\"com.swmansion.rnscreens.CustomAppBarLayout\" width=\"1080\" height=\"275\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                        <DebugMenuToolbar class=\"com.swmansion.rnscreens.ScreenStackHeaderConfig$DebugMenuToolbar\" width=\"1080\" height=\"275\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                          <ActionMenuView class=\"androidx.appcompat.widget.ActionMenuView\" width=\"0\" height=\"147\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"1080\" y=\"128\" \/>\r\n                          <AppCompatTextView class=\"androidx.appcompat.widget.AppCompatTextView\" width=\"308\" height=\"71\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add Expense\" x=\"189\" y=\"166\" text=\"Add Expense\" \/>\r\n                          <AppCompatImageButton class=\"androidx.appcompat.widget.AppCompatImageButton\" width=\"147\" height=\"147\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" value=\"Navigate up\" label=\"Navigate up\" x=\"0\" y=\"128\" \/>\r\n                        <\/DebugMenuToolbar>\r\n                      <\/CustomAppBarLayout>\r\n                    <\/ScreensCoordinatorLayout>\r\n                  <\/ScreenStack>\r\n                <\/SafeAreaProvider>\r\n              <\/RNGestureHandlerRootView>\r\n            <\/ReactSurfaceView>\r\n          <\/ContentFrameLayout>\r\n        <\/FitWindowsLinearLayout>\r\n      <\/FrameLayout>\r\n    <\/LinearLayout>\r\n  <\/DecorView>\r\n<\/ViewHierarchy>"}}
+22:54:46.017 detox[115052] [90mi[39m send
+  data: {
+    "messageId": 10,
+    "type": "testFailed",
+    "params": {
+      "details": "No views in hierarchy found matching: (an instance of android.widget.TextView and view.getText() with or without transformation to match: is \"Dashboard\" and view has effective visibility <VISIBLE>)\n",
+      "viewHierarchy": "<?xml version='1.0' encoding='UTF_8' standalone='yes' ?>\r\n<ViewHierarchy density=\"2.625\">\r\n  <DecorView class=\"com.android.internal.policy.DecorView\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n    <LinearLayout class=\"android.widget.LinearLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n      <ViewStub class=\"android.view.ViewStub\" width=\"0\" height=\"0\" visibility=\"gone\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\" />\r\n      <FrameLayout class=\"android.widget.FrameLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n        <FitWindowsLinearLayout class=\"androidx.appcompat.widget.FitWindowsLinearLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n          <ViewStubCompat class=\"androidx.appcompat.widget.ViewStubCompat\" width=\"0\" height=\"0\" visibility=\"gone\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\" />\r\n          <ContentFrameLayout class=\"androidx.appcompat.widget.ContentFrameLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n            <ReactSurfaceView class=\"com.facebook.react.runtime.ReactSurfaceView\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Amount, , Category, &#128218;, Books, &#127881;, Entertainment, &#127828;, Food, &#129534;, Other, &#127968;, Rent, &#128241;, Subscriptions, &#128652;, Transport, Expense type, Regular expense, Lent money, Borrowed money, Add split details, Date: 2026-03-14, Add note, Save, Add Expense, Navigate up\" x=\"0\" y=\"0\">\r\n              <RNGestureHandlerRootView class=\"com.swmansion.gesturehandler.react.RNGestureHandlerRootView\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                <SafeAreaProvider class=\"com.th3rdwave.safeareacontext.SafeAreaProvider\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                  <ScreenStack class=\"com.swmansion.rnscreens.ScreenStack\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                    <ScreensCoordinatorLayout class=\"com.swmansion.rnscreens.stack.views.ScreensCoordinatorLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                      <Screen class=\"com.swmansion.rnscreens.Screen\" width=\"1080\" height=\"2125\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"275\">\r\n                        <ScreenContentWrapper class=\"com.swmansion.rnscreens.ScreenContentWrapper\" width=\"1080\" height=\"2125\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"275\">\r\n                          <ReactScrollView class=\"com.facebook.react.views.scroll.ReactScrollView\" width=\"1080\" height=\"2125\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Amount, , Category, &#128218;, Books, &#127881;, Entertainment, &#127828;, Food, &#129534;, Other, &#127968;, Rent, &#128241;, Subscriptions, &#128652;, Transport, Expense type, Regular expense, Lent money, Borrowed money, Add split details, Date: 2026-03-14, Add note, Save\" x=\"0\" y=\"275\">\r\n                            <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"1080\" height=\"2334\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Amount, , Category, &#128218;, Books, &#127881;, Entertainment, &#127828;, Food, &#129534;, Other, &#127968;, Rent, &#128241;, Subscriptions, &#128652;, Transport, Expense type, Regular expense, Lent money, Borrowed money, Add split details, Date: 2026-03-14, Add note, Save\" x=\"0\" y=\"66\">\r\n                              <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"986\" height=\"57\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Amount\" x=\"47\" y=\"113\" text=\"Amount\" />\r\n                              <ReactEditText class=\"com.facebook.react.views.textinput.ReactEditText\" width=\"986\" height=\"201\" visibility=\"visible\" alpha=\"1.0\" focused=\"true\" x=\"47\" y=\"196\" id=\"add-expense-amount-input\" />\r\n                              <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"986\" height=\"57\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Category\" x=\"47\" y=\"459\" text=\"Category\" />\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128218;, Books\" x=\"47\" y=\"558\" id=\"category-grid-item-default-books\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128218;\" x=\"155\" y=\"592\" text=\"&#128218;\" />\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"104\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Books\" x=\"142\" y=\"698\" text=\"Books\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127881;, Entertainment\" x=\"373\" y=\"558\" id=\"category-grid-item-default-entertainment\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127881;\" x=\"481\" y=\"592\" text=\"&#127881;\" />\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"236\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Entertainment\" x=\"402\" y=\"698\" text=\"Entertainment\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127828;, Food\" x=\"700\" y=\"558\" id=\"category-grid-item-default-food\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127828;\" x=\"808\" y=\"592\" text=\"&#127828;\" />\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"83\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Food\" x=\"805\" y=\"698\" text=\"Food\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#129534;, Other\" x=\"47\" y=\"820\" id=\"category-grid-item-default-other\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#129534;\" x=\"155\" y=\"854\" text=\"&#129534;\" />\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"92\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Other\" x=\"148\" y=\"960\" text=\"Other\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127968;, Rent\" x=\"373\" y=\"820\" id=\"category-grid-item-default-rent\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127968;\" x=\"481\" y=\"854\" text=\"&#127968;\" />\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"77\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Rent\" x=\"481\" y=\"960\" text=\"Rent\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128241;, Subscriptions\" x=\"700\" y=\"820\" id=\"category-grid-item-default-subscriptions\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128241;\" x=\"808\" y=\"854\" text=\"&#128241;\" />\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"230\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Subscriptions\" x=\"732\" y=\"960\" text=\"Subscriptions\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128652;, Transport\" x=\"47\" y=\"1083\" id=\"category-grid-item-default-transport\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128652;\" x=\"155\" y=\"1117\" text=\"&#128652;\" />\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"163\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Transport\" x=\"112\" y=\"1223\" text=\"Transport\" />\r\n                              </ReactViewGroup>\r\n                              <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"986\" height=\"57\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Expense type\" x=\"47\" y=\"1456\" text=\"Expense type\" />\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"986\" height=\"246\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"47\" y=\"1539\" id=\"add-expense-type-toggle\" />\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"338\" height=\"99\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Regular expense\" x=\"47\" y=\"1539\" id=\"add-expense-type-expense\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"264\" height=\"47\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Regular expense\" x=\"83\" y=\"1565\" text=\"Regular expense\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"253\" height=\"99\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Lent money\" x=\"411\" y=\"1539\" id=\"add-expense-type-lent\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"185\" height=\"47\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Lent money\" x=\"445\" y=\"1562\" text=\"Lent money\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"337\" height=\"94\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Borrowed money\" x=\"47\" y=\"1665\" id=\"add-expense-type-borrowed\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"268\" height=\"47\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Borrowed money\" x=\"81\" y=\"1688\" text=\"Borrowed money\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"348\" height=\"98\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add split details\" x=\"47\" y=\"1828\" id=\"add-expense-split-toggle\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"269\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add split details\" x=\"86\" y=\"1851\" text=\"Add split details\" />\r\n                              </ReactViewGroup>\r\n                              <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"986\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Date: 2026-03-14\" x=\"47\" y=\"1925\" text=\"Date: 2026-03-14\" />\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"229\" height=\"98\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add note\" x=\"47\" y=\"2003\" id=\"add-expense-note-toggle\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"150\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add note\" x=\"86\" y=\"2026\" text=\"Add note\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"986\" height=\"147\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Save\" x=\"47\" y=\"2206\" id=\"add-expense-save-button\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"92\" height=\"57\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Save\" x=\"493\" y=\"2250\" text=\"Save\" />\r\n                              </ReactViewGroup>\r\n                            </ReactViewGroup>\r\n                          </ReactScrollView>\r\n                        </ScreenContentWrapper>\r\n                        <ScreenStackHeaderConfig class=\"com.swmansion.rnscreens.ScreenStackHeaderConfig\" width=\"1080\" height=\"0\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\" />\r\n                      </Screen>\r\n                      <CustomAppBarLayout class=\"com.swmansion.rnscreens.CustomAppBarLayout\" width=\"1080\" height=\"275\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                        <DebugMenuToolbar class=\"com.swmansion.rnscreens.ScreenStackHeaderConfig$DebugMenuToolbar\" width=\"1080\" height=\"275\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                          <ActionMenuView class=\"androidx.appcompat.widget.ActionMenuView\" width=\"0\" height=\"147\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"1080\" y=\"128\" />\r\n                          <AppCompatTextView class=\"androidx.appcompat.widget.AppCompatTextView\" width=\"308\" height=\"71\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add Expense\" x=\"189\" y=\"166\" text=\"Add Expense\" />\r\n                          <AppCompatImageButton class=\"androidx.appcompat.widget.AppCompatImageButton\" width=\"147\" height=\"147\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" value=\"Navigate up\" label=\"Navigate up\" x=\"0\" y=\"128\" />\r\n                        </DebugMenuToolbar>\r\n                      </CustomAppBarLayout>\r\n                    </ScreensCoordinatorLayout>\r\n                  </ScreenStack>\r\n                </SafeAreaProvider>\r\n              </RNGestureHandlerRootView>\r\n            </ReactSurfaceView>\r\n          </ContentFrameLayout>\r\n        </FitWindowsLinearLayout>\r\n      </FrameLayout>\r\n    </LinearLayout>\r\n  </DecorView>\r\n</ViewHierarchy>"
+    }
+  }
+22:54:46.019 detox[115078] [90mi[39m get message
+  data: {"messageId":10,"type":"testFailed","params":{"details":"No views in hierarchy found matching: (an instance of android.widget.TextView and view.getText() with or without transformation to match: is \"Dashboard\" and view has effective visibility <VISIBLE>)\n","viewHierarchy":"<?xml version='1.0' encoding='UTF_8' standalone='yes' ?>\r\n<ViewHierarchy density=\"2.625\">\r\n  <DecorView class=\"com.android.internal.policy.DecorView\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n    <LinearLayout class=\"android.widget.LinearLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n      <ViewStub class=\"android.view.ViewStub\" width=\"0\" height=\"0\" visibility=\"gone\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\" />\r\n      <FrameLayout class=\"android.widget.FrameLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n        <FitWindowsLinearLayout class=\"androidx.appcompat.widget.FitWindowsLinearLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n          <ViewStubCompat class=\"androidx.appcompat.widget.ViewStubCompat\" width=\"0\" height=\"0\" visibility=\"gone\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\" />\r\n          <ContentFrameLayout class=\"androidx.appcompat.widget.ContentFrameLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n            <ReactSurfaceView class=\"com.facebook.react.runtime.ReactSurfaceView\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Amount, , Category, &#128218;, Books, &#127881;, Entertainment, &#127828;, Food, &#129534;, Other, &#127968;, Rent, &#128241;, Subscriptions, &#128652;, Transport, Expense type, Regular expense, Lent money, Borrowed money, Add split details, Date: 2026-03-14, Add note, Save, Add Expense, Navigate up\" x=\"0\" y=\"0\">\r\n              <RNGestureHandlerRootView class=\"com.swmansion.gesturehandler.react.RNGestureHandlerRootView\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                <SafeAreaProvider class=\"com.th3rdwave.safeareacontext.SafeAreaProvider\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                  <ScreenStack class=\"com.swmansion.rnscreens.ScreenStack\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                    <ScreensCoordinatorLayout class=\"com.swmansion.rnscreens.stack.views.ScreensCoordinatorLayout\" width=\"1080\" height=\"2400\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                      <Screen class=\"com.swmansion.rnscreens.Screen\" width=\"1080\" height=\"2125\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"275\">\r\n                        <ScreenContentWrapper class=\"com.swmansion.rnscreens.ScreenContentWrapper\" width=\"1080\" height=\"2125\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"275\">\r\n                          <ReactScrollView class=\"com.facebook.react.views.scroll.ReactScrollView\" width=\"1080\" height=\"2125\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Amount, , Category, &#128218;, Books, &#127881;, Entertainment, &#127828;, Food, &#129534;, Other, &#127968;, Rent, &#128241;, Subscriptions, &#128652;, Transport, Expense type, Regular expense, Lent money, Borrowed money, Add split details, Date: 2026-03-14, Add note, Save\" x=\"0\" y=\"275\">\r\n                            <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"1080\" height=\"2334\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Amount, , Category, &#128218;, Books, &#127881;, Entertainment, &#127828;, Food, &#129534;, Other, &#127968;, Rent, &#128241;, Subscriptions, &#128652;, Transport, Expense type, Regular expense, Lent money, Borrowed money, Add split details, Date: 2026-03-14, Add note, Save\" x=\"0\" y=\"66\">\r\n                              <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"986\" height=\"57\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Amount\" x=\"47\" y=\"113\" text=\"Amount\" />\r\n                              <ReactEditText class=\"com.facebook.react.views.textinput.ReactEditText\" width=\"986\" height=\"201\" visibility=\"visible\" alpha=\"1.0\" focused=\"true\" x=\"47\" y=\"196\" id=\"add-expense-amount-input\" />\r\n                              <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"986\" height=\"57\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Category\" x=\"47\" y=\"459\" text=\"Category\" />\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128218;, Books\" x=\"47\" y=\"558\" id=\"category-grid-item-default-books\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128218;\" x=\"155\" y=\"592\" text=\"&#128218;\" />\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"104\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Books\" x=\"142\" y=\"698\" text=\"Books\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127881;, Entertainment\" x=\"373\" y=\"558\" id=\"category-grid-item-default-entertainment\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127881;\" x=\"481\" y=\"592\" text=\"&#127881;\" />\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"236\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Entertainment\" x=\"402\" y=\"698\" text=\"Entertainment\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127828;, Food\" x=\"700\" y=\"558\" id=\"category-grid-item-default-food\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127828;\" x=\"808\" y=\"592\" text=\"&#127828;\" />\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"83\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Food\" x=\"805\" y=\"698\" text=\"Food\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#129534;, Other\" x=\"47\" y=\"820\" id=\"category-grid-item-default-other\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#129534;\" x=\"155\" y=\"854\" text=\"&#129534;\" />\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"92\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Other\" x=\"148\" y=\"960\" text=\"Other\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127968;, Rent\" x=\"373\" y=\"820\" id=\"category-grid-item-default-rent\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#127968;\" x=\"481\" y=\"854\" text=\"&#127968;\" />\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"77\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Rent\" x=\"481\" y=\"960\" text=\"Rent\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128241;, Subscriptions\" x=\"700\" y=\"820\" id=\"category-grid-item-default-subscriptions\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128241;\" x=\"808\" y=\"854\" text=\"&#128241;\" />\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"230\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Subscriptions\" x=\"732\" y=\"960\" text=\"Subscriptions\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"295\" height=\"231\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128652;, Transport\" x=\"47\" y=\"1083\" id=\"category-grid-item-default-transport\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"78\" height=\"85\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"&#128652;\" x=\"155\" y=\"1117\" text=\"&#128652;\" />\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"163\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Transport\" x=\"112\" y=\"1223\" text=\"Transport\" />\r\n                              </ReactViewGroup>\r\n                              <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"986\" height=\"57\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Expense type\" x=\"47\" y=\"1456\" text=\"Expense type\" />\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"986\" height=\"246\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"47\" y=\"1539\" id=\"add-expense-type-toggle\" />\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"338\" height=\"99\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Regular expense\" x=\"47\" y=\"1539\" id=\"add-expense-type-expense\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"264\" height=\"47\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Regular expense\" x=\"83\" y=\"1565\" text=\"Regular expense\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"253\" height=\"99\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Lent money\" x=\"411\" y=\"1539\" id=\"add-expense-type-lent\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"185\" height=\"47\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Lent money\" x=\"445\" y=\"1562\" text=\"Lent money\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"337\" height=\"94\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Borrowed money\" x=\"47\" y=\"1665\" id=\"add-expense-type-borrowed\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"268\" height=\"47\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Borrowed money\" x=\"81\" y=\"1688\" text=\"Borrowed money\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"348\" height=\"98\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add split details\" x=\"47\" y=\"1828\" id=\"add-expense-split-toggle\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"269\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add split details\" x=\"86\" y=\"1851\" text=\"Add split details\" />\r\n                              </ReactViewGroup>\r\n                              <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"986\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Date: 2026-03-14\" x=\"47\" y=\"1925\" text=\"Date: 2026-03-14\" />\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"229\" height=\"98\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add note\" x=\"47\" y=\"2003\" id=\"add-expense-note-toggle\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"150\" height=\"51\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add note\" x=\"86\" y=\"2026\" text=\"Add note\" />\r\n                              </ReactViewGroup>\r\n                              <ReactViewGroup class=\"com.facebook.react.views.view.ReactViewGroup\" width=\"986\" height=\"147\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Save\" x=\"47\" y=\"2206\" id=\"add-expense-save-button\">\r\n                                <ReactTextView class=\"com.facebook.react.views.text.ReactTextView\" width=\"92\" height=\"57\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Save\" x=\"493\" y=\"2250\" text=\"Save\" />\r\n                              </ReactViewGroup>\r\n                            </ReactViewGroup>\r\n                          </ReactScrollView>\r\n                        </ScreenContentWrapper>\r\n                        <ScreenStackHeaderConfig class=\"com.swmansion.rnscreens.ScreenStackHeaderConfig\" width=\"1080\" height=\"0\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\" />\r\n                      </Screen>\r\n                      <CustomAppBarLayout class=\"com.swmansion.rnscreens.CustomAppBarLayout\" width=\"1080\" height=\"275\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                        <DebugMenuToolbar class=\"com.swmansion.rnscreens.ScreenStackHeaderConfig$DebugMenuToolbar\" width=\"1080\" height=\"275\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"0\" y=\"0\">\r\n                          <ActionMenuView class=\"androidx.appcompat.widget.ActionMenuView\" width=\"0\" height=\"147\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" x=\"1080\" y=\"128\" />\r\n                          <AppCompatTextView class=\"androidx.appcompat.widget.AppCompatTextView\" width=\"308\" height=\"71\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" label=\"Add Expense\" x=\"189\" y=\"166\" text=\"Add Expense\" />\r\n                          <AppCompatImageButton class=\"androidx.appcompat.widget.AppCompatImageButton\" width=\"147\" height=\"147\" visibility=\"visible\" alpha=\"1.0\" focused=\"false\" value=\"Navigate up\" label=\"Navigate up\" x=\"0\" y=\"128\" />\r\n                        </DebugMenuToolbar>\r\n                      </CustomAppBarLayout>\r\n                    </ScreensCoordinatorLayout>\r\n                  </ScreenStack>\r\n                </SafeAreaProvider>\r\n              </RNGestureHandlerRootView>\r\n            </ReactSurfaceView>\r\n          </ContentFrameLayout>\r\n        </FitWindowsLinearLayout>\r\n      </FrameLayout>\r\n    </LinearLayout>\r\n  </DecorView>\r\n</ViewHierarchy>"}}
+   
+22:54:46.020 detox[115078] [90mE[39m tap
+  error: Test Failed: No views in hierarchy found matching: (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Dashboard" and view has effective visibility <VISIBLE>)
+  
+  
+  HINT: To print view hierarchy on failed actions/matches, use log-level verbose or higher.
+22:54:46.020 detox[115078] [90mB[39m onTestFnFailure
+  args: ({"error":{"name":"DetoxRuntimeError"}})
+22:54:46.020 detox[115078] [90mi[39m starting ADBScreencapRecording
+22:54:46.020 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22542387_17.png"
+22:54:46.549 detox[115078] [90mi[39m 
+22:54:46.549 detox[115078] [90mi[39m stopping ADBScreencapRecording
+22:54:46.549 detox[115078] [90mE[39m onTestFnFailure
+22:54:46.549 detox[115078] [90mE[39m test_fn
+  error: Test Failed: No views in hierarchy found matching: (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Dashboard" and view has effective visibility <VISIBLE>)
+  
+  
+  HINT: To print view hierarchy on failed actions/matches, use log-level verbose or higher.
+22:54:46.550 detox[115078] [90mB[39m onTestDone
+  args: ({"title":"adds an expense and sees it in transactions","fullName":"App smoke flow adds an expense and sees it in transactions","status":"failed","invocations":1,"timedOut":false})
+22:54:46.550 detox[115078] [90mi[39m stopping ADBLogcatRecording
+22:54:46.550 detox[115078] [90mi[39m starting ADBScreencapRecording
+22:54:46.550 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "screencap /sdcard/22542387_18.png"
+22:54:46.553 detox[115078] [90mi[39m stopping ADBVideoRecording
+22:54:46.553 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "date +\"%m-%d %T.000\""
+22:54:46.557 detox[115078] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22542387_16.mp4
+22:54:46.558 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell screenrecord /sdcard/22542387_16.mp4 terminated with SIGINT
+22:54:46.559 detox[115078] [90mi[39m saving ADBVideoRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow adds an expense and sees it in transactions/test.mp4
+22:54:46.618 detox[115078] [90mi[39m 03-14 22:54:44.000
+
+22:54:46.618 detox[115078] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell logcat -T "03-14 22:54:42.000" --pid=9792 -f /sdcard/22542387_14.log
+22:54:46.623 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell "logcat -T \"03-14 22:54:42.000\" --pid=9792 -f /sdcard/22542387_14.log" terminated with SIGINT
+22:54:47.059 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell du /sdcard/22542387_16.mp4
+22:54:47.077 detox[115078] [90mi[39m 
+22:54:47.078 detox[115078] [90mi[39m stopping ADBScreencapRecording
+22:54:47.078 detox[115078] [90mE[39m onTestDone
+22:54:47.078 detox[115078] [90mE[39m adds an expense and sees it in transactions
+22:54:47.078 detox[115078] [90mi[39m App smoke flow: adds an expense and sees it in transactions [FAIL]
+22:54:47.079 detox[115078] [90mB[39m onRunDescribeFinish
+  args: ({"name":"App smoke flow"})
+22:54:47.079 detox[115078] [90mE[39m onRunDescribeFinish
+22:54:47.079 detox[115078] [90mE[39m App smoke flow
+22:54:47.080 detox[115078] [90mB[39m afterAll
+22:54:47.082 detox[115078] [90mB[39m terminateApp
+  args: ()
+22:54:47.082 detox[115078] [90mB[39m onBeforeTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:54:47.082 detox[115078] [90mE[39m onBeforeTerminateApp
+22:54:47.084 detox[115078] [90mi[39m sending SIGINT to: /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell am instrument -w -r -e detoxServer ws://localhost:41697 -e detoxSessionId 32d47440-e6d3-aee5-7307-a25756827880 -e detoxEnableSynchronization 0 -e debug false com.mcfuzzysquirrel.studentfinance.test/androidx.test.runner.AndroidJUnitRunner
+22:54:47.085 detox[115078] [90mi[39m /home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb -s emulator-5554 shell am instrument -w -r -e detoxServer ws://localhost:41697 -e detoxSessionId 32d47440-e6d3-aee5-7307-a25756827880 -e detoxEnableSynchronization 0 -e debug false com.mcfuzzysquirrel.studentfinance.test/androidx.test.runner.AndroidJUnitRunner terminated with SIGINT
+22:54:47.085 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "am force-stop com.mcfuzzysquirrel.studentfinance"
+22:54:47.088 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 reverse --remove tcp:41697
+22:54:47.101 detox[115078] [90mi[39m 
+22:54:47.101 detox[115078] [90mi[39m 84	/sdcard/22542387_16.mp4
+
+22:54:47.101 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_16.mp4" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow adds an expense and sees it in transactions/test.mp4"
+22:54:47.110 detox[115078] [90mi[39m /sdcard/22542387_16.mp4: 1 file pulled, 0 skipped. 37.7 MB/s (77239 bytes in 0.002s)
+
+22:54:47.110 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_16.mp4\""
+22:54:47.238 detox[115078] [90mi[39m 
+22:54:47.241 detox[115078] [90mi[39m saving ADBLogcatRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow adds an expense and sees it in transactions/device.log
+22:54:47.241 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_14.log" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow adds an expense and sees it in transactions/device.log"
+22:54:47.271 detox[115078] [90mi[39m 
+22:54:47.272 detox[115078] [90mB[39m onTerminateApp
+  args: ({"deviceId":"emulator-5554","bundleId":"com.mcfuzzysquirrel.studentfinance"})
+22:54:47.272 detox[115078] [90mE[39m onTerminateApp
+22:54:47.272 detox[115078] [90mE[39m terminateApp
+22:54:47.272 detox[115078] [90mE[39m afterAll
+22:54:47.272 detox[115078] [90mB[39m onRunDescribeFinish
+  args: ({"name":"ROOT_DESCRIBE_BLOCK"})
+22:54:47.272 detox[115078] [90mE[39m onRunDescribeFinish
+22:54:47.272 detox[115078] [90mE[39m run the tests
+22:54:47.302 detox[115052] [90mi[39m app exited session 32d47440-e6d3-aee5-7307-a25756827880
+22:54:47.302 detox[115052] [90mi[39m send
+  data: {
+    "type": "appDisconnected"
+  }
+22:54:47.303 detox[115052] [90mE[39m connection :41697<->:52373
+22:54:47.307 detox[115078] [90mB[39m tear down environment
+22:54:47.308 detox[115078] [90mB[39m onBeforeCleanup
+  args: ()
+22:54:47.309 detox[115078] [90mi[39m get message
+  data: {"type":"appDisconnected"}
+   
+22:54:47.310 detox[115078] [90mi[39m /sdcard/22542387_14.log: 1 file pulled, 0 skipped. 1.6 MB/s (4096 bytes in 0.002s)
+
+22:54:47.310 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_14.log\""
+22:54:47.398 detox[115078] [90mi[39m 
+22:54:47.398 detox[115078] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow adds an expense and sees it in transactions/testStart.png
+22:54:47.398 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_15.png" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow adds an expense and sees it in transactions/testStart.png"
+22:54:47.447 detox[115078] [90mi[39m /sdcard/22542387_15.png: 1 file pulled, 0 skipped. 13.6 MB/s (166586 bytes in 0.012s)
+
+22:54:47.447 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_15.png\""
+22:54:47.630 detox[115078] [90mi[39m 
+22:54:47.631 detox[115078] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow adds an expense and sees it in transactions/testFnFailure.png
+22:54:47.631 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_17.png" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow adds an expense and sees it in transactions/testFnFailure.png"
+22:54:47.698 detox[115078] [90mi[39m /sdcard/22542387_17.png: 1 file pulled, 0 skipped. 25.3 MB/s (166805 bytes in 0.006s)
+
+22:54:47.701 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_17.png\""
+22:54:47.777 detox[115078] [90mi[39m 
+22:54:47.778 detox[115078] [90mi[39m saving ADBScreencapRecording to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow adds an expense and sees it in transactions/testDone.png
+22:54:47.778 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 pull "/sdcard/22542387_18.png" "artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/✗ App smoke flow adds an expense and sees it in transactions/testDone.png"
+22:54:47.809 detox[115078] [90mi[39m /sdcard/22542387_18.png: 1 file pulled, 0 skipped. 42.0 MB/s (166805 bytes in 0.004s)
+
+22:54:47.812 detox[115078] [90mi[39m "/home/mcfuzzysquirrel/Android/Sdk/platform-tools/adb" -s emulator-5554 shell "rm  \"/sdcard/22542387_18.png\""
+22:54:47.895 detox[115078] [90mi[39m 
+22:54:47.896 detox[115078] [90mi[39m saving FileArtifact to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/detox_pid_115078.json.log { append: true }
+22:54:47.896 detox[115078] [90mi[39m saving FileArtifact to: artifacts/detox/android.emu.debug.2026-03-14 20-54-01Z/detox_pid_115078.log { append: true }
+22:54:47.896 detox[115078] [90mE[39m onBeforeCleanup
+22:54:47.899 detox[115052] [90mi[39m tester exited session 32d47440-e6d3-aee5-7307-a25756827880
+22:54:47.899 detox[115052] [90mE[39m connection :41697<->:58996
+22:54:47.900 detox[115052] [90mi[39m received event of :  deallocateDevice {
+  deviceCookie: {
+    id: 'emulator-5554',
+    adbName: 'emulator-5554',
+    name: 'emulator-5554 (detox-api35)'
+  }
+}
+22:54:47.900 detox[115078] [90mi[39m dispatching event to  primary-115052 /tmp/detox.primary-115052  :  deallocateDevice , {
+  deviceCookie: {
+    id: 'emulator-5554',
+    adbName: 'emulator-5554',
+    name: 'emulator-5554 (detox-api35)'
+  }
+}
+22:54:47.901 detox[115052] [90mB[39m free: emulator-5554
+  data: {}
+22:54:47.902 detox[115052] [90mE[39m free: emulator-5554
+22:54:47.902 detox[115052] [90mi[39m dispatching event to socket  :  deallocateDeviceDone {}
+22:54:47.902 detox[115078] [90mi[39m ## received events ##
+22:54:47.903 detox[115078] [90mi[39m detected event deallocateDeviceDone {}
+22:54:47.903 detox[115078] [90mE[39m tear down environment
+22:54:47.904 detox[115078] [90mE[39m e2e/smoke.e2e.js
+22:54:47.909 detox[115052] [90mi[39m received event of :  reportTestResults {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js',
+      isPermanentFailure: false
+    }
+  ]
+}
+22:54:47.909 detox[115078] [90mi[39m dispatching event to  primary-115052 /tmp/detox.primary-115052  :  reportTestResults , {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js',
+      testExecError: undefined,
+      isPermanentFailure: false
+    }
+  ]
+}
+22:54:47.910 detox[115052] [90mi[39m dispatching event to socket  :  reportTestResultsDone {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js',
+      isPermanentFailure: false
+    }
+  ]
+}
+22:54:47.910 detox[115052] [90mi[39m broadcasting event to all known sockets listening to  /tmp/detox.primary-115052  :   sessionStateUpdate {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js',
+      isPermanentFailure: false
+    }
+  ]
+}
+22:54:47.910 detox[115078] [90mi[39m ## received events ##
+22:54:47.910 detox[115078] [90mi[39m detected event reportTestResultsDone {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/home/mcfuzzysquirrel/Projects/mcfuzzy-test-personal-finance-app/e2e/smoke.e2e.js',
+      isPermanentFailure: false
+    }
+  ]
+}
+22:54:47.912 detox[115052] [90mi[39m server socket error Error: read ECONNRESET
+    at Pipe.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+22:54:47.912 detox[115052] [90mi[39m socket disconnected secondary-115078
+22:54:47.912 detox[115078] [90mi[39m connection closed primary-115052 /tmp/detox.primary-115052 0 tries remaining of 0
+22:54:47.912 detox[115078] [90mi[39m secondary-115078 exceeded connection rety amount of  or stopRetrying flag set.
+22:54:48.018 detox[115052] [90mE[39m Command failed with exit code = 1:
+jest --config e2e/jest.config.js
+22:54:48.019 detox[115052] [90mB[39m cleanup
+  args: ()
+22:54:48.020 detox[115052] [90mE[39m cleanup
+22:54:48.021 detox[115052] [90mi[39m Detox server has been closed gracefully
+22:54:48.022 detox[115052] [90mE[39m node_modules/.bin/detox test -c android.emu.debug --record-logs all --take-screenshots failing --record-videos failing --artifacts-location artifacts/detox

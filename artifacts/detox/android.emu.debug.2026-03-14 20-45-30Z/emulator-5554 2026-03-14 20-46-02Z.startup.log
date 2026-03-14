@@ -1,0 +1,154 @@
+--------- beginning of main
+03-14 22:45:44.390  5723  5723 I .studentfinance: Late-enabling -Xcheck:jni
+03-14 22:45:44.480  5723  5723 I .studentfinance: Using CollectorTypeCMC GC.
+03-14 22:45:44.483  5723  5723 W .studentfinance: Unexpected CPU variant for x86: x86_64.
+03-14 22:45:44.483  5723  5723 W .studentfinance: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+03-14 22:45:44.504  5723  5723 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+--------- beginning of system
+03-14 22:45:44.537  5723  5723 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[com.mcfuzzysquirrel.studentfinance]: x86_64, null instrumentation[com.mcfuzzysquirrel.studentfinance.test]: null, null
+03-14 22:45:44.543  5723  5723 W .studentfinance: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]} | PCL[])
+03-14 22:45:44.548  5723  5723 W .studentfinance: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986])
+03-14 22:45:44.550  5723  5723 W .studentfinance: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902])
+03-14 22:45:44.551  5723  5723 W ziparchive: Unable to open '/data/app/~~iQlUTSSRDXJswpF_nJkn0g==/com.mcfuzzysquirrel.studentfinance.test-wH5RmtktQTpJlYTVl2FeTQ==/base.dm': No such file or directory
+03-14 22:45:44.551  5723  5723 W ziparchive: Unable to open '/data/app/~~iQlUTSSRDXJswpF_nJkn0g==/com.mcfuzzysquirrel.studentfinance.test-wH5RmtktQTpJlYTVl2FeTQ==/base.dm': No such file or directory
+03-14 22:45:44.666  5723  5723 W ziparchive: Unable to open '/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.dm': No such file or directory
+03-14 22:45:44.666  5723  5723 W ziparchive: Unable to open '/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.dm': No such file or directory
+03-14 22:45:45.063  5723  5723 D nativeloader: Configuring clns-7 for other apk /system/framework/android.test.runner.jar:/system/framework/android.test.mock.jar:/system/framework/android.test.base.jar:/data/app/~~iQlUTSSRDXJswpF_nJkn0g==/com.mcfuzzysquirrel.studentfinance.test-wH5RmtktQTpJlYTVl2FeTQ==/base.apk:/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~iQlUTSSRDXJswpF_nJkn0g==/com.mcfuzzysquirrel.studentfinance.test-wH5RmtktQTpJlYTVl2FeTQ==/lib/x86_64:/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/lib/x86_64:/data/app/~~iQlUTSSRDXJswpF_nJkn0g==/com.mcfuzzysquirrel.studentfinance.test-wH5RmtktQTpJlYTVl2FeTQ==/base.apk!/lib/x86_64:/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.mcfuzzysquirrel.studentfinance
+03-14 22:45:45.074  5723  5723 V GraphicsEnvironment: Currently set values for:
+03-14 22:45:45.074  5723  5723 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+03-14 22:45:45.074  5723  5723 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+03-14 22:45:45.074  5723  5723 V GraphicsEnvironment: Global.Settings values are invalid: number of packages: 0, number of values: 0
+03-14 22:45:45.074  5723  5723 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+03-14 22:45:45.081  5723  5723 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+03-14 22:45:45.089  5723  5723 D nativeloader: Configuring clns-8 for other apk /system/framework/android.test.mock.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~iQlUTSSRDXJswpF_nJkn0g==/com.mcfuzzysquirrel.studentfinance.test-wH5RmtktQTpJlYTVl2FeTQ==/lib/x86_64:/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/lib/x86_64, permitted_path=/data:/mnt/expand
+03-14 22:45:45.089  5723  5723 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+03-14 22:45:45.096  5723  5723 D nativeloader: Configuring clns-9 for other apk /system/framework/android.test.runner.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~iQlUTSSRDXJswpF_nJkn0g==/com.mcfuzzysquirrel.studentfinance.test-wH5RmtktQTpJlYTVl2FeTQ==/lib/x86_64:/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/lib/x86_64, permitted_path=/data:/mnt/expand
+03-14 22:45:45.097  5723  5723 W .studentfinance: ClassLoaderContext shared library size mismatch. Expected=2, found=3 (PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]} | PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]#PCL[/system/framework/android.test.runner.jar*2496447986]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]}};PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902:/system/framework/android.test.base.jar*724373495:/data/app/~~iQlUTSSRDXJswpF_nJkn0g==/com.mcfuzzysquirrel.studentfinance.test-wH5RmtktQTpJlYTVl2FeTQ==/base.apk*3224200876:/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk*2060289533])
+03-14 22:45:45.098  5723  5723 W .studentfinance: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]#PCL[/system/framework/android.test.runner.jar*2496447986]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]}};PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902:/system/framework/android.test.base.jar*724373495:/data/app/~~iQlUTSSRDXJswpF_nJkn0g==/com.mcfuzzysquirrel.studentfinance.test-wH5RmtktQTpJlYTVl2FeTQ==/base.apk*3224200876:/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk*2060289533])
+03-14 22:45:45.103  5723  5723 W .studentfinance: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]#PCL[/system/framework/android.test.runner.jar*2496447986]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]}};PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902:/system/framework/android.test.base.jar*724373495:/data/app/~~iQlUTSSRDXJswpF_nJkn0g==/com.mcfuzzysquirrel.studentfinance.test-wH5RmtktQTpJlYTVl2FeTQ==/base.apk*3224200876:/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk*2060289533])
+03-14 22:45:45.104  5723  5723 W ziparchive: Unable to open '/data/app/~~iQlUTSSRDXJswpF_nJkn0g==/com.mcfuzzysquirrel.studentfinance.test-wH5RmtktQTpJlYTVl2FeTQ==/base.dm': No such file or directory
+03-14 22:45:45.104  5723  5723 W ziparchive: Unable to open '/data/app/~~iQlUTSSRDXJswpF_nJkn0g==/com.mcfuzzysquirrel.studentfinance.test-wH5RmtktQTpJlYTVl2FeTQ==/base.dm': No such file or directory
+03-14 22:45:45.236  5723  5723 W ziparchive: Unable to open '/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.dm': No such file or directory
+03-14 22:45:45.236  5723  5723 W ziparchive: Unable to open '/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.dm': No such file or directory
+03-14 22:45:45.638  5723  5723 I AndroidJUnitRunner: newApplication com.mcfuzzysquirrel.studentfinance.MainApplication
+03-14 22:45:45.656  5723  5723 I AndroidJUnitRunner: onCreate Bundle[mParcelledData.dataSize=312]
+03-14 22:45:45.657  5723  5723 D AndroidJUnitRunner: Use the raw file system for managing file I/O.
+03-14 22:45:45.722  5723  5723 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+03-14 22:45:45.723  5723  5752 D AndroidJUnitRunner: onStart is called.
+03-14 22:45:45.726  5723  5723 W SoLoader: Initializing SoLoader: 0
+03-14 22:45:45.729  5723  5723 W SoLoader: Recording new base apk path: /data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk
+03-14 22:45:45.729  5723  5723 W SoLoader: Previously recorded 0 base apk paths.
+03-14 22:45:45.730  5723  5723 I SoLoader: Preparing SO source: DirectorySoSource[root = /vendor/lib64 flags = 2]
+03-14 22:45:45.730  5723  5723 I SoLoader: Preparing SO source: DirectorySoSource[root = /system/lib64 flags = 2]
+03-14 22:45:45.730  5723  5723 I SoLoader: Preparing SO source: DirectApkSoSource[root = [/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk!/lib/x86_64]]
+03-14 22:45:45.745  5723  5723 I SoLoader: Preparing SO source: ApplicationSoSource[DirectorySoSource[root = /data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/lib/x86_64 flags = 0]]
+03-14 22:45:45.746  5723  5723 I SoLoader: init finish: 4 SO sources prepared
+03-14 22:45:45.746  5723  5723 W SoLoader: SoLoader initialized: 8
+03-14 22:45:45.786  5723  5723 D nativeloader: Load /data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk!/lib/x86_64/libc++_shared.so using ns clns-7 from class loader (caller=/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk): ok
+03-14 22:45:45.825  5723  5723 D nativeloader: Load /data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk!/lib/x86_64/libjsi.so using ns clns-7 from class loader (caller=/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk): ok
+03-14 22:45:45.835  5723  5723 D nativeloader: Load /data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk!/lib/x86_64/libfbjni.so using ns clns-7 from class loader (caller=/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk): ok
+03-14 22:45:45.843  5723  5723 D nativeloader: Load /data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk!/lib/x86_64/libreactnative.so using ns clns-7 from class loader (caller=/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk): ok
+03-14 22:45:45.843  5723  5723 D jni_lib_merge: Entering merged library JNI_OnLoad.
+03-14 22:45:45.843  5723  5723 D jni_lib_merge: Preparing 12 pre-merged libs (including stub)
+03-14 22:45:45.843  5723  5723 D jni_lib_merge: Preparing to register libfabricjni_so.  onload_func: 0x727ce6ae4730
+03-14 22:45:45.843  5723  5723 D jni_lib_merge: Preparing to register libreact_devsupportjni_so.  onload_func: 0x727ce6ce1190
+03-14 22:45:45.843  5723  5723 D jni_lib_merge: Preparing to register libreact_featureflagsjni_so.  onload_func: 0x727ce6cf2910
+03-14 22:45:45.843  5723  5723 D jni_lib_merge: Preparing to register libreact_newarchdefaults_so.  onload_func: 0x727ce6d93d20
+03-14 22:45:45.843  5723  5723 D jni_lib_merge: Preparing to register libreactnativeblob_so.  onload_func: 0x727ce6f9e2e0
+03-14 22:45:45.843  5723  5723 D jni_lib_merge: Preparing to register libreactnativejni_so.  onload_func: 0x727ce6fde770
+03-14 22:45:45.843  5723  5723 D jni_lib_merge: Preparing to register libreactnativejni_common_so.  onload_func: 0x727ce6fee5d0
+03-14 22:45:45.843  5723  5723 D jni_lib_merge: Preparing to register librninstance_so.  onload_func: 0x727ce702b4c0
+03-14 22:45:45.844  5723  5723 D jni_lib_merge: Preparing to register libturbomodulejsijni_so.  onload_func: 0x727ce718cc00
+03-14 22:45:45.844  5723  5723 D jni_lib_merge: Preparing to register libuimanagerjni_so.  onload_func: 0x727ce71a4de0
+03-14 22:45:45.844  5723  5723 D jni_lib_merge: Preparing to register libyoga_so.  onload_func: 0x727ce71b3d70
+03-14 22:45:45.844  5723  5723 D jni_lib_merge: About to register 11 actual methods.
+03-14 22:45:45.867  5723  5723 D nativeloader: Load /data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk!/lib/x86_64/libreact_codegen_rnscreens.so using ns clns-7 from class loader (caller=/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk): ok
+03-14 22:45:45.867  5723  5723 D jni_lib_merge: Entering merged library JNI_OnLoad.
+03-14 22:45:45.867  5723  5723 D jni_lib_merge: Preparing 12 pre-merged libs (including stub)
+03-14 22:45:45.867  5723  5723 D jni_lib_merge: Preparing to register libfabricjni_so.  onload_func: 0x727ce6ae4730
+03-14 22:45:45.867  5723  5723 D jni_lib_merge: Preparing to register libreact_devsupportjni_so.  onload_func: 0x727ce6ce1190
+03-14 22:45:45.867  5723  5723 D jni_lib_merge: Preparing to register libreact_featureflagsjni_so.  onload_func: 0x727ce6cf2910
+03-14 22:45:45.867  5723  5723 D jni_lib_merge: Preparing to register libreact_newarchdefaults_so.  onload_func: 0x727ce6d93d20
+03-14 22:45:45.867  5723  5723 D jni_lib_merge: Preparing to register libreactnativeblob_so.  onload_func: 0x727ce6f9e2e0
+03-14 22:45:45.867  5723  5723 D jni_lib_merge: Preparing to register libreactnativejni_so.  onload_func: 0x727ce6fde770
+03-14 22:45:45.867  5723  5723 D jni_lib_merge: Preparing to register libreactnativejni_common_so.  onload_func: 0x727ce6fee5d0
+03-14 22:45:45.867  5723  5723 D jni_lib_merge: Preparing to register librninstance_so.  onload_func: 0x727ce702b4c0
+03-14 22:45:45.867  5723  5723 D jni_lib_merge: Preparing to register libturbomodulejsijni_so.  onload_func: 0x727ce718cc00
+03-14 22:45:45.867  5723  5723 D jni_lib_merge: Preparing to register libuimanagerjni_so.  onload_func: 0x727ce71a4de0
+03-14 22:45:45.867  5723  5723 D jni_lib_merge: Preparing to register libyoga_so.  onload_func: 0x727ce71b3d70
+03-14 22:45:45.867  5723  5723 D jni_lib_merge: About to register 11 actual methods.
+03-14 22:45:45.877  5723  5723 D nativeloader: Load /data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk!/lib/x86_64/libreact_codegen_rnsvg.so using ns clns-7 from class loader (caller=/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk): ok
+03-14 22:45:45.877  5723  5723 D jni_lib_merge: Entering merged library JNI_OnLoad.
+03-14 22:45:45.877  5723  5723 D jni_lib_merge: Preparing 12 pre-merged libs (including stub)
+03-14 22:45:45.877  5723  5723 D jni_lib_merge: Preparing to register libfabricjni_so.  onload_func: 0x727ce6ae4730
+03-14 22:45:45.877  5723  5723 D jni_lib_merge: Preparing to register libreact_devsupportjni_so.  onload_func: 0x727ce6ce1190
+03-14 22:45:45.877  5723  5723 D jni_lib_merge: Preparing to register libreact_featureflagsjni_so.  onload_func: 0x727ce6cf2910
+03-14 22:45:45.877  5723  5723 D jni_lib_merge: Preparing to register libreact_newarchdefaults_so.  onload_func: 0x727ce6d93d20
+03-14 22:45:45.877  5723  5723 D jni_lib_merge: Preparing to register libreactnativeblob_so.  onload_func: 0x727ce6f9e2e0
+03-14 22:45:45.877  5723  5723 D jni_lib_merge: Preparing to register libreactnativejni_so.  onload_func: 0x727ce6fde770
+03-14 22:45:45.877  5723  5723 D jni_lib_merge: Preparing to register libreactnativejni_common_so.  onload_func: 0x727ce6fee5d0
+03-14 22:45:45.877  5723  5723 D jni_lib_merge: Preparing to register librninstance_so.  onload_func: 0x727ce702b4c0
+03-14 22:45:45.877  5723  5723 D jni_lib_merge: Preparing to register libturbomodulejsijni_so.  onload_func: 0x727ce718cc00
+03-14 22:45:45.877  5723  5723 D jni_lib_merge: Preparing to register libuimanagerjni_so.  onload_func: 0x727ce71a4de0
+03-14 22:45:45.877  5723  5723 D jni_lib_merge: Preparing to register libyoga_so.  onload_func: 0x727ce71b3d70
+03-14 22:45:45.877  5723  5723 D jni_lib_merge: About to register 11 actual methods.
+03-14 22:45:45.886  5723  5723 D nativeloader: Load /data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk!/lib/x86_64/libreact_codegen_safeareacontext.so using ns clns-7 from class loader (caller=/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk): ok
+03-14 22:45:45.890  5723  5723 D nativeloader: Load /data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk!/lib/x86_64/libappmodules.so using ns clns-7 from class loader (caller=/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk): ok
+03-14 22:45:45.953  5723  5752 I InstrConnection: Could not send broadcast or register receiver (isolatedProcess?)
+03-14 22:45:45.956  5723  5752 D TestRequestBuilder: Using class path scanning to discover tests
+03-14 22:45:45.957  5723  5752 I TestRequestBuilder: Scanning classpath to find tests in paths [/data/app/~~iQlUTSSRDXJswpF_nJkn0g==/com.mcfuzzysquirrel.studentfinance.test-wH5RmtktQTpJlYTVl2FeTQ==/base.apk]
+03-14 22:45:45.958  5723  5752 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 22:45:46.491  5723  5752 I TestRunner: run started: 1 tests
+03-14 22:45:46.499  5723  5752 I TestRunner: started: runDetoxTests(com.mcfuzzysquirrel.studentfinance.DetoxTest)
+03-14 22:45:46.533  5723  5752 I Detox   : Detox server connection details: url=ws://localhost:36931, sessionId=5a768b26-d324-b11a-d215-c9a8105e1c3a
+03-14 22:45:46.543  5723  5752 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+03-14 22:45:46.558  5723  5752 W .studentfinance: Accessing hidden field Ljava/lang/reflect/Field;->accessFlags:I (unsupported, reflection, allowed)
+03-14 22:45:46.560  5723  5752 I Detox   : Connecting to server...
+03-14 22:45:46.560  5723  5752 I DetoxWSClient: At connectToServer
+03-14 22:45:46.640  5723  5758 D TrafficStats: tagSocket(102) with statsTag=0xffffffff, statsUid=-1
+03-14 22:45:46.659  5723  5758 D DetoxWSClient: At onOpen
+03-14 22:45:46.659  5723  5758 I DetoxWSClient: Sending out action 'login' (ID #0)
+03-14 22:45:46.662  5723  5758 I Detox   : Connected to server!
+03-14 22:45:46.665  5723  5758 D DetoxWSClient: Received action 'loginSuccess' (ID #0, params={"testerConnected":true,"appConnected":true})
+03-14 22:45:46.665  5723  5754 I DetoxDispatcher: Handling action 'loginSuccess' (ID #0)...
+03-14 22:45:46.666  5723  5754 I DetoxDispatcher: Done with action 'loginSuccess'
+03-14 22:45:46.668  5723  5752 I Detox   : Launching the tested activity!
+03-14 22:45:46.709  5723  5758 D DetoxWSClient: Received action 'isReady' (ID #-1000, params={})
+03-14 22:45:46.709  5723  5754 I DetoxDispatcher: Handling action 'isReady' (ID #-1000)...
+03-14 22:45:47.582  5723  5723 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+03-14 22:45:47.770  5723  5723 D LifecycleMonitor: Lifecycle status change: com.mcfuzzysquirrel.studentfinance.MainActivity@340991c in: PRE_ON_CREATE
+03-14 22:45:48.153  5723  5773 D TrafficStats: tagSocket(109) with statsTag=0xffffffff, statsUid=-1
+03-14 22:45:48.162  5723  5773 W unknown:ReconnectingWebSocket: Couldn't connect to "ws://10.0.2.2:8081/message?device=sdk_gphone64_x86_64%20-%2015%20-%20API%2035&app=com.mcfuzzysquirrel.studentfinance&clientid=BridgelessDevSupportManager", will silently retry
+03-14 22:45:48.204  5723  5723 W unknown:BridgelessReact: ReactHost{0}.startSurface(surfaceId = 0): Schedule
+03-14 22:45:48.204  5723  5723 W unknown:BridgelessReact: ReactHost{0}.attachSurface(surfaceId = 0)
+03-14 22:45:48.206  5723  5774 W unknown:BridgelessReact: ReactHost{0}.getOrCreateReactInstanceTask()
+03-14 22:45:48.206  5723  5774 W unknown:BridgelessReact: ReactHost{0}.getOrCreateReactInstanceTask(): Start
+03-14 22:45:48.206  5723  5774 D Detox.RNMarker: REACT_BRIDGELESS_LOADING_START (null)
+03-14 22:45:48.206  5723  5774 W unknown:BridgelessReact: ReactHost{0}.getJSBundleLoader()
+03-14 22:45:48.206  5723  5774 W unknown:BridgelessReact: ReactHost{0}.isMetroRunning()
+03-14 22:45:48.209  5723  5775 D TrafficStats: tagSocket(109) with statsTag=0xffffffff, statsUid=-1
+03-14 22:45:48.215  5723  5775 W unknown:ReactNative: The packager does not seem to be running as we got an IOException requesting its status: Failed to connect to /10.0.2.2:8081
+03-14 22:45:48.215  5723  5775 W unknown:BridgelessReact: ReactHost{0}.isMetroRunning(): Async result = false
+03-14 22:45:48.218  5723  5774 W unknown:BridgelessReact: ReactHost{0}.getOrCreateReactInstanceTask(): Creating BridgelessReactContext
+03-14 22:45:48.219  5723  5774 W unknown:BridgelessReact: ReactHost{0}.getOrCreateReactInstanceTask(): Creating ReactInstance
+03-14 22:45:48.244  5723  5723 W .studentfinance: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+03-14 22:45:48.250  5723  5723 D LifecycleMonitor: Lifecycle status change: com.mcfuzzysquirrel.studentfinance.MainActivity@340991c in: CREATED
+03-14 22:45:48.252  5723  5723 D LifecycleMonitor: Lifecycle status change: com.mcfuzzysquirrel.studentfinance.MainActivity@340991c in: STARTED
+03-14 22:45:48.256  5723  5723 W unknown:BridgelessReact: ReactHost{0}.onHostResume(activity)
+03-14 22:45:48.256  5723  5723 W unknown:ReactNative: Packager connection already open, nooping.
+03-14 22:45:48.259  5723  5723 W unknown:BridgelessReact: ReactHost{0}.ReactContext.onHostResume()
+03-14 22:45:48.259  5723  5723 D LifecycleMonitor: Lifecycle status change: com.mcfuzzysquirrel.studentfinance.MainActivity@340991c in: RESUMED
+03-14 22:45:48.266  5723  5778 D TrafficStats: tagSocket(117) with statsTag=0xffffffff, statsUid=-1
+03-14 22:45:48.272  5723  5723 W HWUI    : Unknown dataspace 0
+03-14 22:45:48.275  5723  5774 D nativeloader: Load /data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk!/lib/x86_64/libhermesvm.so using ns clns-7 from class loader (caller=/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk): ok
+03-14 22:45:48.283  5723  5774 D nativeloader: Load /data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk!/lib/x86_64/libhermestooling.so using ns clns-7 from class loader (caller=/data/app/~~9rWWwtrYnZOxTSYf9qhrwg==/com.mcfuzzysquirrel.studentfinance-uRqTEwpxQYKTGXQx112snA==/base.apk): ok
+03-14 22:45:48.284  5723  5774 D jni_lib_merge: Entering merged library JNI_OnLoad.
+03-14 22:45:48.284  5723  5774 D jni_lib_merge: Preparing 4 pre-merged libs (including stub)
+03-14 22:45:48.284  5723  5774 D jni_lib_merge: Preparing to register libhermes_executor_so.  onload_func: 0x727cdd4ea050
+03-14 22:45:48.284  5723  5774 D jni_lib_merge: Preparing to register libhermesinstancejni_so.  onload_func: 0x727cdd520680
+03-14 22:45:48.284  5723  5774 D jni_lib_merge: Preparing to register libjsijniprofiler_so.  onload_func: 0x727cdd5223f0
+03-14 22:45:48.284  5723  5774 D jni_lib_merge: About to register 3 actual methods.
+03-14 22:45:48.503  5723  5765 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+03-14 22:45:48.505  5723  5765 I EGL_emulation: Opening libGLESv2_emulation.so
+03-14 22:45:48.558  5723  5765 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+03-14 22:45:48.600  5723  5765 I Gralloc4: mapper 4.x 

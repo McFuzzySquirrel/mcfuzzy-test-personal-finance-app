@@ -1,10 +1,11 @@
 beforeAll(async () => {
   await device.launchApp({
     newInstance: true,
-    delete: true,
+    // New Architecture keeps JS/native loopers busy; disable Detox sync from the start.
+    launchArgs: { detoxEnableSynchronization: 0 },
   });
 });
 
-beforeEach(async () => {
-  await device.reloadReactNative();
+afterAll(async () => {
+  await device.terminateApp();
 });

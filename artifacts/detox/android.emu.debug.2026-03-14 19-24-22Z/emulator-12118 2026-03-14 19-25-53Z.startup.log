@@ -1,0 +1,90 @@
+--------- beginning of main
+03-14 21:25:28.661  3442  3442 I .studentfinance: Late-enabling -Xcheck:jni
+03-14 21:25:28.694  3442  3442 I .studentfinance: Using CollectorTypeCMC GC.
+03-14 21:25:28.695  3442  3442 W .studentfinance: Unexpected CPU variant for x86: x86_64.
+03-14 21:25:28.695  3442  3442 W .studentfinance: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+03-14 21:25:28.728  3442  3442 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+--------- beginning of system
+03-14 21:25:28.791  3442  3442 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[com.mcfuzzysquirrel.studentfinance]: x86_64, null instrumentation[com.mcfuzzysquirrel.studentfinance.test]: null, null
+03-14 21:25:28.797  3442  3442 W .studentfinance: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]} | PCL[])
+03-14 21:25:28.801  3442  3442 W .studentfinance: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986])
+03-14 21:25:28.805  3442  3442 W .studentfinance: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902])
+03-14 21:25:28.806  3442  3442 W ziparchive: Unable to open '/data/app/~~vA0irBHkRGJcF60dDHqZjQ==/com.mcfuzzysquirrel.studentfinance.test-6vKZxynfLrEBXNZ0vadmEg==/base.dm': No such file or directory
+03-14 21:25:28.806  3442  3442 W ziparchive: Unable to open '/data/app/~~vA0irBHkRGJcF60dDHqZjQ==/com.mcfuzzysquirrel.studentfinance.test-6vKZxynfLrEBXNZ0vadmEg==/base.dm': No such file or directory
+03-14 21:25:28.807  3442  3442 W ziparchive: Unable to open '/data/app/~~eY70Mez8bTTkIcPSQTf8WQ==/com.mcfuzzysquirrel.studentfinance-neK3Nzo6LoYcqzpSPfzJtQ==/base.dm': No such file or directory
+03-14 21:25:28.807  3442  3442 W ziparchive: Unable to open '/data/app/~~eY70Mez8bTTkIcPSQTf8WQ==/com.mcfuzzysquirrel.studentfinance-neK3Nzo6LoYcqzpSPfzJtQ==/base.dm': No such file or directory
+03-14 21:25:29.490  3442  3442 D nativeloader: Configuring clns-7 for other apk /system/framework/android.test.runner.jar:/system/framework/android.test.mock.jar:/system/framework/android.test.base.jar:/data/app/~~vA0irBHkRGJcF60dDHqZjQ==/com.mcfuzzysquirrel.studentfinance.test-6vKZxynfLrEBXNZ0vadmEg==/base.apk:/data/app/~~eY70Mez8bTTkIcPSQTf8WQ==/com.mcfuzzysquirrel.studentfinance-neK3Nzo6LoYcqzpSPfzJtQ==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~vA0irBHkRGJcF60dDHqZjQ==/com.mcfuzzysquirrel.studentfinance.test-6vKZxynfLrEBXNZ0vadmEg==/lib/x86_64:/data/app/~~eY70Mez8bTTkIcPSQTf8WQ==/com.mcfuzzysquirrel.studentfinance-neK3Nzo6LoYcqzpSPfzJtQ==/lib/x86_64:/data/app/~~vA0irBHkRGJcF60dDHqZjQ==/com.mcfuzzysquirrel.studentfinance.test-6vKZxynfLrEBXNZ0vadmEg==/base.apk!/lib/x86_64:/data/app/~~eY70Mez8bTTkIcPSQTf8WQ==/com.mcfuzzysquirrel.studentfinance-neK3Nzo6LoYcqzpSPfzJtQ==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.mcfuzzysquirrel.studentfinance
+03-14 21:25:29.510  3442  3442 V GraphicsEnvironment: Currently set values for:
+03-14 21:25:29.510  3442  3442 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+03-14 21:25:29.510  3442  3442 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+03-14 21:25:29.510  3442  3442 V GraphicsEnvironment: Global.Settings values are invalid: number of packages: 0, number of values: 0
+03-14 21:25:29.511  3442  3442 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+03-14 21:25:29.515  3442  3442 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+03-14 21:25:29.519  3442  3442 D nativeloader: Configuring clns-8 for other apk /system/framework/android.test.mock.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~vA0irBHkRGJcF60dDHqZjQ==/com.mcfuzzysquirrel.studentfinance.test-6vKZxynfLrEBXNZ0vadmEg==/lib/x86_64:/data/app/~~eY70Mez8bTTkIcPSQTf8WQ==/com.mcfuzzysquirrel.studentfinance-neK3Nzo6LoYcqzpSPfzJtQ==/lib/x86_64, permitted_path=/data:/mnt/expand
+03-14 21:25:29.519  3442  3442 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+03-14 21:25:29.522  3442  3442 D nativeloader: Configuring clns-9 for other apk /system/framework/android.test.runner.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~vA0irBHkRGJcF60dDHqZjQ==/com.mcfuzzysquirrel.studentfinance.test-6vKZxynfLrEBXNZ0vadmEg==/lib/x86_64:/data/app/~~eY70Mez8bTTkIcPSQTf8WQ==/com.mcfuzzysquirrel.studentfinance-neK3Nzo6LoYcqzpSPfzJtQ==/lib/x86_64, permitted_path=/data:/mnt/expand
+03-14 21:25:29.526  3442  3442 W .studentfinance: ClassLoaderContext shared library size mismatch. Expected=2, found=3 (PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]} | PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]#PCL[/system/framework/android.test.runner.jar*2496447986]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]}};PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902:/system/framework/android.test.base.jar*724373495:/data/app/~~vA0irBHkRGJcF60dDHqZjQ==/com.mcfuzzysquirrel.studentfinance.test-6vKZxynfLrEBXNZ0vadmEg==/base.apk*3109463912:/data/app/~~eY70Mez8bTTkIcPSQTf8WQ==/com.mcfuzzysquirrel.studentfinance-neK3Nzo6LoYcqzpSPfzJtQ==/base.apk*707418998])
+03-14 21:25:29.527  3442  3442 W .studentfinance: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]#PCL[/system/framework/android.test.runner.jar*2496447986]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]}};PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902:/system/framework/android.test.base.jar*724373495:/data/app/~~vA0irBHkRGJcF60dDHqZjQ==/com.mcfuzzysquirrel.studentfinance.test-6vKZxynfLrEBXNZ0vadmEg==/base.apk*3109463912:/data/app/~~eY70Mez8bTTkIcPSQTf8WQ==/com.mcfuzzysquirrel.studentfinance-neK3Nzo6LoYcqzpSPfzJtQ==/base.apk*707418998])
+03-14 21:25:29.534  3442  3442 W .studentfinance: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]#PCL[/system/framework/android.test.runner.jar*2496447986]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]}};PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902:/system/framework/android.test.base.jar*724373495:/data/app/~~vA0irBHkRGJcF60dDHqZjQ==/com.mcfuzzysquirrel.studentfinance.test-6vKZxynfLrEBXNZ0vadmEg==/base.apk*3109463912:/data/app/~~eY70Mez8bTTkIcPSQTf8WQ==/com.mcfuzzysquirrel.studentfinance-neK3Nzo6LoYcqzpSPfzJtQ==/base.apk*707418998])
+03-14 21:25:29.535  3442  3442 W ziparchive: Unable to open '/data/app/~~vA0irBHkRGJcF60dDHqZjQ==/com.mcfuzzysquirrel.studentfinance.test-6vKZxynfLrEBXNZ0vadmEg==/base.dm': No such file or directory
+03-14 21:25:29.535  3442  3442 W ziparchive: Unable to open '/data/app/~~vA0irBHkRGJcF60dDHqZjQ==/com.mcfuzzysquirrel.studentfinance.test-6vKZxynfLrEBXNZ0vadmEg==/base.dm': No such file or directory
+03-14 21:25:29.536  3442  3442 W ziparchive: Unable to open '/data/app/~~eY70Mez8bTTkIcPSQTf8WQ==/com.mcfuzzysquirrel.studentfinance-neK3Nzo6LoYcqzpSPfzJtQ==/base.dm': No such file or directory
+03-14 21:25:29.536  3442  3442 W ziparchive: Unable to open '/data/app/~~eY70Mez8bTTkIcPSQTf8WQ==/com.mcfuzzysquirrel.studentfinance-neK3Nzo6LoYcqzpSPfzJtQ==/base.dm': No such file or directory
+03-14 21:25:30.002  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:30.670  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:30.670  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:31.063  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:31.063  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:31.616  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:31.617  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:32.133  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:32.133  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:32.754  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:32.755  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:33.111  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:33.112  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:33.538  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:33.542  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:33.945  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:33.946  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:34.345  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:34.350  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:34.904  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:34.905  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:35.418  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:35.419  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:36.240  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:36.241  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:36.649  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:36.650  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:37.068  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:37.070  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:37.618  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:37.619  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:38.112  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:38.122  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:38.647  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:38.651  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:39.597  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:39.602  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:40.687  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:40.690  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:41.083  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:41.084  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:41.868  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:41.876  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:42.537  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:42.542  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:43.230  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:43.249  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:43.777  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:43.789  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:44.350  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:44.355  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:45.130  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:45.130  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:45.568  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:45.569  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:46.122  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:46.127  3442  3442 W .studentfinance: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+03-14 21:25:46.537  3442  3442 W .studentfinance: Openi
