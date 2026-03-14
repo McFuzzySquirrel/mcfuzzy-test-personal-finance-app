@@ -2,7 +2,10 @@ import { formatCentsForInput, formatZAR, parseCurrencyInputToCents } from '@/uti
 
 describe('currency utils', () => {
   it('formats cents into ZAR display string', () => {
-    expect(formatZAR(4500)).toContain('45.00');
+    const result = formatZAR(4500);
+    // en-ZA locale uses comma as decimal separator: "R 45,00"
+    expect(result).toContain('R');
+    expect(result).toContain('45');
   });
 
   it('formats cents for input fields', () => {

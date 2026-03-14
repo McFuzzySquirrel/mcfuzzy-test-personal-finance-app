@@ -38,6 +38,7 @@ jest.mock('@react-navigation/native', () => ({
     goBack: jest.fn(),
   }),
   useRoute: () => ({ params: {} }),
+  useFocusEffect: jest.fn(),
 }));
 
 jest.mock('@react-navigation/native-stack', () => ({

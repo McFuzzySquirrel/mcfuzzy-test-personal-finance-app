@@ -183,8 +183,8 @@ export default function BudgetScreen({ navigation }: BudgetScreenProps): React.J
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-      <Text style={styles.title}>Budget settings</Text>
+    <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false} testID="budget-scroll-view">
+      <Text style={styles.title} testID="budget-title">Budget settings</Text>
       <Text style={styles.subtitle}>{formatMonthLabel(currentMonth)}</Text>
 
       <View style={styles.headerActions}>
@@ -214,6 +214,7 @@ export default function BudgetScreen({ navigation }: BudgetScreenProps): React.J
               }
               placeholder="0.00"
               style={styles.amountInput}
+              testID={`budget-input-${category.id}`}
               value={budgetDrafts[category.id] ?? ''}
             />
           </View>

@@ -48,8 +48,8 @@ function TabNavigator(): React.JSX.Element {
     <Tab.Navigator>
       <Tab.Screen name="Dashboard" component={DashboardScreen} options={{ tabBarButtonTestID: 'tab-dashboard' }} />
       <Tab.Screen name="Transactions" component={TransactionsScreen} options={{ tabBarButtonTestID: 'tab-transactions' }} />
-      <Tab.Screen name="Insights" component={LazyInsightsScreen} options={{ lazy: true }} />
-      <Tab.Screen name="Budget" component={BudgetScreen} />
+      <Tab.Screen name="Insights" component={LazyInsightsScreen} options={{ lazy: true, tabBarButtonTestID: 'tab-insights' }} />
+      <Tab.Screen name="Budget" component={BudgetScreen} options={{ tabBarButtonTestID: 'tab-budget' }} />
     </Tab.Navigator>
   );
 }

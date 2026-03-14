@@ -2,7 +2,7 @@ import type { SQLiteDatabase } from 'expo-sqlite';
 
 import { getAppStateValue, LAST_ACTIVE_MONTH_KEY, setAppStateValue } from '@/db/appState';
 import { getBudgetsByMonth, rolloverBudgets, upsertBudget } from '@/db/budgets';
-import { deleteCategory, getAllCategories, insertCategory } from '@/db/categories';
+import { deleteCategory, getAllCategories, insertCategory, updateCategory } from '@/db/categories';
 import { DatabaseError } from '@/db/errors';
 import {
   deleteExpense,
@@ -10,11 +10,13 @@ import {
   getExpensesByMonth,
   getMonthlyTotalByCategory,
   getMonthlyTotals,
+  getOutstandingSplits,
   getWeeklyTotalsByDay,
   insertExpense,
+  markSplitSettled,
   updateExpense,
 } from '@/db/expenses';
-import { createRecurringInstance, getDueRecurringExpenses } from '@/db/recurring';
+import { createRecurringInstance, getDueRecurringExpenses, getRecurringTemplates } from '@/db/recurring';
 import { seedDefaultCategories } from '@/db/seeds';
 
 type MockDb = {
@@ -314,5 +316,213 @@ describe('db data layer', () => {
       'INSERT INTO categories (id, name, icon, is_custom) VALUES (?, ?, ?, ?);',
       ['default-food', 'Food', null, 0]
     );
+  });
+
+  it('updates a custom category name, icon and isCustom flag', async () => {
+    db.runAsync.mockResolvedValue({ changes: 1 });
+    db.getFirstAsync.mockResolvedValueOnce({
+      id: 'custom-1',
+      name: 'Updated Name',
+      icon: 'star',
+      is_custom: 1,
+    });
+
+    const result = await updateCategory(db, 'custom-1', { name: 'Updated Name', icon: 'star', isCustom: true });
+
+    expect(db.runAsync).toHaveBeenCalledWith(
+      expect.stringContaining('UPDATE categories SET'),
+      expect.arrayContaining(['Updated Name', 'star', 1, 'custom-1'])
+    );
+    expect(result.name).toBe('Updated Name');
+    expect(result.icon).toBe('star');
+  });
+
+  it('updateCategory throws INVALID_INPUT when no fields provided', async () => {
+    await expect(updateCategory(db, 'custom-1', {})).rejects.toMatchObject({
+      name: 'DatabaseError',
+      code: 'INVALID_INPUT',
+    });
+  });
+
+  it('updateCategory throws NOT_FOUND when category does not exist (changes === 0)', async () => {
+    db.runAsync.mockResolvedValue({ changes: 0 });
+
+    await expect(updateCategory(db, 'nonexistent', { name: 'New' })).rejects.toMatchObject({
+      name: 'DatabaseError',
+      code: 'NOT_FOUND',
+    });
+  });
+
+  it('updateCategory throws NOT_FOUND when getFirstAsync returns null after update', async () => {
+    db.runAsync.mockResolvedValue({ changes: 1 });
+    db.getFirstAsync.mockResolvedValueOnce(null);
+
+    await expect(updateCategory(db, 'custom-1', { name: 'Ghost' })).rejects.toMatchObject({
+      name: 'DatabaseError',
+      code: 'NOT_FOUND',
+    });
+  });
+
+  it('deleteCategory throws NOT_FOUND when category does not exist', async () => {
+    db.getFirstAsync.mockResolvedValueOnce(null);
+
+    await expect(deleteCategory(db, 'missing')).rejects.toMatchObject({
+      name: 'DatabaseError',
+      code: 'NOT_FOUND',
+    });
+  });
+
+  it('returns outstanding split/lent/borrowed expenses', async () => {
+    db.getAllAsync.mockResolvedValueOnce([
+      {
+        id: 'split-1',
+        amount: 5000,
+        category_id: 'cat-1',
+        note: 'Dinner',
+        date: '2026-03-10',
+        type: 'split',
+        split_with: 'Alice',
+        split_amount: 2500,
+        is_recurring: 0,
+        recurring_interval: null,
+        settled: 0,
+        recurring_template_id: null,
+      },
+      {
+        id: 'lent-1',
+        amount: 3000,
+        category_id: 'cat-1',
+        note: null,
+        date: '2026-03-11',
+        type: 'lent',
+        split_with: 'Bob',
+        split_amount: null,
+        is_recurring: 0,
+        recurring_interval: null,
+        settled: 0,
+        recurring_template_id: null,
+      },
+    ]);
+
+    const outstanding = await getOutstandingSplits(db);
+    expect(outstanding).toHaveLength(2);
+    expect(outstanding[0].type).toBe('split');
+    expect(outstanding[0].settled).toBe(false);
+    expect(outstanding[1].type).toBe('lent');
+    expect(db.getAllAsync.mock.calls[0][0]).toContain("type IN ('split', 'lent', 'borrowed')");
+    expect(db.getAllAsync.mock.calls[0][0]).toContain('settled = 0');
+  });
+
+  it('marks a split expense as settled', async () => {
+    db.runAsync.mockResolvedValue({ changes: 1 });
+
+    await markSplitSettled(db, 'split-1');
+
+    expect(db.runAsync).toHaveBeenCalledWith(
+      expect.stringContaining('SET settled = 1'),
+      ['split-1']
+    );
+  });
+
+  it('markSplitSettled throws NOT_FOUND when expense does not exist', async () => {
+    db.runAsync.mockResolvedValue({ changes: 0 });
+    db.getFirstAsync.mockResolvedValueOnce(null); // getExpenseById returns null
+
+    await expect(markSplitSettled(db, 'missing')).rejects.toMatchObject({
+      name: 'DatabaseError',
+      code: 'NOT_FOUND',
+    });
+  });
+
+  it('markSplitSettled throws CONSTRAINT_VIOLATION for non-split expense types', async () => {
+    db.runAsync.mockResolvedValue({ changes: 0 });
+    db.getFirstAsync.mockResolvedValueOnce({
+      id: 'expense-1',
+      amount: 1000,
+      category_id: 'cat-1',
+      note: null,
+      date: '2026-03-01',
+      type: 'expense',
+      split_with: null,
+      split_amount: null,
+      is_recurring: 0,
+      recurring_interval: null,
+      settled: 0,
+      recurring_template_id: null,
+    });
+
+    await expect(markSplitSettled(db, 'expense-1')).rejects.toMatchObject({
+      name: 'DatabaseError',
+      code: 'CONSTRAINT_VIOLATION',
+    });
+  });
+
+  it('updateExpense throws INVALID_INPUT when no fields provided', async () => {
+    await expect(updateExpense(db, 'exp-1', {})).rejects.toMatchObject({
+      name: 'DatabaseError',
+      code: 'INVALID_INPUT',
+    });
+  });
+
+  it('getMonthlyTotals returns empty array for empty months input', async () => {
+    const result = await getMonthlyTotals(db, []);
+    expect(result).toEqual([]);
+    expect(db.getAllAsync).not.toHaveBeenCalled();
+  });
+
+  it('getRecurringTemplates returns recurring expense rows', async () => {
+    db.getAllAsync.mockResolvedValueOnce([
+      {
+        id: 'tmpl-1',
+        amount: 18900,
+        category_id: 'cat-subscriptions',
+        note: 'Streaming',
+        date: '2026-01-05',
+        type: 'expense',
+        split_with: null,
+        split_amount: null,
+        is_recurring: 1,
+        recurring_interval: 'monthly',
+        settled: 0,
+        recurring_template_id: null,
+      },
+    ]);
+
+    const templates = await getRecurringTemplates(db);
+    expect(templates).toHaveLength(1);
+    expect(templates[0].isRecurring).toBe(true);
+    expect(templates[0].recurringInterval).toBe('monthly');
+    expect(db.getAllAsync.mock.calls[0][0]).toContain('is_recurring = 1');
+  });
+
+  it('createRecurringInstance throws CONSTRAINT_VIOLATION for non-recurring template', async () => {
+    db.getFirstAsync.mockResolvedValueOnce({
+      id: 'not-recurring',
+      amount: 1000,
+      category_id: 'cat-1',
+      note: null,
+      date: '2026-01-10',
+      type: 'expense',
+      split_with: null,
+      split_amount: null,
+      is_recurring: 0,
+      recurring_interval: null,
+      settled: 0,
+      recurring_template_id: null,
+    });
+
+    await expect(createRecurringInstance(db, 'not-recurring', '2026-03-10')).rejects.toMatchObject({
+      name: 'DatabaseError',
+      code: 'CONSTRAINT_VIOLATION',
+    });
+  });
+
+  it('createRecurringInstance throws NOT_FOUND when template is missing', async () => {
+    db.getFirstAsync.mockResolvedValueOnce(null);
+
+    await expect(createRecurringInstance(db, 'missing-tmpl', '2026-03-10')).rejects.toMatchObject({
+      name: 'DatabaseError',
+      code: 'NOT_FOUND',
+    });
   });
 });
