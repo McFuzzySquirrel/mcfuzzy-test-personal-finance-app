@@ -42,16 +42,16 @@ The app provides a category-based budgeting system with live progress indicators
 
 ## Try it out
 
-A pre-built Android APK is included in the repo — no development setup required.
+> [!IMPORTANT]
+> This is a **pre-release** build to demonstrate that the app works. It is debug-signed and not intended for production use.
+
+A pre-built Android APK is available from the [GitHub Releases page](https://github.com/McFuzzySquirrel/mcfuzzy-test-personal-finance-app/releases/tag/v1.0.0) — no development setup required.
 
 ### Install on an Android device
 
-1. Download [`release/student-finance.apk`](release/student-finance.apk) to your Android phone
+1. Download `student-finance.apk` from the [latest release](https://github.com/McFuzzySquirrel/mcfuzzy-test-personal-finance-app/releases/tag/v1.0.0)
 2. Open the file and allow installation from unknown sources when prompted
 3. Launch **"Student Finance"** from the app drawer
-
-> [!NOTE]
-> The APK is debug-signed for testing purposes. It targets Android API 35 but should work on Android 8+ (API 26+).
 
 ### Install on an Android emulator
 
