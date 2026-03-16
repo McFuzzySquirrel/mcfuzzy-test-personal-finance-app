@@ -53,9 +53,28 @@ export function SpendingPieChart({ data }: SpendingPieChartProps): React.JSX.Ele
     });
   }, [data, total]);
 
+  const chartAccessibilityLabel = useMemo(() => {
+    if (chartData.length === 0) {
+      return 'No spending data for this month';
+    }
+
+    const breakdown = data
+      .map((item) => {
+        const pct = total > 0 ? Math.round((item.total / total) * 100) : 0;
+        return `${item.categoryName} ${pct}%`;
+      })
+      .join(', ');
+
+    return `Spending by category: ${breakdown}`;
+  }, [chartData.length, data, total]);
+
   if (chartData.length === 0) {
     return (
-      <View style={styles.emptyState} testID="spending-pie-chart">
+      <View
+        accessibilityLabel="No spending data for this month"
+        style={styles.emptyState}
+        testID="spending-pie-chart"
+      >
         <Text style={styles.emptyIllustration}>◔</Text>
         <Text style={styles.emptyTitle}>No expenses this month</Text>
         <Text style={styles.emptyText}>Log spending to see where your money is going by category.</Text>
@@ -64,7 +83,14 @@ export function SpendingPieChart({ data }: SpendingPieChartProps): React.JSX.Ele
   }
 
   return (
-    <View style={styles.card} testID="spending-pie-chart">
+    <View
+      accessible
+      accessibilityHint="Tap a slice to see exact amount"
+      accessibilityLabel={chartAccessibilityLabel}
+      accessibilityRole="image"
+      style={styles.card}
+      testID="spending-pie-chart"
+    >
       <PieChart
         centerLabelComponent={() => (
           <View style={styles.centerLabel}>

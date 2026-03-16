@@ -39,7 +39,7 @@ function getCategoryIcon(categoryName: string, icon?: string): string {
 
 function LoadingPanel({ label }: { label: string }): React.JSX.Element {
   return (
-    <View style={styles.loadingPanel}>
+    <View accessibilityLabel={label} accessibilityRole="progressbar" style={styles.loadingPanel}>
       <View style={styles.loadingBlockLarge} />
       <View style={styles.loadingBlockMedium} />
       <Text style={styles.loadingLabel}>{label}</Text>
@@ -67,7 +67,9 @@ export default function InsightsScreen(): React.JSX.Element {
 
       <View style={styles.toggleRow}>
         <Pressable
+          accessibilityLabel="Show this month spending"
           accessibilityRole="button"
+          accessibilityState={{ selected: selectedView === 'this-month' }}
           onPress={() => setSelectedView('this-month')}
           style={[styles.toggleButton, selectedView === 'this-month' ? styles.toggleButtonSelected : null]}
           testID="insights-toggle-this-month"
@@ -78,7 +80,9 @@ export default function InsightsScreen(): React.JSX.Element {
         </Pressable>
 
         <Pressable
+          accessibilityLabel="Show spending trends"
           accessibilityRole="button"
+          accessibilityState={{ selected: selectedView === 'trends' }}
           onPress={() => setSelectedView('trends')}
           style={[styles.toggleButton, selectedView === 'trends' ? styles.toggleButtonSelected : null]}
           testID="insights-toggle-trends"
@@ -89,7 +93,16 @@ export default function InsightsScreen(): React.JSX.Element {
 
       {selectedView === 'this-month' ? (
         <View>
-          <View style={styles.summaryCard}>
+          <View
+            accessible
+            accessibilityLabel={
+              categoryLoading
+                ? 'This month total: loading'
+                : `This month total: ${formatZAR(monthTotal)}`
+            }
+            accessibilityRole="summary"
+            style={styles.summaryCard}
+          >
             <Text style={styles.summaryLabel}>This month total</Text>
             <Text style={styles.summaryValue}>{categoryLoading ? 'Loading...' : formatZAR(monthTotal)}</Text>
             <Text style={styles.summaryMeta}>Spending grouped by category with labels and exact-value callouts.</Text>
@@ -99,11 +112,14 @@ export default function InsightsScreen(): React.JSX.Element {
 
           {categoryLoading ? <LoadingPanel label="Loading this month" /> : <SpendingPieChart data={categoryTotals} />}
 
-          <View style={styles.legendSection}>
+          <View accessibilityRole="list" style={styles.legendSection}>
             <Text style={styles.sectionTitle}>Category legend</Text>
 
             {categoryTotals.length === 0 && !categoryLoading ? (
-              <View style={styles.legendEmptyState}>
+              <View
+                accessibilityLabel="No categories to show for this month yet"
+                style={styles.legendEmptyState}
+              >
                 <Text style={styles.legendEmptyText}>No categories to show for this month yet.</Text>
               </View>
             ) : null}
@@ -112,7 +128,13 @@ export default function InsightsScreen(): React.JSX.Element {
               const percentage = monthTotal > 0 ? Math.round((item.total / monthTotal) * 100) : 0;
 
               return (
-                <View key={item.categoryId} style={styles.legendRow}>
+                <View
+                  accessible
+                  accessibilityLabel={`${item.categoryName}, ${formatZAR(item.total)}, ${percentage}% of monthly spend`}
+                  accessibilityRole="text"
+                  key={item.categoryId}
+                  style={styles.legendRow}
+                >
                   <View style={styles.legendIdentity}>
                     <Text style={styles.legendIcon}>{getCategoryIcon(item.categoryName, item.icon)}</Text>
                     <View>
@@ -128,7 +150,16 @@ export default function InsightsScreen(): React.JSX.Element {
         </View>
       ) : (
         <View>
-          <View style={styles.summaryCard}>
+          <View
+            accessible
+            accessibilityLabel={
+              trendLoading
+                ? 'Six-month trend: loading'
+                : `Six-month trend: ${monthlyTrend.length} months`
+            }
+            accessibilityRole="summary"
+            style={styles.summaryCard}
+          >
             <Text style={styles.summaryLabel}>Six-month trend</Text>
             <Text style={styles.summaryValue}>{trendLoading ? 'Loading...' : `${monthlyTrend.length} months`}</Text>
             <Text style={styles.summaryMeta}>Current month is highlighted to make direction changes easier to spot.</Text>

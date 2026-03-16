@@ -20,16 +20,27 @@ function SplitRow({
   expense: Expense;
   onSettle: (expenseId: string) => void;
 }): React.JSX.Element {
+  const personLabel = expense.splitWith?.trim() || 'Unknown person';
+  const owedLabel = formatZAR(getOwedAmount(expense));
+
   return (
-    <View style={styles.row} testID={`splits-row-${expense.id}`}>
+    <View
+      accessibilityRole="summary"
+      accessibilityLabel={`${personLabel}, ${owedLabel}, ${categoryName}`}
+      style={styles.row}
+      testID={`splits-row-${expense.id}`}
+    >
       <View style={styles.rowMain}>
-        <Text style={styles.personText}>{expense.splitWith?.trim() || 'Unknown person'}</Text>
+        <Text style={styles.personText}>{personLabel}</Text>
         <Text style={styles.metaText}>{dayjs(expense.date).format('D MMM YYYY')}</Text>
         {expense.type === 'split' ? <Text style={styles.metaText}>Category: {categoryName}</Text> : null}
       </View>
       <View style={styles.rowActions}>
-        <Text style={styles.amountText}>{formatZAR(getOwedAmount(expense))}</Text>
+        <Text style={styles.amountText}>{owedLabel}</Text>
         <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={`Mark settled for ${personLabel}`}
+          accessibilityHint="Double tap to mark this entry as settled"
           onPress={() => onSettle(expense.id)}
           style={styles.settleButton}
           testID={`splits-mark-settled-${expense.id}`}
@@ -61,14 +72,14 @@ export default function SplitsScreen(): React.JSX.Element {
 
   return (
     <ScrollView contentContainerStyle={styles.content}>
-      <Text style={styles.title}>Outstanding splits</Text>
+      <Text accessibilityRole="header" style={styles.title}>Outstanding splits</Text>
       <Text style={styles.subtitle}>Track unsettled split, lent, and borrowed entries.</Text>
 
       {isLoading ? <Text style={styles.statusText}>Loading outstanding entries...</Text> : null}
       {error ? <Text style={styles.statusText}>{error}</Text> : null}
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>They owe you</Text>
+        <Text accessibilityRole="header" style={styles.sectionTitle}>They owe you</Text>
         {theyOweYou.length === 0 ? (
           <Text style={styles.statusText} testID="splits-they-owe-empty">
             No unsettled entries.
@@ -88,7 +99,7 @@ export default function SplitsScreen(): React.JSX.Element {
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>You owe them</Text>
+        <Text accessibilityRole="header" style={styles.sectionTitle}>You owe them</Text>
         {youOweThem.length === 0 ? (
           <Text style={styles.statusText} testID="splits-you-owe-empty">
             No unsettled entries.

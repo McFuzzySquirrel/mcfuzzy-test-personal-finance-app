@@ -136,6 +136,8 @@ export default function AddExpenseScreen({ navigation }: AddExpenseScreenProps):
       <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled" testID="add-expense-scroll-view">
         <Text style={styles.label}>Amount</Text>
         <TextInput
+          accessibilityLabel="Expense amount"
+          accessibilityHint="Enter the expense amount in rands"
           autoFocus
           keyboardType="decimal-pad"
           onChangeText={(value) => setAmountText(sanitizeAmountInput(value))}
@@ -187,6 +189,9 @@ export default function AddExpenseScreen({ navigation }: AddExpenseScreenProps):
 
           <Text style={styles.helperText}>Date: {today}</Text>
           <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={isNoteVisible ? 'Hide note' : 'Add note'}
+            accessibilityHint={isNoteVisible ? 'Double tap to hide the note field' : 'Double tap to show the note field'}
             onPress={() => setIsNoteVisible((currentValue) => !currentValue)}
             style={styles.noteToggle}
             testID="add-expense-note-toggle"
@@ -195,6 +200,8 @@ export default function AddExpenseScreen({ navigation }: AddExpenseScreenProps):
           </Pressable>
           {isNoteVisible ? (
             <TextInput
+              accessibilityLabel="Expense note"
+              accessibilityHint="Enter an optional note for this expense"
               multiline
               onChangeText={setNoteText}
               placeholder="Optional note"
@@ -206,6 +213,10 @@ export default function AddExpenseScreen({ navigation }: AddExpenseScreenProps):
         </View>
 
         <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={isSaving ? 'Saving expense' : 'Save expense'}
+          accessibilityHint="Double tap to save this expense"
+          accessibilityState={{ disabled: isSaving }}
           disabled={isSaving}
           onPress={() => {
             void handleSave();

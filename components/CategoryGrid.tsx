@@ -36,6 +36,9 @@ export default function CategoryGrid({ categories, onSelect, selectedId }: Categ
         return (
           <Pressable
             accessibilityRole="button"
+            accessibilityLabel={`${category.name} category`}
+            accessibilityHint="Double tap to select this category"
+            accessibilityState={{ selected: isSelected }}
             key={category.id}
             onPress={() => onSelect(category.id)}
             style={[styles.tile, isSelected ? styles.tileSelected : undefined]}

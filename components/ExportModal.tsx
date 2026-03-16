@@ -151,11 +151,15 @@ export default function ExportModal({
     <Modal animationType="slide" onRequestClose={onClose} transparent visible={visible}>
       <View style={styles.overlay}>
         <View style={styles.sheet}>
-          <Text style={styles.title}>Export monthly report</Text>
+          <Text accessibilityRole="header" style={styles.title}>Export monthly report</Text>
           <Text style={styles.subtitle}>{formatMonthLabel(`${month}-01`)}</Text>
 
           <View style={styles.monthRow}>
             <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Previous month"
+              accessibilityHint="Double tap to select the previous month for export"
+              accessibilityState={{ disabled: isExporting }}
               disabled={isExporting}
               onPress={() => onMonthChange(dayjs(`${month}-01`).subtract(1, 'month').format('YYYY-MM'))}
               style={styles.ghostButton}
@@ -163,8 +167,12 @@ export default function ExportModal({
             >
               <Text style={styles.ghostButtonText}>Previous</Text>
             </Pressable>
-            <Text style={styles.monthLabel}>{formatMonthLabel(`${month}-01`)}</Text>
+            <Text accessibilityRole="text" style={styles.monthLabel}>{formatMonthLabel(`${month}-01`)}</Text>
             <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Next month"
+              accessibilityHint="Double tap to select the next month for export"
+              accessibilityState={{ disabled: isExporting }}
               disabled={isExporting}
               onPress={() => onMonthChange(dayjs(`${month}-01`).add(1, 'month').format('YYYY-MM'))}
               style={styles.ghostButton}
@@ -177,6 +185,10 @@ export default function ExportModal({
           <Text style={styles.sectionTitle}>Format</Text>
           <View style={styles.formatRow}>
             <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="CSV format"
+              accessibilityHint="Double tap to select CSV export format"
+              accessibilityState={{ selected: format === 'csv', disabled: isExporting }}
               disabled={isExporting}
               onPress={() => setFormat('csv')}
               style={[styles.formatButton, format === 'csv' ? styles.formatButtonSelected : undefined]}
@@ -185,6 +197,10 @@ export default function ExportModal({
               <Text style={styles.formatButtonText}>CSV</Text>
             </Pressable>
             <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="PDF format"
+              accessibilityHint="Double tap to select PDF export format"
+              accessibilityState={{ selected: format === 'pdf', disabled: isExporting }}
               disabled={isExporting}
               onPress={() => setFormat('pdf')}
               style={[styles.formatButton, format === 'pdf' ? styles.formatButtonSelected : undefined]}
@@ -196,6 +212,10 @@ export default function ExportModal({
 
           <View style={styles.actionsRow}>
             <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Cancel export"
+              accessibilityHint="Double tap to close the export dialog"
+              accessibilityState={{ disabled: isExporting }}
               disabled={isExporting}
               onPress={onClose}
               style={[styles.secondaryButton, isExporting ? styles.buttonDisabled : undefined]}
@@ -204,6 +224,10 @@ export default function ExportModal({
               <Text style={styles.secondaryButtonText}>Cancel</Text>
             </Pressable>
             <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={isExporting ? 'Exporting report' : 'Export report'}
+              accessibilityHint="Double tap to export the monthly report"
+              accessibilityState={{ disabled: isExporting }}
               disabled={isExporting}
               onPress={() => {
                 void runExport();

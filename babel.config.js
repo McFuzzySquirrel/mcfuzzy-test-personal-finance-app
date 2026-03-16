@@ -11,6 +11,11 @@ module.exports = function (api) {
           }
         }
       ]
-    ]
+    ],
+    env: {
+      test: {
+        plugins: ['dynamic-import-node']
+      }
+    }
   };
 };

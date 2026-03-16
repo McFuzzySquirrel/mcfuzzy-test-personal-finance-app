@@ -36,9 +36,28 @@ export function MonthlyBarChart({ data }: MonthlyBarChartProps): React.JSX.Eleme
     return highest > 0 ? highest : 100;
   }, [data]);
 
+  const chartAccessibilityLabel = useMemo(() => {
+    if (chartData.length === 0 || data.every((item) => item.total === 0)) {
+      return 'No spending trend data available';
+    }
+
+    const breakdown = data
+      .map((item) => {
+        const label = dayjs(`${item.month}-01`).format('MMM');
+        return `${label} ${formatZAR(item.total)}`;
+      })
+      .join(', ');
+
+    return `Monthly spending trend: ${breakdown}`;
+  }, [chartData.length, data]);
+
   if (chartData.length === 0 || data.every((item) => item.total === 0)) {
     return (
-      <View style={styles.emptyState} testID="monthly-bar-chart">
+      <View
+        accessibilityLabel="No spending trend data available"
+        style={styles.emptyState}
+        testID="monthly-bar-chart"
+      >
         <Text style={styles.emptyTitle}>No spending trend yet</Text>
         <Text style={styles.emptyText}>Your last six months will appear here once you start logging expenses.</Text>
       </View>
@@ -46,7 +65,13 @@ export function MonthlyBarChart({ data }: MonthlyBarChartProps): React.JSX.Eleme
   }
 
   return (
-    <View style={styles.card} testID="monthly-bar-chart">
+    <View
+      accessible
+      accessibilityLabel={chartAccessibilityLabel}
+      accessibilityRole="image"
+      style={styles.card}
+      testID="monthly-bar-chart"
+    >
       <BarChart
         adjustToWidth
         barBorderRadius={10}

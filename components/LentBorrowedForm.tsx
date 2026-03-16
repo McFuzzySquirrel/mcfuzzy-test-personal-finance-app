@@ -39,6 +39,10 @@ export default function LentBorrowedForm({
 
           return (
             <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={option.label}
+              accessibilityHint={`Double tap to select ${option.label.toLowerCase()}`}
+              accessibilityState={{ selected: isSelected }}
               key={option.value}
               onPress={() => onTypeChange(option.value)}
               style={[styles.segmentOption, isSelected ? styles.segmentOptionSelected : undefined]}
@@ -54,6 +58,8 @@ export default function LentBorrowedForm({
         <View style={styles.personRow}>
           <Text style={styles.subLabel}>Person</Text>
           <TextInput
+            accessibilityLabel="Person name"
+            accessibilityHint="Enter the name of the person involved"
             onChangeText={onPersonNameChange}
             placeholder="Who is this with?"
             style={styles.input}

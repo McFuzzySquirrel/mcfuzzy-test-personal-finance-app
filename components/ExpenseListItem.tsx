@@ -39,6 +39,8 @@ export default function ExpenseListItem({ categoryName, expense, onPress }: Expe
   return (
     <Pressable
       accessibilityRole="button"
+      accessibilityLabel={`${categoryName} expense, ${formatZAR(expense.amount)}${badgeLabel ? `, ${badgeLabel}` : ''}`}
+      accessibilityHint="Double tap to edit this expense"
       onPress={onPress}
       style={styles.card}
       testID={`expense-list-item-${expense.id}`}

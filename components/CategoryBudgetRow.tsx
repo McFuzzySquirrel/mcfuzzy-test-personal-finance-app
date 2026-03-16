@@ -31,10 +31,19 @@ export interface CategoryBudgetRowProps {
 
 export default function CategoryBudgetRow({ budget, category, spent }: CategoryBudgetRowProps): React.JSX.Element {
   return (
-    <View style={styles.card} testID={`category-budget-row-${category.id}`}>
+    <View
+      accessible={!budget}
+      accessibilityLabel={
+        budget
+          ? undefined
+          : `${category.name}: No budget set, ${formatZAR(spent)} spent this month`
+      }
+      style={styles.card}
+      testID={`category-budget-row-${category.id}`}
+    >
       <View style={styles.headerRow}>
         <View style={styles.categoryRow}>
-          <Text style={styles.icon}>{getCategoryIcon(category)}</Text>
+          <Text importantForAccessibility="no-hide-descendants" style={styles.icon}>{getCategoryIcon(category)}</Text>
           <View>
             <Text style={styles.categoryName}>{category.name}</Text>
             <Text style={styles.metaText}>{category.isCustom ? 'Custom category' : 'System category'}</Text>

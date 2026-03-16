@@ -57,6 +57,9 @@ export default function SplitExpenseForm({
   return (
     <View style={styles.section}>
       <Pressable
+        accessibilityRole="button"
+        accessibilityLabel={enabled ? 'Hide split details' : 'Add split details'}
+        accessibilityHint={enabled ? 'Double tap to hide split options' : 'Double tap to show split options'}
         onPress={() => onEnabledChange(!enabled)}
         style={styles.toggle}
         testID="add-expense-split-toggle"
@@ -68,6 +71,8 @@ export default function SplitExpenseForm({
         <View style={styles.panel}>
           <Text style={styles.label}>Who do you share with?</Text>
           <TextInput
+            accessibilityLabel="Split with person name"
+            accessibilityHint="Enter the name of the person you share with"
             onChangeText={onSplitWithChange}
             placeholder="Name"
             style={styles.input}
@@ -79,6 +84,10 @@ export default function SplitExpenseForm({
           <Text style={styles.label}>Split type</Text>
           <View style={styles.optionRow}>
             <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Equal split"
+              accessibilityHint="Double tap to split the expense equally"
+              accessibilityState={{ selected: splitType === 'equal' }}
               onPress={() => onSplitTypeChange('equal')}
               style={[styles.option, splitType === 'equal' ? styles.optionSelected : undefined]}
               testID="add-expense-split-type-equal"
@@ -86,6 +95,10 @@ export default function SplitExpenseForm({
               <Text style={styles.optionText}>Equal</Text>
             </Pressable>
             <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Custom split"
+              accessibilityHint="Double tap to enter a custom split amount"
+              accessibilityState={{ selected: splitType === 'custom' }}
               onPress={() => onSplitTypeChange('custom')}
               style={[styles.option, splitType === 'custom' ? styles.optionSelected : undefined]}
               testID="add-expense-split-type-custom"
@@ -100,6 +113,8 @@ export default function SplitExpenseForm({
             </Text>
           ) : (
             <TextInput
+              accessibilityLabel="Custom split amount"
+              accessibilityHint="Enter the custom split amount in rands"
               keyboardType="decimal-pad"
               onChangeText={(value) => onCustomSplitAmountTextChange(sanitizeAmountInput(value))}
               placeholder="Split amount"

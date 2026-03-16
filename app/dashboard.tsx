@@ -34,13 +34,25 @@ export default function DashboardScreen({ navigation }: DashboardScreenProps): R
         <Text style={styles.subtitle}>{formatMonthLabel(currentMonth)}</Text>
 
         <View style={styles.summaryRow}>
-          <View style={styles.summaryCard} testID="dashboard-summary-spent-card">
+          <View
+            accessible={true}
+            accessibilityLabel={`Spent this month: ${isLoading ? 'Loading' : formatZAR(totalSpent)}`}
+            accessibilityRole="summary"
+            style={styles.summaryCard}
+            testID="dashboard-summary-spent-card"
+          >
             <Text style={styles.summaryLabel}>Spent this month</Text>
             <Text style={styles.summaryValue}>{isLoading ? 'Loading...' : formatZAR(totalSpent)}</Text>
             <Text style={styles.summaryMeta}>Current month total</Text>
           </View>
 
-          <View style={styles.summaryCard} testID="dashboard-summary-remaining-card">
+          <View
+            accessible={true}
+            accessibilityLabel={`Remaining: ${isLoading ? 'Loading' : totalRemaining === null ? 'No budget set' : formatZAR(totalRemaining)}`}
+            accessibilityRole="summary"
+            style={styles.summaryCard}
+            testID="dashboard-summary-remaining-card"
+          >
             <Text style={styles.summaryLabel}>Remaining</Text>
             <Text style={styles.summaryValue}>
               {isLoading ? 'Loading...' : totalRemaining === null ? 'No budget set' : formatZAR(totalRemaining)}
@@ -48,7 +60,13 @@ export default function DashboardScreen({ navigation }: DashboardScreenProps): R
             <Text style={styles.summaryMeta}>{hasAnyBudget ? 'Budget left this month' : 'Set limits to track this'}</Text>
           </View>
 
-          <View style={styles.summaryCard} testID="dashboard-summary-top-category-card">
+          <View
+            accessible={true}
+            accessibilityLabel={`Top category: ${isLoading ? 'Loading' : topCategory ? `${topCategory.category.name}, ${formatZAR(topCategory.spent)}` : 'No spend yet'}`}
+            accessibilityRole="summary"
+            style={styles.summaryCard}
+            testID="dashboard-summary-top-category-card"
+          >
             <Text style={styles.summaryLabel}>Top category</Text>
             <Text numberOfLines={1} style={styles.summaryValue}>
               {isLoading ? 'Loading...' : topCategory ? topCategory.category.name : 'No spend yet'}
@@ -61,6 +79,9 @@ export default function DashboardScreen({ navigation }: DashboardScreenProps): R
 
         {!hasAnyBudget ? (
           <Pressable
+            accessibilityHint="Navigates to the budget settings screen"
+            accessibilityLabel="Set your monthly budgets"
+            accessibilityRole="button"
             onPress={() => navigation.navigate('Tabs', { screen: 'Budget' })}
             style={styles.banner}
             testID="dashboard-no-budget-banner"
@@ -78,6 +99,9 @@ export default function DashboardScreen({ navigation }: DashboardScreenProps): R
             <Text style={styles.zeroTitle}>No expenses yet</Text>
             <Text style={styles.zeroText}>Start with your first quick entry and the dashboard will fill itself in.</Text>
             <Pressable
+              accessibilityHint="Opens the add expense screen"
+              accessibilityLabel="Log your first expense"
+              accessibilityRole="button"
               onPress={() => navigation.navigate('AddExpense')}
               style={styles.zeroButton}
               testID="dashboard-zero-state-add-expense"
@@ -102,6 +126,8 @@ export default function DashboardScreen({ navigation }: DashboardScreenProps): R
         </View>
 
         <Pressable
+          accessibilityLabel="View Transactions"
+          accessibilityRole="button"
           onPress={() => navigation.navigate('Tabs', { screen: 'Transactions' })}
           style={styles.secondaryButton}
           testID="dashboard-view-transactions-button"
@@ -110,6 +136,8 @@ export default function DashboardScreen({ navigation }: DashboardScreenProps): R
         </Pressable>
 
         <Pressable
+          accessibilityLabel="View Splits"
+          accessibilityRole="button"
           onPress={() => navigation.navigate('Splits')}
           style={styles.secondaryButton}
           testID="dashboard-open-splits-button"
@@ -119,11 +147,13 @@ export default function DashboardScreen({ navigation }: DashboardScreenProps): R
       </ScrollView>
 
       <Pressable
+        accessibilityLabel="Add new expense"
+        accessibilityRole="button"
         onPress={() => navigation.navigate('AddExpense')}
         style={styles.fab}
         testID="dashboard-add-expense-button"
       >
-        <Text style={styles.fabText}>+</Text>
+        <Text importantForAccessibility="no" style={styles.fabText}>+</Text>
       </Pressable>
     </View>
   );

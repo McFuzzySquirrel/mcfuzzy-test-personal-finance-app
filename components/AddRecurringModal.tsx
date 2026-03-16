@@ -80,13 +80,14 @@ export default function AddRecurringModal({
   };
 
   return (
-    <Modal animationType="slide" onRequestClose={onClose} transparent visible={visible}>
+    <Modal accessibilityViewIsModal={true} animationType="slide" onRequestClose={onClose} transparent visible={visible}>
       <View style={styles.overlay}>
         <View style={styles.sheet}>
           <Text style={styles.title}>Add recurring expense</Text>
           <Text style={styles.subtitle}>Monthly interval</Text>
 
           <TextInput
+            accessibilityLabel="Recurring expense amount"
             keyboardType="decimal-pad"
             onChangeText={setAmountText}
             placeholder="Amount"
@@ -97,6 +98,7 @@ export default function AddRecurringModal({
           {amountError ? <Text style={styles.errorText}>{amountError}</Text> : null}
 
           <TextInput
+            accessibilityLabel="Day of month, between 1 and 28"
             keyboardType="number-pad"
             onChangeText={setDayOfMonthText}
             placeholder="Day of month (1-28)"
@@ -107,6 +109,7 @@ export default function AddRecurringModal({
           {dayError ? <Text style={styles.errorText}>{dayError}</Text> : null}
 
           <TextInput
+            accessibilityLabel="Description or note for recurring expense"
             onChangeText={setNoteText}
             placeholder="Description / note"
             style={styles.input}
@@ -121,6 +124,9 @@ export default function AddRecurringModal({
 
               return (
                 <Pressable
+                  accessibilityLabel={`${category.name} category`}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: isSelected }}
                   key={category.id}
                   onPress={() => setCategoryId(category.id)}
                   style={[styles.categoryChip, isSelected ? styles.categoryChipSelected : undefined]}
@@ -134,10 +140,19 @@ export default function AddRecurringModal({
           {categoryError ? <Text style={styles.errorText}>{categoryError}</Text> : null}
 
           <View style={styles.actionsRow}>
-            <Pressable onPress={onClose} style={styles.secondaryButton} testID="recurring-modal-cancel-button">
+            <Pressable
+              accessibilityLabel="Cancel"
+              accessibilityRole="button"
+              onPress={onClose}
+              style={styles.secondaryButton}
+              testID="recurring-modal-cancel-button"
+            >
               <Text style={styles.secondaryButtonText}>Cancel</Text>
             </Pressable>
             <Pressable
+              accessibilityLabel={isSaving ? 'Saving recurring expense' : 'Save recurring expense'}
+              accessibilityRole="button"
+              accessibilityState={{ disabled: isSaving }}
               disabled={isSaving}
               onPress={() => {
                 void handleSave();

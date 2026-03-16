@@ -174,6 +174,8 @@ export default function EditExpenseScreen({ navigation, route }: EditExpenseScre
       <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
         <Text style={styles.label}>Amount</Text>
         <TextInput
+          accessibilityLabel="Expense amount"
+          accessibilityHint="Edit the expense amount in rands"
           keyboardType="decimal-pad"
           onChangeText={(value) => setAmountText(sanitizeAmountInput(value))}
           style={styles.amountInput}
@@ -195,6 +197,8 @@ export default function EditExpenseScreen({ navigation, route }: EditExpenseScre
           {expense.type !== 'expense' ? <Text style={styles.helperText}>Type: {expense.type}</Text> : null}
           <Text style={styles.label}>Note</Text>
           <TextInput
+            accessibilityLabel="Expense note"
+            accessibilityHint="Edit the optional note for this expense"
             multiline
             onChangeText={setNoteText}
             placeholder="Optional note"
@@ -205,6 +209,10 @@ export default function EditExpenseScreen({ navigation, route }: EditExpenseScre
         </View>
 
         <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={isSaving ? 'Saving expense' : 'Save expense'}
+          accessibilityHint="Double tap to save changes to this expense"
+          accessibilityState={{ disabled: isSaving }}
           disabled={isSaving}
           onPress={() => {
             void handleSave();
@@ -216,6 +224,9 @@ export default function EditExpenseScreen({ navigation, route }: EditExpenseScre
         </Pressable>
 
         <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Delete expense"
+          accessibilityHint="Double tap to delete this expense"
           onPress={() => {
             Alert.alert('Delete expense', 'This will permanently remove the expense.', [
               { style: 'cancel', text: 'Cancel' },

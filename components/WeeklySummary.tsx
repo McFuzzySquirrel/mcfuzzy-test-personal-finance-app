@@ -22,7 +22,12 @@ export function WeeklySummary(): React.JSX.Element {
   const highestTotal = useMemo(() => data.reduce((max, item) => Math.max(max, item.total), 0), [data]);
 
   return (
-    <View style={styles.card} testID="weekly-summary-widget">
+    <View
+      accessibilityLabel={`Weekly summary: ${isLoading ? 'Loading' : `Total ${formatZAR(total)}`}`}
+      accessibilityRole="summary"
+      style={styles.card}
+      testID="weekly-summary-widget"
+    >
       <View style={styles.headerRow}>
         <Text style={styles.title}>This week</Text>
         <Text style={styles.total}>{isLoading ? 'Loading...' : formatZAR(total)}</Text>
@@ -42,9 +47,14 @@ export function WeeklySummary(): React.JSX.Element {
             const width: DimensionValue = highestTotal > 0 ? `${Math.max(8, (item.total / highestTotal) * 100)}%` : '8%';
 
             return (
-              <View key={item.date} style={styles.dayRow}>
+              <View
+                accessible={true}
+                accessibilityLabel={`${item.dayLabel}: ${formatZAR(item.total)}`}
+                key={item.date}
+                style={styles.dayRow}
+              >
                 <Text style={styles.dayLabel}>{item.dayLabel}</Text>
-                <View style={styles.barTrack}>
+                <View importantForAccessibility="no" style={styles.barTrack}>
                   <View style={[styles.barFill, { width }]} />
                 </View>
                 <Text style={styles.dayAmount}>{formatZAR(item.total)}</Text>

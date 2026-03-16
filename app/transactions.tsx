@@ -52,14 +52,20 @@ export default function TransactionsScreen({ navigation }: TransactionsScreenPro
     <View style={styles.container}>
       <View style={styles.monthRow}>
         <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Previous month"
+          accessibilityHint="Double tap to view the previous month"
           onPress={() => setMonth(dayjs(`${month}-01`).subtract(1, 'month').format('YYYY-MM'))}
           style={styles.monthButton}
           testID="transactions-prev-month"
         >
           <Text style={styles.monthButtonText}>Previous</Text>
         </Pressable>
-        <Text style={styles.monthLabel}>{formatMonthLabel(`${month}-01`)}</Text>
+        <Text accessibilityRole="header" style={styles.monthLabel}>{formatMonthLabel(`${month}-01`)}</Text>
         <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Next month"
+          accessibilityHint="Double tap to view the next month"
           onPress={() => setMonth(dayjs(`${month}-01`).add(1, 'month').format('YYYY-MM'))}
           style={styles.monthButton}
           testID="transactions-next-month"
@@ -69,6 +75,9 @@ export default function TransactionsScreen({ navigation }: TransactionsScreenPro
       </View>
 
       <Pressable
+        accessibilityRole="button"
+        accessibilityLabel="Export expenses"
+        accessibilityHint="Double tap to open the export options"
         onPress={() => setIsExportVisible(true)}
         style={styles.exportButton}
         testID="transactions-open-export"
@@ -78,6 +87,9 @@ export default function TransactionsScreen({ navigation }: TransactionsScreenPro
 
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.filtersRow}>
         <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Show all categories"
+          accessibilityState={{ selected: !selectedCategoryId }}
           onPress={() => setSelectedCategoryId(null)}
           style={[styles.filterChip, !selectedCategoryId ? styles.filterChipSelected : undefined]}
           testID="transactions-category-filter-all"
@@ -89,6 +101,9 @@ export default function TransactionsScreen({ navigation }: TransactionsScreenPro
 
           return (
             <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={`Filter by ${category.name}`}
+              accessibilityState={{ selected: isSelected }}
               key={category.id}
               onPress={() => setSelectedCategoryId(category.id)}
               style={[styles.filterChip, isSelected ? styles.filterChipSelected : undefined]}
@@ -107,6 +122,7 @@ export default function TransactionsScreen({ navigation }: TransactionsScreenPro
       ) : null}
 
       <FlatList
+        accessibilityRole="list"
         contentContainerStyle={styles.listContent}
         data={filteredExpenses}
         keyExtractor={(item) => item.id}

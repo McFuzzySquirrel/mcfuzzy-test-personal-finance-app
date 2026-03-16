@@ -75,21 +75,30 @@ export default function BudgetProgressBar({ label, limit, spent }: BudgetProgres
   }, [status]);
 
   return (
-    <View accessibilityLabel={`${label}: ${statusStyles.label}`} style={styles.container}>
+    <View
+      accessible={true}
+      accessibilityLabel={`${label}: ${statusStyles.label}, ${formatZAR(spent)} of ${formatZAR(limit)}, ${Math.round(progress)} percent`}
+      accessibilityRole="progressbar"
+      accessibilityValue={{ min: 0, max: 100, now: Math.round(progress) }}
+      style={styles.container}
+    >
       <View style={styles.headerRow}>
         <Text numberOfLines={1} style={styles.label}>
           {label}
         </Text>
-        <View style={[styles.statusBadge, statusStyles.badge]}>
-          <Text style={styles.statusIcon}>{getStatusIcon(status)}</Text>
+        <View
+          accessibilityLabel={statusStyles.label}
+          style={[styles.statusBadge, statusStyles.badge]}
+        >
+          <Text importantForAccessibility="no" style={styles.statusIcon}>{getStatusIcon(status)}</Text>
         </View>
       </View>
 
-      <View style={styles.track}>
+      <View importantForAccessibility="no" style={styles.track}>
         <View style={[styles.fillBase, statusStyles.fill, { width: `${progress}%` }]} />
       </View>
 
-      <Text style={styles.amountText}>{`${formatZAR(spent)} / ${formatZAR(limit)}`}</Text>
+      <Text importantForAccessibility="no" style={styles.amountText}>{`${formatZAR(spent)} / ${formatZAR(limit)}`}</Text>
     </View>
   );
 }

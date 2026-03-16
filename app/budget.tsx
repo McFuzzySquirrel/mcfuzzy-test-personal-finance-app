@@ -188,7 +188,13 @@ export default function BudgetScreen({ navigation }: BudgetScreenProps): React.J
       <Text style={styles.subtitle}>{formatMonthLabel(currentMonth)}</Text>
 
       <View style={styles.headerActions}>
-        <Pressable onPress={() => void handleCopyFromLastMonth()} style={styles.ghostButton}>
+        <Pressable
+          accessibilityHint="Copies budget limits from the previous month"
+          accessibilityLabel="Copy from last month"
+          accessibilityRole="button"
+          onPress={() => void handleCopyFromLastMonth()}
+          style={styles.ghostButton}
+        >
           <Text style={styles.ghostButtonText}>Copy from last month</Text>
         </Pressable>
       </View>
@@ -205,6 +211,7 @@ export default function BudgetScreen({ navigation }: BudgetScreenProps): React.J
               <Text style={styles.categoryMeta}>{category.isCustom ? 'Custom category' : 'System category'}</Text>
             </View>
             <TextInput
+              accessibilityLabel={`Monthly budget limit for ${category.name}`}
               keyboardType="decimal-pad"
               onChangeText={(value) =>
                 setBudgetDrafts((currentDrafts) => ({
@@ -221,6 +228,9 @@ export default function BudgetScreen({ navigation }: BudgetScreenProps): React.J
         ))}
 
         <Pressable
+          accessibilityLabel={isSaving ? 'Saving budgets' : 'Save budgets'}
+          accessibilityRole="button"
+          accessibilityState={{ disabled: isSaving }}
           disabled={isSaving}
           onPress={() => {
             void handleSaveBudgets();
@@ -236,6 +246,9 @@ export default function BudgetScreen({ navigation }: BudgetScreenProps): React.J
         <Text style={styles.sectionTitle}>Recurring expenses</Text>
         {recurringError ? <Text style={styles.errorText}>{recurringError}</Text> : null}
         <Pressable
+          accessibilityHint="Opens a form to add a new recurring expense"
+          accessibilityLabel="Add recurring expense"
+          accessibilityRole="button"
           onPress={() => setIsRecurringModalVisible(true)}
           style={styles.ghostButton}
           testID="budget-add-recurring-button"
@@ -248,43 +261,59 @@ export default function BudgetScreen({ navigation }: BudgetScreenProps): React.J
         ) : (
           recurringList.map((expense) => (
             <Pressable
+              accessibilityHint="Opens expense details for editing"
+              accessibilityLabel={`${expense.note?.trim() || 'Recurring expense'}, ${formatZAR(expense.amount)}, ${categoryNameById.get(expense.categoryId) ?? 'Uncategorized'}`}
+              accessibilityRole="button"
               key={expense.id}
               onPress={() => navigation.navigate('EditExpense', { expenseId: expense.id })}
               style={styles.recurringCard}
               testID={`budget-recurring-row-${expense.id}`}
             >
-              <View>
+              <View importantForAccessibility="no-hide-descendants">
                 <Text style={styles.recurringTitle}>{expense.note?.trim() || 'Recurring expense'}</Text>
                 <Text style={styles.recurringMeta}>
                   {categoryNameById.get(expense.categoryId) ?? 'Uncategorized'} | Monthly | Next due {getNextDueDate(expense.date)}
                 </Text>
               </View>
-              <Text style={styles.recurringAmount}>{formatZAR(expense.amount)}</Text>
+              <Text importantForAccessibility="no" style={styles.recurringAmount}>{formatZAR(expense.amount)}</Text>
             </Pressable>
           ))
         )}
       </View>
 
       <View style={styles.section}>
-        <Pressable onPress={() => setIsAddCategoryVisible((currentValue) => !currentValue)} style={styles.ghostButton}>
+        <Pressable
+          accessibilityHint={isAddCategoryVisible ? 'Hides the custom category form' : 'Shows a form to create a custom category'}
+          accessibilityLabel="Add custom category"
+          accessibilityRole="button"
+          onPress={() => setIsAddCategoryVisible((currentValue) => !currentValue)}
+          style={styles.ghostButton}
+        >
           <Text style={styles.ghostButtonText}>Add custom category</Text>
         </Pressable>
 
         {isAddCategoryVisible ? (
           <View style={styles.addCategoryPanel}>
             <TextInput
+              accessibilityLabel="Custom category name"
               onChangeText={setCustomCategoryName}
               placeholder="Category name"
               style={styles.textInput}
               value={customCategoryName}
             />
             <TextInput
+              accessibilityLabel="Custom category icon"
               onChangeText={setCustomCategoryIcon}
               placeholder="Optional icon"
               style={styles.textInput}
               value={customCategoryIcon}
             />
-            <Pressable onPress={() => void handleCreateCategory()} style={styles.inlineButton}>
+            <Pressable
+              accessibilityLabel="Create category"
+              accessibilityRole="button"
+              onPress={() => void handleCreateCategory()}
+              style={styles.inlineButton}
+            >
               <Text style={styles.inlineButtonText}>Create category</Text>
             </Pressable>
           </View>
