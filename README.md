@@ -40,7 +40,28 @@ The app provides a category-based budgeting system with live progress indicators
 
 **Accessibility** — Comprehensive `accessibilityLabel`, `accessibilityRole`, and `accessibilityValue` attributes across all screens and components. Progress bars use semantic roles; decorative elements are hidden from screen readers.
 
-## Getting started
+## Try it out
+
+A pre-built Android APK is included in the repo — no development setup required.
+
+### Install on an Android device
+
+1. Download [`release/student-finance.apk`](release/student-finance.apk) to your Android phone
+2. Open the file and allow installation from unknown sources when prompted
+3. Launch **"Student Finance"** from the app drawer
+
+> [!NOTE]
+> The APK is debug-signed for testing purposes. It targets Android API 35 but should work on Android 8+ (API 26+).
+
+### Install on an Android emulator
+
+```bash
+adb install release/student-finance.apk
+```
+
+---
+
+## Getting started (development)
 
 ### Prerequisites
 
